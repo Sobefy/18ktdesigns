@@ -1,36 +1,19 @@
-import Image from "next/image";
 const CreateCustomRing = () => {
   return (
-    <div className="">
-      <section className="relative overflow-y-hidden h-screen">
-        <Image
-          className="
-            hidden
-            lg:block
-            absolute
-            top-0
-            left-0
-            w-2/5
-            h-full
-            object-cover
-          "
-          src="/../public/images/love-engagement-ring-bride-groom-engagement-proposal-bride-and-groom-engagement-photo-t20-G0rrAw.jpg"
-          alt=""
-          layout="fill"
-        />
-        <div className="relative px-4 xl:px-10">
-          <nav className="flex justify-between items-center py-8">
-            <a className="inline-block mr-auto text-lg font-semibold" href="#">
-              <Image
-                className="h-7"
-                src="/../public/images/18KT-LOGO-100x-2x.png"
-                alt=""
-                layout="fill"
-              />
-            </a>
-            <div className="lg:hidden ml-auto">
-              <button
-                className="
+    <section className="relative overflow-y-hidden h-screen">
+      <div className="relative px-4 xl:px-10">
+        <nav className="flex justify-between items-center py-8">
+          <a className="inline-block mr-auto text-lg font-semibold" href="#">
+            <img
+              className="h-7 absolute z-50"
+              src="/images/18KT-LOGO-100x-2x.png"
+              alt=""
+              width="auto"
+            />
+          </a>
+          <div className="lg:hidden ml-auto">
+            <button
+              className="
                   navbar-burger
                   flex
                   items-center
@@ -38,35 +21,35 @@ const CreateCustomRing = () => {
                   hover:bg-gray-50
                   rounded
                 "
+            >
+              <svg
+                className="block h-4 w-4"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="block h-4 w-4"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>Mobile menu</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                </svg>
-              </button>
-            </div>
-            <div className="hidden lg:flex w-auto lg:w-3/5 lg:pl-16 ml-auto">
-              <ul className="flex items-center space-x-12">
-                <li>
-                  <a className="text-sm font-medium" href="#"></a>
-                </li>
-                <li>
-                  <a className="text-sm font-medium" href="#"></a>
-                </li>
-                <li>
-                  <a className="text-sm font-medium" href="#"></a>
-                </li>
-                <li>
-                  <a className="text-sm font-medium" href="#"></a>
-                </li>
-              </ul>
-              <div className="ml-auto">
-                <a
-                  className="
+                <title>Mobile menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+              </svg>
+            </button>
+          </div>
+          <div className="hidden lg:flex w-auto lg:w-3/5 lg:pl-16 ml-auto">
+            <ul className="flex items-center space-x-12">
+              <li>
+                <a className="text-sm font-medium" href="#"></a>
+              </li>
+              <li>
+                <a className="text-sm font-medium" href="#"></a>
+              </li>
+              <li>
+                <a className="text-sm font-medium" href="#"></a>
+              </li>
+              <li>
+                <a className="text-sm font-medium" href="#"></a>
+              </li>
+            </ul>
+            <div className="ml-auto">
+              <a
+                className="
                     inline-block
                     py-3
                     px-8
@@ -80,16 +63,33 @@ const CreateCustomRing = () => {
                     transition
                     duration-200
                   "
-                  href="#"
-                >
-                  Chat with someone
-                </a>
-              </div>
+                href="#"
+              >
+                Chat with someone
+              </a>
             </div>
-          </nav>
+          </div>
+        </nav>
+      </div>
+      <div className="grid grid-cols-3">
+        <div className="col-start-1 col-end-2">
+          <img
+            className="
+            hidden
+            lg:block
+            absolute
+            top-0
+            left-0
+            w-1/3
+            h-full
+            object-cover
+          "
+            src="/images/love-engagement-ring-bride-groom-engagement-proposal-bride-and-groom-engagement-photo-t20-G0rrAw.jpg"
+            alt=""
+          />
         </div>
-        <div className="relative container px-4 mx-auto pb-20">
-          <div className="w-full lg:w-3/5 lg:pl-16 ml-auto">
+        <div className="relative container px-4 m-0 pb-20 col-start-2 col-end-4">
+          <div className="w-full lg:w-4/5 lg:pl-16 m-auto">
             <div className="mt-10 lg:mt-20 max-w-2xl lg:pr-10">
               <div className="max-w-xl">
                 <h2 className="mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">
@@ -147,17 +147,16 @@ const CreateCustomRing = () => {
             </div>
           </div>
         </div>
-        <Image
-          className="hidden xl:block absolute right-0 bottom-0 mb-64"
-          src="/../public/zeus-assets/icons/dots/yellow-dot-right-shield.svg"
-          alt=""
-          width="30px"
-          height="20px"
-        />
-        <div className="hidden navbar-menu relative z-50">
-          <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-          <nav
-            className="
+      </div>
+      <img
+        className="hidden xl:block absolute right-0 bottom-0 mb-64"
+        src="/zeus-assets/icons/dots/yellow-dot-right-shield.svg"
+        alt=""
+      />
+      <div className="hidden navbar-menu relative z-50">
+        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          className="
               fixed
               top-0
               left-0
@@ -171,107 +170,103 @@ const CreateCustomRing = () => {
               border-r
               overflow-y-auto
             "
-          >
-            <div className="flex items-center mb-8">
-              <a
-                className="mr-auto text-lg font-semibold leading-none"
-                href="#"
-              >
-                <Image
-                  className="h-7"
-                  src="/../public/zeus-assets/logo/logo-zeus-red.svg"
-                  alt=""
-                  width="30px"
-                  height="20px"
-                />
-              </a>
-              <button className="navbar-close">
-                <svg
-                  className="
+        >
+          <div className="flex items-center mb-8">
+            <a className="mr-auto text-lg font-semibold leading-none" href="#">
+              <img
+                className="h-7"
+                src="/zeus-assets/logo/logo-zeus-red.svg"
+                alt=""
+                width="auto"
+              />
+            </a>
+            <button className="navbar-close">
+              <svg
+                className="
                     h-6
                     w-6
                     text-gray-500
                     cursor-pointer
                     hover:text-gray-500
                   "
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <ul>
-                <li className="mb-1">
-                  <a
-                    className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
-                    href="#"
-                  ></a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
-                    href="#"
-                  ></a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
-                    href="#"
-                  ></a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
-                    href="#"
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <div className="mt-auto">
-              <div className="pt-6">
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li className="mb-1">
                 <a
                   className="
+                      block
+                      p-4
+                      text-sm
+                      font-medium
+                      text-gray-900
+                      hover:bg-gray-50
+                      rounded
+                    "
+                  href="#"
+                ></a>
+              </li>
+              <li className="mb-1">
+                <a
+                  className="
+                      block
+                      p-4
+                      text-sm
+                      font-medium
+                      text-gray-900
+                      hover:bg-gray-50
+                      rounded
+                    "
+                  href="#"
+                ></a>
+              </li>
+              <li className="mb-1">
+                <a
+                  className="
+                      block
+                      p-4
+                      text-sm
+                      font-medium
+                      text-gray-900
+                      hover:bg-gray-50
+                      rounded
+                    "
+                  href="#"
+                ></a>
+              </li>
+              <li className="mb-1">
+                <a
+                  className="
+                      block
+                      p-4
+                      text-sm
+                      font-medium
+                      text-gray-900
+                      hover:bg-gray-50
+                      rounded
+                    "
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-auto">
+            <div className="pt-6">
+              <a
+                className="
                     block
                     py-3
                     text-center text-sm
@@ -284,19 +279,18 @@ const CreateCustomRing = () => {
                     transition
                     duration-200
                   "
-                  href="#"
-                >
-                  Chat with someone
-                </a>
-              </div>
-              <p className="mt-6 mb-4 text-sm text-center text-gray-500">
-                <span>© 2021 All rights reserved.</span>
-              </p>
+                href="#"
+              >
+                Chat with someone
+              </a>
             </div>
-          </nav>
-        </div>
-      </section>
-    </div>
+            <p className="mt-6 mb-4 text-sm text-center text-gray-500">
+              <span>© 2021 All rights reserved.</span>
+            </p>
+          </div>
+        </nav>
+      </div>
+    </section>
   );
 };
 export default CreateCustomRing;
