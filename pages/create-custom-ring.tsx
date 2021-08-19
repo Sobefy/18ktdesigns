@@ -1,11 +1,11 @@
 const CreateCustomRing = () => {
   return (
-    <section className="relative overflow-y-hidden h-screen">
-      <div className="relative px-4 xl:px-10">
+    <section className="relative overflow-y-hidden h-screen bg-blue-50">
+      <div className="absolute w-full px-4 xl:px-10 top-0 left-0 z-50">
         <nav className="flex justify-between items-center py-8">
           <a className="inline-block mr-auto text-lg font-semibold" href="#">
             <img
-              className="h-7 absolute z-50"
+              className="h-7"
               src="/images/18KT-LOGO-100x-2x.png"
               alt=""
               width="auto"
@@ -71,8 +71,8 @@ const CreateCustomRing = () => {
           </div>
         </nav>
       </div>
-      <div className="grid grid-cols-3">
-        <div className="col-start-1 col-end-2">
+      <div className="grid grid-cols-1 lg:grid-cols-5 h-full">
+        <div className="col-start-1 col-end-3 relative">
           <img
             className="
             hidden
@@ -80,7 +80,7 @@ const CreateCustomRing = () => {
             absolute
             top-0
             left-0
-            w-1/3
+            w-full
             h-full
             object-cover
           "
@@ -88,22 +88,19 @@ const CreateCustomRing = () => {
             alt=""
           />
         </div>
-        <div className="relative container px-4 m-0 pb-20 col-start-2 col-end-4">
-          <div className="w-full lg:w-4/5 lg:pl-16 m-auto">
-            <div className="mt-10 lg:mt-20 max-w-2xl lg:pr-10">
-              <div className="max-w-xl">
-                <h2 className="mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">
-                  Let's create your custom ring
-                </h2>
-                <p className="max-w-md mb-6 lg:mb-14 text-gray-500 leading-relaxed">
-                  Before we begin, we'd like to learn a bit about what you're
-                  looking for so we can give you the best experience possible.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-wrap mb-16 lg:mb-20">
-              <a
-                className="
+        <div className="relative container m-0 col-start-3 col-end-6">
+          <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
+            <div className="lg:w-3/5 max-w-2xl">
+              <h2 className="mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">
+                Let's create your custom ring
+              </h2>
+              <p className="mb-6 lg:mb-14 text-gray-500 leading-relaxed">
+                Before we begin, we'd like to learn a bit about what you're
+                looking for so we can give you the best experience possible.
+              </p>
+              <div className="flex flex-wrap">
+                <a
+                  className="
                   block
                   w-full
                   md:w-auto
@@ -121,12 +118,12 @@ const CreateCustomRing = () => {
                   transition
                   duration-200
                 "
-                href="#"
-              >
-                Get Started
-              </a>
-              <a
-                className="
+                  href="#"
+                >
+                  Get Started
+                </a>
+                <a
+                  className="
                   block
                   w-full
                   md:w-auto
@@ -140,10 +137,11 @@ const CreateCustomRing = () => {
                   border
                   hover:border-gray-300
                 "
-                href="#"
-              >
-                Design other jewelry
-              </a>
+                  href="#"
+                >
+                  Design other jewelry
+                </a>
+              </div>
             </div>
           </div>
         </div>
