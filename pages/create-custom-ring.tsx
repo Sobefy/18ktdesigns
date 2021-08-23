@@ -1,4 +1,13 @@
+import { useState } from "react";
+
+/* eslint-disable @next/next/no-img-element */
 const CreateCustomRing = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const handleHamburgerClick = () => {
+    setNavOpen(!navOpen);
+  };
+
   return (
     <section className="relative overflow-y-hidden h-screen bg-blue-50">
       <div className="absolute w-full px-4 xl:px-10 top-0 left-0 z-50">
@@ -21,6 +30,7 @@ const CreateCustomRing = () => {
                   hover:bg-gray-50
                   rounded
                 "
+              onClick={handleHamburgerClick}
             >
               <svg
                 className="block h-4 w-4"
@@ -151,10 +161,11 @@ const CreateCustomRing = () => {
         src="/zeus-assets/icons/dots/yellow-dot-right-shield.svg"
         alt=""
       />
-      <div className="hidden navbar-menu relative z-50">
-        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-        <nav
-          className="
+      {navOpen ? (
+        <div className="navbar-menu relative z-50">
+          <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+          <nav
+            className="
               fixed
               top-0
               left-0
@@ -168,44 +179,47 @@ const CreateCustomRing = () => {
               border-r
               overflow-y-auto
             "
-        >
-          <div className="flex items-center mb-8">
-            <a className="mr-auto text-lg font-semibold leading-none" href="#">
-              <img
-                className="h-7"
-                src="/zeus-assets/logo/logo-zeus-red.svg"
-                alt=""
-                width="auto"
-              />
-            </a>
-            <button className="navbar-close">
-              <svg
-                className="
+          >
+            <div className="flex items-center mb-8">
+              <a
+                className="mr-auto text-lg font-semibold leading-none"
+                href="#"
+              >
+                <img
+                  className="h-7"
+                  src="/zeus-assets/logo/logo-zeus-red.svg"
+                  alt=""
+                  width="auto"
+                />
+              </a>
+              <button className="navbar-close" onClick={handleHamburgerClick}>
+                <svg
+                  className="
                     h-6
                     w-6
                     text-gray-500
                     cursor-pointer
                     hover:text-gray-500
                   "
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div>
-            <ul>
-              <li className="mb-1">
-                <a
-                  className="
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li className="mb-1">
+                  <a
+                    className="
                       block
                       p-4
                       text-sm
@@ -214,12 +228,12 @@ const CreateCustomRing = () => {
                       hover:bg-gray-50
                       rounded
                     "
-                  href="#"
-                ></a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="
+                    href="#"
+                  ></a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="
                       block
                       p-4
                       text-sm
@@ -228,12 +242,12 @@ const CreateCustomRing = () => {
                       hover:bg-gray-50
                       rounded
                     "
-                  href="#"
-                ></a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="
+                    href="#"
+                  ></a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="
                       block
                       p-4
                       text-sm
@@ -242,12 +256,12 @@ const CreateCustomRing = () => {
                       hover:bg-gray-50
                       rounded
                     "
-                  href="#"
-                ></a>
-              </li>
-              <li className="mb-1">
-                <a
-                  className="
+                    href="#"
+                  ></a>
+                </li>
+                <li className="mb-1">
+                  <a
+                    className="
                       block
                       p-4
                       text-sm
@@ -256,15 +270,15 @@ const CreateCustomRing = () => {
                       hover:bg-gray-50
                       rounded
                     "
-                  href="#"
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <div className="mt-auto">
-            <div className="pt-6">
-              <a
-                className="
+                    href="#"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-auto">
+              <div className="pt-6">
+                <a
+                  className="
                     block
                     py-3
                     text-center text-sm
@@ -277,17 +291,18 @@ const CreateCustomRing = () => {
                     transition
                     duration-200
                   "
-                href="#"
-              >
-                Chat with someone
-              </a>
+                  href="#"
+                >
+                  Chat with someone
+                </a>
+              </div>
+              <p className="mt-6 mb-4 text-sm text-center text-gray-500">
+                <span>© 2021 All rights reserved.</span>
+              </p>
             </div>
-            <p className="mt-6 mb-4 text-sm text-center text-gray-500">
-              <span>© 2021 All rights reserved.</span>
-            </p>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
+      ) : null}
     </section>
   );
 };
