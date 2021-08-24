@@ -1,17 +1,24 @@
+/* eslint-disable @next/next/no-img-element */
+// TODO: Change for Image component
 import { useState } from "react";
 
-const Header = () => {
+interface HeaderProps {
+  alternateNav?: boolean;
+}
+
+const Header = ({ alternateNav = false }: HeaderProps) => {
   const [navOpen, setNavOpen] = useState(false);
 
   const handleHamburgerClick = () => {
     setNavOpen(!navOpen);
   };
+
   return (
     <div className="absolute w-full px-4 xl:px-10 top-0 left-0 z-50">
       <nav className="flex justify-between items-center py-8">
         <a className="inline-block mr-auto text-lg font-semibold" href="#">
           <img
-            className="h-7"
+            className={`${alternateNav ? "h-7" : "h-12"}`}
             src="/images/18KT-LOGO-100x-2x.png"
             alt=""
             width="auto"
@@ -72,7 +79,7 @@ const Header = () => {
                   "
               href="#"
             >
-              Chat with someone
+              {alternateNav ? "Chat with someone" : "Start a Project"}
             </a>
           </div>
         </div>

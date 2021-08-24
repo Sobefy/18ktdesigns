@@ -1,13 +1,11 @@
-import { useState } from "react";
-import Header from "../public/components/Header";
-
 /* eslint-disable @next/next/no-img-element */
+// TODO: Change for Image component
+import Header from "../components/Header";
+
 const CreateCustomRing = () => {
   return (
     <section className="relative overflow-y-hidden h-screen bg-blue-50">
-      <div className="absolute w-full px-4 xl:px-10 top-0 left-0 z-50">
-        <Header />
-      </div>
+      <Header alternateNav={true} />
       <div className="grid grid-cols-1 lg:grid-cols-5 h-full">
         <div className="col-start-1 col-end-3 relative">
           <img
