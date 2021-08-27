@@ -11,7 +11,6 @@ const WhoWillBeWearing = () => {
       <div className="lg:w-3/5 max-w-2xl">
         <PrimaryButton text="Back" />
         <Title text=" Who Will Be Wearing The Ring?" />
-
         <Description
           text="Are you designing a ring for your significant other, or designing your
           own ring?"
