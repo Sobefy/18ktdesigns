@@ -14,7 +14,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
   };
 
   return (
-    <div className="absolute w-full py-8 px-4 xl:px-10 top-0 left-0 z-50 ">
+    <div className="absolute w-full py-8 px-4 xl:px-10 top-0 left-0 z-50">
       <nav className="flex justify-between items-center">
         <a className="inline-block mr-auto text-lg font-semibold" href="#">
           <img
@@ -251,7 +251,6 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
           </nav>
         </div>
       ) : null}
-     
     </div>
   );
 };
