@@ -3,10 +3,12 @@ interface CheckboxProps {
 }
 const Inputs = ({ CheckboxText }: CheckboxProps) => {
   return (
-    <>
-      <input type="checkbox" className="form-checkbox" />
-      <span className="ml-2">{CheckboxText}</span>
-    </>
+    <div className="my-6">
+      <div className="object-center">
+        <input type="checkbox" className="form-checkbox my-1" />
+        <span className="ml-2">{CheckboxText}</span>
+      </div>
+    </div>
   );
 };
 export default Inputs;

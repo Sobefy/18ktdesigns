@@ -1,13 +1,13 @@
 interface DescriptionProps {
-    DescriptionText: string;
-  }
+  DescriptionText: string;
+}
 const Description = ({ DescriptionText }: DescriptionProps) => {
-    return (
-          <>
-          <p className="mb-6 lg:mb-14 text-gray-500 leading-relaxed">
-          {DescriptionText}
-          </p>
-          </>
-    );
-  };
-  export default Description;
+  return (
+    <>
+      <p className="mb-6 lg:mb-12 text-gray-500 leading-relaxed">
+        {DescriptionText}
+      </p>
+    </>
+  );
+};
+export default Description;

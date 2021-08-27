@@ -1,10 +1,10 @@
 import WhoWillBeWearing from "../components/WhoWillBeWearing";
 
-const random = () => {
+const Random = () => {
   return (
     <>
-      <WhoWillBeWearing/>
+      <WhoWillBeWearing />
     </>
   );
 };
-export default random;
+export default Random;

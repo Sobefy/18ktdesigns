@@ -2,6 +2,7 @@
 // TODO: Change for Image component
 import Header from "../components/Header";
 import Landig from "../components/Landing";
+import WhoWillBeWearing from "../components/WhoWillBeWearing";
 
 const CreateCustomRing = () => {
   return (
@@ -23,17 +24,16 @@ const CreateCustomRing = () => {
             src="/images/love-engagement-ring-bride-groom-engagement-proposal-bride-and-groom-engagement-photo-t20-G0rrAw.jpg"
             alt=""
           />
-          
         </div>
         <div className="relative container m-0 col-start-3 col-end-6">
-        <Landig/>
-      </div>
+          <WhoWillBeWearing />
+        </div>
       </div>
       <img
         className="hidden xl:block absolute right-0 bottom-0 mb-64"
         src="/zeus-assets/icons/dots/yellow-dot-right-shield.svg"
         alt=""
-      /> 
+      />
     </section>
   );
 };
