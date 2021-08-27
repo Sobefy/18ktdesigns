@@ -1,8 +1,9 @@
 import PrimaryButton from "../Common/PrimaryButton/PrimaryButton";
-import Tittle from "../Common/Tittle";
+import Title from "../Common/Title";
 import Description from "../Common/Description";
 import Checkbox from "../Common/Checkbox";
 import Input from "../Common/Input";
+import BackButton from "../Common/BackButton/BackButton";
 
 const WhoWillBeWearing = () => {
   return (
@@ -10,10 +11,10 @@ const WhoWillBeWearing = () => {
       <div className="lg:w-3/5 max-w-2xl">
         <div className="flex">
           <PrimaryButton text="Back" />
-          <Tittle TittleText=" Who Will Be Wearing The Ring?" />
+          <Title text=" Who Will Be Wearing The Ring?" />
         </div>
         <Description
-          DescriptionText="Are you designing a ring for your significant other, or designing your
+          text="Are you designing a ring for your significant other, or designing your
           own ring?"
         />
         <select
@@ -35,17 +36,17 @@ const WhoWillBeWearing = () => {
           <option>Me</option>
         </select>
       </div>
-      <Description DescriptionText="Who’s the lucky guy or gal?" />
+      <Description text="Who’s the lucky guy or gal?" />
       <div className="bg-gray-100 p-4 w-72 space-x-4 rounded-lg">
-        <Input InputText="Your S/O's First Name" />
+        <Input text="Your S/O's First Name" />
       </div>
       <div className="flex mt-6">
         <label className="flex items-center">
-          <Checkbox CheckboxText="I'd prefer not to say" />
+          <Checkbox text="I'd prefer not to say" />
         </label>
       </div>
       <Description
-        DescriptionText="Looking around for a ring someone might surprise you with later, or are
+        text="Looking around for a ring someone might surprise you with later, or are
         you planning to purchase your own ring?"
       />
       <select
@@ -67,7 +68,7 @@ const WhoWillBeWearing = () => {
         <option>Planning to buy my own ring</option>
         <option>My S/O and I are shopping together</option>
       </select>
-      {<PrimaryButton text="Next" />}
+      {<BackButton text="Next" />}
     </div>
   );
 };
