@@ -1,15 +1,15 @@
 interface InputProps {
-  InputText: string;
+  text: string;
 }
-const PrimaryButton = ({ InputText }: InputProps) => {
+const Input = ({ text }: InputProps) => {
   return (
     <div className="bg-gray-100 p-4 w-72 space-x-4 rounded-lg">
       <input
         className="bg-gray-100 outline-none"
         type="text"
-        placeholder={InputText}
+        placeholder={text}
       />
     </div>
   );
 };
-export default PrimaryButton;
+export default Input;

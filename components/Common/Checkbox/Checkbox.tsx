@@ -1,14 +1,14 @@
 interface CheckboxProps {
-  CheckboxText: string;
+  text: string;
 }
-const Inputs = ({ CheckboxText }: CheckboxProps) => {
+const Checkbox = ({ text }: CheckboxProps) => {
   return (
     <div className="my-6">
       <div className="object-center">
         <input type="checkbox" className="form-checkbox my-1" />
-        <span className="ml-2">{CheckboxText}</span>
+        <span className="ml-2">{text}</span>
       </div>
     </div>
   );
 };
-export default Inputs;
+export default Checkbox;
