@@ -14,11 +14,11 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
   };
 
   return (
-    <div className="absolute w-full px-4 xl:px-10 top-0 left-0 z-50">
-      <nav className="flex justify-between items-center py-8">
+    <div className="absolute w-full py-8 px-4 xl:px-10 top-0 left-0 z-50 ">
+      <nav className="flex justify-between items-center">
         <a className="inline-block mr-auto text-lg font-semibold" href="#">
           <img
-            className={`${alternateNav ? "h-7" : "h-12"}`}
+            className={`${alternateNav ? "h-7" : "h-16"}`}
             src="/images/18KT-LOGO-100x-2x.png"
             alt=""
             width="auto"
@@ -46,22 +46,33 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex w-auto lg:w-3/5 lg:pl-16 ml-auto">
-          <ul className="flex items-center space-x-12">
-            <li>
-              <a className="text-sm font-medium" href="#"></a>
-            </li>
-            <li>
-              <a className="text-sm font-medium" href="#"></a>
-            </li>
-            <li>
-              <a className="text-sm font-medium" href="#"></a>
-            </li>
-            <li>
-              <a className="text-sm font-medium" href="#"></a>
-            </li>
-          </ul>
-          <div className="ml-auto">
+
+        <div className="hidden lg:flex w-auto lg:w-3/5 lg:pl-16 ">
+          {alternateNav ? null : (
+            <ul className="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12">
+              <li>
+                <a className="text-sm font-medium" href="#">
+                  How it works
+                </a>
+              </li>
+              <li>
+                <a className="text-sm font-medium" href="#">
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a className="text-sm font-medium" href="#">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a className="text-sm font-medium" href="#">
+                  Shop Jewerly
+                </a>
+              </li>
+            </ul>
+          )}
+          <div className={alternateNav ? "ml-auto" : "null"}>
             <a
               className="
                     inline-block
@@ -85,7 +96,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
         </div>
       </nav>
       {navOpen ? (
-        <div className="navbar-menu relative z-50">
+        <div className="navbar-menu relative z-50 ">
           <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
           <nav
             className="
@@ -109,8 +120,12 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                 href="#"
               >
                 <img
-                  className="h-7"
-                  src="/zeus-assets/logo/logo-zeus-red.svg"
+                  className={alternateNav ? "h-7" : "h-16"}
+                  src={
+                    alternateNav
+                      ? "/zeus-assets/logo/logo-zeus-red.svg"
+                      : "/images/18KT-LOGO-100x-2x.png"
+                  }
                   alt=""
                   width="auto"
                 />
@@ -139,10 +154,11 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
               </button>
             </div>
             <div>
-              <ul>
-                <li className="mb-1">
-                  <a
-                    className="
+              {alternateNav ? null : (
+                <ul>
+                  <li className="mb-1">
+                    <a
+                      className="
                       block
                       p-4
                       text-sm
@@ -151,12 +167,14 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                       hover:bg-gray-50
                       rounded
                     "
-                    href="#"
-                  ></a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="
+                      href="#"
+                    >
+                      How it works
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="
                       block
                       p-4
                       text-sm
@@ -165,12 +183,14 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                       hover:bg-gray-50
                       rounded
                     "
-                    href="#"
-                  ></a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="
+                      href="#"
+                    >
+                      Testimonials
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="
                       block
                       p-4
                       text-sm
@@ -179,12 +199,14 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                       hover:bg-gray-50
                       rounded
                     "
-                    href="#"
-                  ></a>
-                </li>
-                <li className="mb-1">
-                  <a
-                    className="
+                      href="#"
+                    >
+                      About Us
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="
                       block
                       p-4
                       text-sm
@@ -193,10 +215,13 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                       hover:bg-gray-50
                       rounded
                     "
-                    href="#"
-                  ></a>
-                </li>
-              </ul>
+                      href="#"
+                    >
+                      Shop Jewelry
+                    </a>
+                  </li>
+                </ul>
+              )}
             </div>
             <div className="mt-auto">
               <div className="pt-6">
@@ -216,7 +241,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                   "
                   href="#"
                 >
-                  Chat with someone
+                  {alternateNav ? "Chat with someone" : "Start a Project"}
                 </a>
               </div>
               <p className="mt-6 mb-4 text-sm text-center text-gray-500">
@@ -226,6 +251,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
           </nav>
         </div>
       ) : null}
+     
     </div>
   );
 };
