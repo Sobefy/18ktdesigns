@@ -4,8 +4,22 @@ import Description from "../Common/Description";
 import Checkbox from "../Common/Checkbox";
 import Input from "../Common/Input";
 import BackButton from "../Common/BackButton/BackButton";
+import Select from "../Common/Select";
 
 const WhoWillBeWearing = () => {
+  const chooseRecipientOptions = [
+    {
+      id: 1,
+      value: "mySignificantOther",
+      label: "My significant other",
+    },
+    {
+      id: 2,
+      value: "me",
+      label: "Me",
+    },
+  ];
+
   return (
     <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
       <div className="lg:w-3/5 max-w-2xl">
@@ -15,25 +29,10 @@ const WhoWillBeWearing = () => {
           text="Are you designing a ring for your significant other, or designing your
           own ring?"
         />
-        <select
-          className="
-          object-center
-                lg:mb-12 
-                text-center
-                mb-6
-                py-4
-                px-8
-                md:mr-4
-                text-sm text-black
-                font-medium
-                leading-normal
-                bg-white
-              "
-        >
-          <option>-- Choose recipient --</option>
-          <option>My significant other</option>
-          <option>Me</option>
-        </select>
+        <Select
+          defaultOptionLabel="Choose recipient"
+          options={chooseRecipientOptions}
+        />
 
         <Description text="Who’s the lucky guy or gal?" />
 
