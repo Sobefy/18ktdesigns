@@ -8,8 +8,8 @@ import BackButton from "../Common/BackButton/BackButton";
 const WhoWillBeWearing = () => {
   return (
     <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
-      <div className="lg:w-3/5 max-w-2xl">
-        <PrimaryButton text="Back" />
+      <div className="lg:w-3/5 max-w-2xl text-center">
+        <BackButton text="Back" />
         <Title text=" Who Will Be Wearing The Ring?" />
         <Description
           text="Are you designing a ring for your significant other, or designing your
