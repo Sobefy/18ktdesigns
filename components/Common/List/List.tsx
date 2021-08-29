@@ -1,7 +1,7 @@
 interface ListProps {
-  options: { id: number; value: string; label: string }[];
+  options: { id: number; value: string; label: string;}[];
 }
-const List = ({ options }: ListProps) => {
+const List = ({options }: ListProps) => {
   return (
     <ul className="divide-y divide-gray-300">
       {options.map((option) => (

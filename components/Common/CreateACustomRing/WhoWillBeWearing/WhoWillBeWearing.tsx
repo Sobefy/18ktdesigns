@@ -47,7 +47,7 @@ const WhoWillBeWearing = () => {
           own ring?"
         />
         <Select
-          defaultOptionLabel="Choose recipient"
+          defaultOptionLabel="-- Choose recipient --"
           options={chooseRecipientOptions}
         />
 
@@ -62,7 +62,7 @@ const WhoWillBeWearing = () => {
         you planning to purchase your own ring?"
         />
         <Select
-          defaultOptionLabel="Select response"
+          defaultOptionLabel="-- Select response --"
           options={selectResponseOptions}
         />
         <NextButton text="Next" />

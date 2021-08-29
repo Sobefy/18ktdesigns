@@ -38,6 +38,7 @@ const YourCenterStone = () => {
         <Description text="What types of center stones might you be considering for your ring?" />
         <Description text="SELECT ALL THAT APPLY" />
         <section className="pt-8 px-4">
+          
           <List options={selectStone} />
         </section>
         <div className="flex mt-6">
