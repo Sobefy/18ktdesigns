@@ -3,7 +3,23 @@ interface BackButtonProps {
 }
 const BackButton = ({ text }: BackButtonProps) => {
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded">
+    <button
+      className="w-full
+    md:w-auto
+    text-center
+    mb-2
+    py-4
+    px-8
+    md:mr-4
+    text-sm text-white
+    font-medium
+    leading-normal
+    bg-red-400
+    hover:bg-red-300
+    rounded
+    transition
+    duration-200"
+    >
       {text}
     </button>
   );
