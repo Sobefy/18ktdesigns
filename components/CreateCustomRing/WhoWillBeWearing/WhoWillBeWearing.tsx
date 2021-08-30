@@ -1,42 +1,16 @@
-import NextButton from "../../NextButton";
-import Title from "../../Title";
-import Description from "../../Description";
-import Checkbox from "../../Checkbox";
-import Input from "../../Input";
-import BackButton from "../../BackButton/BackButton";
-import Select from "../../Select";
+import NextButton from "../../Common/NextButton";
+import Title from "../../Common/Title";
+import Description from "../../Common/Description";
+import Checkbox from "../../Common/Checkbox";
+import Input from "../../Common/Input";
+import BackButton from "../../Common/BackButton";
+import Select from "../../Common/Select";
+import {
+  chooseRecipientOptions,
+  selectResponseOptions,
+} from "../../../lib/consts";
 
 const WhoWillBeWearing = () => {
-  const chooseRecipientOptions = [
-    {
-      id: 1,
-      value: "mySignificantOther",
-      label: "My significant other",
-    },
-    {
-      id: 2,
-      value: "me",
-      label: "Me",
-    },
-  ];
-  const selectResponseOptions = [
-    {
-      id: 1,
-      value: "shoppingAround",
-      label: "Shopping around",
-    },
-    {
-      id: 2,
-      value: "planningToBuyMyOwnRing",
-      label: "Planning to buy my own ring",
-    },
-    {
-      id: 3,
-      value: "mySOAndIAreShoppingTogether",
-      label: "My S/O and i are shopping together",
-    },
-  ];
-
   return (
     <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
       <div className="lg:w-3/5 max-w-2xl">

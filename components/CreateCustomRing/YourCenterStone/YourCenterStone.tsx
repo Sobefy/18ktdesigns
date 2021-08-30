@@ -5,7 +5,6 @@ import Description from "../../Description";
 import NextButton from "../../NextButton";
 import Title from "../../Title";
 import List from "../../List";
-import RandomImage from "../../../../public/images/18KT-LOGO-100x-2x.png";
 import { selectStone } from "../../../../lib/consts";
 
 const YourCenterStone = () => {
