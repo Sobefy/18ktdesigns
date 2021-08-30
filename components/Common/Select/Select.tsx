@@ -1,11 +1,7 @@
-import { selectResponseOptions } from "../../../lib/consts";
-
 interface SelectProps {
   defaultOptionLabel: string;
   options: { id: number; value: string; label: string }[];
 }
-
-console.log(selectResponseOptions);
 
 const Select = ({ defaultOptionLabel, options }: SelectProps) => {
   return (
