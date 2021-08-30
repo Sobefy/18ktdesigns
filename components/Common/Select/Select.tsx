@@ -1,6 +1,6 @@
 interface SelectProps {
   defaultOptionLabel: string;
-  options: { id: number; value: string; label: string;}[];
+  options: { id: number; value: string; label: string }[];
 }
 
 const Select = ({ defaultOptionLabel, options }: SelectProps) => {
