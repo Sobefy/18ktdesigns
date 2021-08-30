@@ -1,7 +1,7 @@
-interface PrimaryButtonProps {
+interface NextButtonProps {
   text: string;
 }
-const PrimaryButton = ({ text }: PrimaryButtonProps) => {
+const NextButton = ({ text }: NextButtonProps) => {
   return (
     <button
       className="w-full
@@ -24,4 +24,4 @@ const PrimaryButton = ({ text }: PrimaryButtonProps) => {
     </button>
   );
 };
-export default PrimaryButton;
+export default NextButton;

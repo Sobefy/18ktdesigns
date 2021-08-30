@@ -1,9 +1,10 @@
-import WhoWillBeWearing from "../components/WhoWillBeWearing";
-
+import ItStartsWithStyle from "../components/Common/CreateACustomRing/ItStartsWithStyle";
+import YourCenterStone from "../components/Common/CreateACustomRing/YourCenterStone";
 const Random = () => {
   return (
     <>
-      <WhoWillBeWearing />
+      <YourCenterStone/>
+
     </>
   );
 };

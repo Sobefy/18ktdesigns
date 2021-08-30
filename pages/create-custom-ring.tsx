@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 // TODO: Change for Image component
-import Header from "../components/Header";
-import Landig from "../components/Landing";
-import WhoWillBeWearing from "../components/WhoWillBeWearing";
+import Header from "../components/Common/CreateACustomRing/Header";
+import Landig from "../components/Common/CreateACustomRing/Landing";
+import WhoWillBeWearing from "../components/Common/CreateACustomRing/WhoWillBeWearing";
 
 const CreateCustomRing = () => {
   return (
