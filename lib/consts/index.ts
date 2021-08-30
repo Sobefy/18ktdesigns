@@ -715,3 +715,34 @@ export const chooseACountry = [
     label: "Other",
   },
 ];
+
+export const chooseRecipientOptions = [
+  {
+    id: 1,
+    value: "mySignificantOther",
+    label: "My significant other",
+  },
+  {
+    id: 2,
+    value: "me",
+    label: "Me",
+  },
+];
+
+export const selectResponseOptions = [
+  {
+    id: 1,
+    value: "shoppingAround",
+    label: "Shopping around",
+  },
+  {
+    id: 2,
+    value: "planningToBuyMyOwnRing",
+    label: "Planning to buy my own ring",
+  },
+  {
+    id: 3,
+    value: "mySOAndIAreShoppingTogether",
+    label: "My S/O and i are shopping together",
+  },
+];
