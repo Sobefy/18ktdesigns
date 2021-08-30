@@ -1,6 +1,6 @@
 interface SelectProps {
   defaultOptionLabel: string;
-  options: { id: number; value: string; label: string;}[];
+  options: { id: number; value: string; label: string }[];
 }
 
 const Select = ({ defaultOptionLabel, options }: SelectProps) => {
@@ -20,7 +20,7 @@ const Select = ({ defaultOptionLabel, options }: SelectProps) => {
         bg-white
     "
     >
-      <option>-- {defaultOptionLabel} --</option>
+      <option>{defaultOptionLabel}</option>
       {options.map((option) => (
         <option key={option.id} value={option.value}>
           {option.label}

@@ -60,7 +60,6 @@ const Landing = () => {
         </div>
       </div>
     </div>
-
     /* : null} */
   );
 };
