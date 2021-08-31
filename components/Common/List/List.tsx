@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useState } from "react";
+import SelectedSvg from "../SelectedSvg";
 
 interface ListProps {
   options: {
@@ -9,12 +11,23 @@ interface ListProps {
     imageWidth?: number;
     imageHeight?: number;
     imageUnit?: "px" | "rem";
-    selected?: boolean;
   }[];
 }
 const List = ({ options }: ListProps) => {
+  const [selectedItems, setSelectedItems] = useState<number[]>([]);
+  const handleItemClick = (id: number) => {
+    const itemIsSelected = selectedItems.includes(id);
+    if (itemIsSelected) {
+      const filteredItems = selectedItems.filter((item) => item !== id);
+      setSelectedItems(filteredItems);
+    } else {
+      setSelectedItems([...selectedItems, id]);
+    }
+  };
+
+  console.log(selectedItems);
   return (
-    <ul className="divide-y divide-gray-300">
+    <ul>
       {options.map((option) => {
         const {
           id,
@@ -24,14 +37,16 @@ const List = ({ options }: ListProps) => {
           imageWidth = 96,
           imageHeight = 42,
           imageUnit = "px",
-          selected = false,
         } = option;
+        const itemIsSelected = selectedItems.includes(id);
         return (
           <li
-            className="p-4 hover:bg-gray-50 cursor-pointer"
+            className="relative bg-white cursor-pointer w-full p-4 my-4 rounded border-gray-200 border"
             key={id}
             value={value}
+            onClick={() => handleItemClick(id)}
           >
+            {itemIsSelected ? <SelectedSvg /> : null}
             {image ? (
               <Image
                 src={image}

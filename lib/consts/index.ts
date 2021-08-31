@@ -16,7 +16,6 @@ export const selectStone = [
     imageWidth: 96,
     imageHeight: 62,
     imageUnit: "px",
-    selected: true,
   },
   {
     id: 3,
