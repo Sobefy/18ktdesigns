@@ -1,13 +1,11 @@
-import BackButton from "../../BackButton/BackButton";
-import Title from "../../Title";
-import Description from "../../Description";
-import Select from "../../Select";
-import Checkbox from "../../Checkbox";
-import NextButton from "../../NextButton";
-import InfoPopUp from "../../InfoPopUp";
-import { minPrice } from "../../../../lib/consts";
-import { maxPrice } from "../../../../lib/consts";
-
+import BackButton from "../../Common/BackButton/BackButton";
+import Title from "../../Common/Title";
+import Description from "../../Common/Description";
+import Select from "../../Common/Select";
+import Checkbox from "../../Common/Checkbox";
+import NextButton from "../../Common/NextButton";
+import InfoPopUp from "../../Common/InfoPopUpButton";
+import { minPrice, maxPrice } from "../../../lib/consts";
 const SetYourBudget = () => {
   return (
     <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">

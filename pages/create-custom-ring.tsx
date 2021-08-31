@@ -2,7 +2,9 @@
 import Header from "../components/CreateCustomRing/Header";
 import ItStartsWithStyle from "../components/CreateCustomRing/ItStartsWithStyle";
 import Landing from "../components/CreateCustomRing/Landing";
+import SetYourBudget from "../components/CreateCustomRing/SetYourBudget";
 import WhoWillBeWearing from "../components/CreateCustomRing/WhoWillBeWearing";
+import YourCenterStone from "../components/CreateCustomRing/YourCenterStone";
 const CreateCustomRing = () => {
   return (
     <section className="relative overflow-y-hidden h-screen bg-blue-50">
@@ -25,7 +27,7 @@ const CreateCustomRing = () => {
           />
         </div>
         <div className="relative container m-0 col-start-3 col-end-6 overflow-y-auto">
-          <WhoWillBeWearing />
+          <YourCenterStone/>
         </div>
       </div>
       <img

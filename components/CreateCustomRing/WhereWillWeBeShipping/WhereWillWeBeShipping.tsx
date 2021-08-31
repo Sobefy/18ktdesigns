@@ -1,9 +1,9 @@
-import NextButton from "../../NextButton";
-import Title from "../../Title";
-import Description from "../../Description";
-import BackButton from "../../BackButton/BackButton";
-import Select from "../../Select";
-import { chooseACountry } from "../../../../lib/consts";
+import NextButton from "../../Common/NextButton";
+import Title from "../../Common/Title";
+import Description from "../../Common/Description";
+import BackButton from "../../Common/BackButton";
+import Select from "../../Common/Select";
+import { chooseACountry } from "../../../lib/consts";
 
 const WherWillBeShipping = () => {
   return (

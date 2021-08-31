@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import BackButton from "../../BackButton";
-import Checkbox from "../../Checkbox";
-import Description from "../../Description";
-import NextButton from "../../NextButton";
-import Title from "../../Title";
-import List from "../../List";
-import { selectStone } from "../../../../lib/consts";
+import BackButton from "../../Common/BackButton";
+import Checkbox from "../../Common/Checkbox";
+import Description from "../../Common/Description";
+import NextButton from "../../Common/NextButton";
+import Title from "../../Common/Title";
+import List from "../../Common/List";
+import { selectStone } from "../../../lib/consts";
 
 const YourCenterStone = () => {
   return (

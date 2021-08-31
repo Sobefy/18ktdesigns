@@ -1,10 +1,5 @@
-// interface HeaderProps {
-//     alternateContentText?: boolean;
-//   }
-// { alternateContentText = false }: HeaderProps
 const Landing = () => {
   return (
-    /* {alternateContentText?      */
     <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
       <div className="lg:w-3/5 max-w-2xl">
         <h2 className="mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">
@@ -60,7 +55,6 @@ const Landing = () => {
         </div>
       </div>
     </div>
-    /* : null} */
   );
 };
 export default Landing;
