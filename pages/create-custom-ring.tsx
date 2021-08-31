@@ -5,6 +5,7 @@ import Landing from "../components/CreateCustomRing/Landing";
 import SetYourBudget from "../components/CreateCustomRing/SetYourBudget";
 import WhoWillBeWearing from "../components/CreateCustomRing/WhoWillBeWearing";
 import YourCenterStone from "../components/CreateCustomRing/YourCenterStone";
+import WhenIsTheSpecialDay from "../components/CreateCustomRing/WhenIsTheSpecialDay/WhenIsTheSpecialDay";
 const CreateCustomRing = () => {
   return (
     <section className="relative overflow-y-hidden h-screen bg-blue-50">
@@ -27,7 +28,11 @@ const CreateCustomRing = () => {
           />
         </div>
         <div className="relative container m-0 sm:mx-auto lg:col-start-3 lg:col-end-6 overflow-y-auto">
-          <WhoWillBeWearing />
+          <div className="w-full m-auto px-4 lg:px-40 xl:px-52 py-40 xl:py-44">
+            <div className="lg:w-4/5 xl:w-3/5 text-center">
+              <WhoWillBeWearing />
+            </div>
+          </div>
         </div>
       </div>
       <img

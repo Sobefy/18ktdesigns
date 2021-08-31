@@ -12,38 +12,36 @@ import {
 
 const WhoWillBeWearing = () => {
   return (
-    <div className="w-full m-auto px-4 lg:px-40 xl:px-52 py-40 xl:py-44">
-      <div className="lg:w-3/5 max-w-2xl text-center">
-        <div className="flex">
-          <BackButton text="" />
-          <Title text="Who Will Be Wearing The Ring?" />
-        </div>
-        <Description
-          text="Are you designing a ring for your significant other, or designing your
-          own ring?"
-        />
-        <Select
-          defaultOptionLabel="-- Choose recipient --"
-          options={chooseRecipientOptions}
-        />
-
-        <Description text="Who’s the lucky guy or gal?" />
-
-        <Input text="Your S/O's First Name" />
-
-        <Checkbox text="I'd prefer not to say" />
-
-        <Description
-          text="Looking around for a ring someone might surprise you with later, or are
-        you planning to purchase your own ring?"
-        />
-        <Select
-          defaultOptionLabel="-- Select response --"
-          options={selectResponseOptions}
-        />
-        <NextButton text="Next" />
+    <>
+      <div className="flex">
+        <BackButton text="" />
+        <Title text="Who Will Be Wearing The Ring?" />
       </div>
-    </div>
+      <Description
+        text="Are you designing a ring for your significant other, or designing your
+          own ring?"
+      />
+      <Select
+        defaultOptionLabel="-- Choose recipient --"
+        options={chooseRecipientOptions}
+      />
+
+      <Description text="Who’s the lucky guy or gal?" />
+
+      <Input text="Your S/O's First Name" />
+
+      <Checkbox text="I'd prefer not to say" />
+
+      <Description
+        text="Looking around for a ring someone might surprise you with later, or are
+        you planning to purchase your own ring?"
+      />
+      <Select
+        defaultOptionLabel="-- Select response --"
+        options={selectResponseOptions}
+      />
+      <NextButton text="Next" />
+    </>
   );
 };
 export default WhoWillBeWearing;
