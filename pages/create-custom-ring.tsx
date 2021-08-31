@@ -10,7 +10,7 @@ const CreateCustomRing = () => {
     <section className="relative overflow-y-hidden h-screen bg-blue-50">
       <Header alternateNav={true} />
       <div className="grid grid-cols-1 lg:grid-cols-5 h-full">
-        <div className="col-start-1 col-end-3 relative">
+        <div className="lg:col-start-1 col-end-3 relative">
           <img
             className="
             hidden
@@ -26,8 +26,8 @@ const CreateCustomRing = () => {
             alt=""
           />
         </div>
-        <div className="relative container m-0 col-start-3 col-end-6 overflow-y-auto">
-          <YourCenterStone/>
+        <div className="relative container m-0 sm:mx-auto lg:col-start-3 lg:col-end-6 overflow-y-auto">
+          <WhoWillBeWearing />
         </div>
       </div>
       <img

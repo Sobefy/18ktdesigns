@@ -12,10 +12,12 @@ import {
 
 const WhoWillBeWearing = () => {
   return (
-    <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
-      <div className="lg:w-3/5 max-w-2xl">
-        <BackButton text="Back" />
-        <Title text="Who Will Be Wearing The Ring?" />
+    <div className="w-full m-auto px-4 lg:px-40 xl:px-52 py-40 xl:py-44">
+      <div className="lg:w-3/5 max-w-2xl text-center">
+        <div className="flex">
+          <BackButton text="" />
+          <Title text="Who Will Be Wearing The Ring?" />
+        </div>
         <Description
           text="Are you designing a ring for your significant other, or designing your
           own ring?"

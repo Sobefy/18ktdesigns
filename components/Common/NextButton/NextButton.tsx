@@ -4,8 +4,8 @@ interface NextButtonProps {
 const NextButton = ({ text }: NextButtonProps) => {
   return (
     <button
-      className="w-full
-    md:w-auto
+      className="
+    w-auto
     text-center
     mb-2
     py-4

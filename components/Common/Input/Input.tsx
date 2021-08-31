@@ -4,7 +4,7 @@ interface InputProps {
 const Input = ({ text }: InputProps) => {
   return (
     <input
-      className="bg-gray-100 w-full outline-none p-4 space-x-4 rounded-lg text-center"
+      className="bg-blue-50 w-full outline-none p-4 space-x-4 rounded text-center shadow-md"
       type="text"
       placeholder={text}
     />

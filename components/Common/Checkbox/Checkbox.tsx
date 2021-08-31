@@ -4,10 +4,8 @@ interface CheckboxProps {
 const Checkbox = ({ text }: CheckboxProps) => {
   return (
     <div className="my-6">
-      <div className="object-center">
-        <input type="checkbox" className="form-checkbox my-1" />
-        <span className="ml-2">{text}</span>
-      </div>
+      <input type="checkbox" className="form-checkbox my-1" />
+      <span className="ml-2 text-gray-500">{text}</span>
     </div>
   );
 };
