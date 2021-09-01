@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/react-datepicker": "^4.1.5",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-datepicker": "^4.2.1",
@@ -17,6 +16,7 @@
   },
   "devDependencies": {
     "@types/react": "17.0.18",
+    "@types/react-datepicker": "^4.1.5",
     "autoprefixer": "^10.3.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
