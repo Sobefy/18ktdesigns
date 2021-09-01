@@ -1,4 +1,6 @@
-export const selectStone = [
+import { ListOption } from "../types";
+
+export const selectStone: ListOption[] = [
   {
     id: 1,
     value: "diamond",

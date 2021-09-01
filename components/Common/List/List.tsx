@@ -1,17 +1,11 @@
 import Image from "next/image";
 import { useState } from "react";
+
+import { ListOption } from "../../../lib/types";
 import SelectedSvg from "../SelectedSvg";
 
 interface ListProps {
-  options: {
-    id: number;
-    value: string;
-    label: string;
-    image?: string;
-    imageWidth?: number;
-    imageHeight?: number;
-    imageUnit?: "px" | "rem";
-  }[];
+  options: ListOption[];
 }
 const List = ({ options }: ListProps) => {
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
@@ -25,7 +19,6 @@ const List = ({ options }: ListProps) => {
     }
   };
 
-  console.log(selectedItems);
   return (
     <ul>
       {options.map((option) => {
