@@ -1,8 +1,23 @@
-import { createMachine, assign, send } from "xstate";
+import { createMachine, assign } from "xstate";
 
 interface CustomRingContext {
-  recipient: "" | "MY_SIGNIFICANT_OTHER" | "ME";
+  whoWillBeWearingTheRing: {
+    me: RecipientSetMeOptions;
+    mySignificantOther: string;
+    preferNotToSay: boolean;
+  };
+  startsWithStyle: {
+    styles: StartstWithStylesOptions[];
+    iHaveNoIdea: boolean;
+  };
 }
+
+type StartstWithStylesOptions =
+  | ""
+  | "I_HAVE_IMAGES"
+  | "DROPPED_SOME_HINTS"
+  | "I_KNOW_MY_SO_SENSE_OF_STYLE"
+  | "I_HAVE_MY_OWN_IDEAS";
 
 type Next = {
   type: "NEXT";
@@ -12,48 +27,75 @@ type Back = {
   type: "BACK";
 };
 
-type DesignOtherJewerly = {
+type LandingDesignOtherJewerly = {
   type: "DESIGN_OTHER_JEWERLY";
 };
 
-type CheckRecipient = {
-  type: "CHECK_RECIPIENT";
+type RecipientIdle = {
+  type: "IDLE";
 };
 
-type SetIdle = {
-  type: "SET_IDLE";
-  recipient: "";
+type RecipientMySignificantOther = {
+  type: "MY_SIGNIFICANT_OTHER";
 };
 
-type SetMySignificantOther = {
-  type: "SET_ME";
-  value: "MY_SIGNIFICANT_OTHER";
+type RecipientMe = {
+  type: "ME";
 };
 
-type SetMe = {
+type RecipientSetMySignificantOther = {
   type: "SET_MY_SIGNIFICANT_OTHER";
-  value: "MY_SIGNIFICANT_OTHER";
+  value: string;
+};
+
+type RecipientSetPrefferNotToSay = {
+  type: "SET_PREFFER_NOT_TO_SAY";
+  value: boolean;
+};
+
+type RecipientSetMeOptions =
+  | ""
+  | "SHOPPING_AROUND"
+  | "BUYING_MY_OWN_RING"
+  | "SHOPPING_TOGHETER";
+
+type RecipientSetMe = {
+  type: "SET_ME";
+  value: RecipientSetMeOptions;
 };
 
 type CustomRingEvents =
   | Next
   | Back
-  | DesignOtherJewerly
-  | CheckRecipient
-  | SetIdle
-  | SetMySignificantOther
-  | SetMe;
+  | LandingDesignOtherJewerly
+  | RecipientIdle
+  | RecipientMySignificantOther
+  | RecipientSetMySignificantOther
+  | RecipientMe
+  | RecipientSetMe
+  | RecipientSetPrefferNotToSay;
 
-export type CustomRingState = {
+type CustomRingState = {
   value:
-    | "idle"
+    | "landing"
     | "recipient"
-    | { recipient: "" | "MY_SIGNIFICANT_OTHER" | "ME" };
+    | "recipient.idle"
+    | "recipient.mySignificantOther"
+    | "recipient.me"
+    | "startsWithStyle";
   context: CustomRingContext;
 };
 
 const initialContext: CustomRingContext = {
-  recipient: "",
+  whoWillBeWearingTheRing: {
+    me: "",
+    mySignificantOther: "",
+    preferNotToSay: false,
+  },
+  startsWithStyle: {
+    styles: [],
+    iHaveNoIdea: false,
+  },
 };
 
 export const customRingMachine = createMachine<
@@ -63,65 +105,91 @@ export const customRingMachine = createMachine<
 >(
   {
     id: "createCustomRing",
-    initial: "idle",
+    initial: "landing",
     context: initialContext,
     states: {
-      idle: {
-        on: { NEXT: { target: "recipient" }, DESIGN_OTHER_JEWERLY: {} },
+      landing: {
+        on: { NEXT: "recipient.hist", DESIGN_OTHER_JEWERLY: {} },
       },
       recipient: {
         initial: "idle",
         on: {
-          BACK: { target: "idle" },
-          SET_MY_SIGNIFICANT_OTHER: {
-            target: "recipient.mySignificantOther",
-            actions: [
-              { type: "setRecipient", recipient: "MY_SIGNIFICANT_OTHER" },
-            ],
-          },
-          SET_ME: {
-            target: "recipient.me",
-            actions: [{ type: "setRecipient", recipient: "ME" }],
-          },
-          SET_IDLE: {
-            target: "recipient.idle",
-            actions: [{ type: "setRecipient", recipient: "" }],
-          },
+          BACK: "landing",
+          IDLE: "recipient.idle",
+          MY_SIGNIFICANT_OTHER: "recipient.mySignificantOther",
+          ME: "recipient.me",
+          NEXT: [
+            { target: "startsWithStyle", in: "#createCustomRing.recipient.me" },
+            {
+              target: "startsWithStyle",
+              in: "#createCustomRing.recipient.mySignificantOther",
+              cond: "isMySignificantOtherFilled",
+            },
+          ],
         },
         states: {
-          idle: {
-            entry: send("CHECK_RECIPIENT"),
+          idle: {},
+          mySignificantOther: {
             on: {
-              CHECK_RECIPIENT: [
-                {
-                  target: "mySignificantOther",
-                  cond: "recipientIsMySignificantOther",
-                },
-                {
-                  target: "me",
-                  cond: "receipentIsMe",
-                },
-              ],
+              SET_MY_SIGNIFICANT_OTHER: { actions: "setMySignificantOther" },
+              SET_PREFFER_NOT_TO_SAY: { actions: "setPrefferNotToSay" },
             },
           },
-          mySignificantOther: {},
-          me: {},
+          me: {
+            on: {
+              SET_ME: { actions: "setMe" },
+            },
+          },
+          hist: {
+            type: "history",
+          },
         },
+      },
+      startsWithStyle: {
+        on: {},
       },
     },
   },
   {
     actions: {
-      setRecipient: assign({
-        recipient: (_, __, { action }) => {
-          return action.recipient || "";
-        },
+      setMySignificantOther: assign((context, event) => {
+        if (event.type !== "SET_MY_SIGNIFICANT_OTHER") {
+          return { ...context };
+        }
+        return {
+          whoWillBeWearingTheRing: {
+            ...context.whoWillBeWearingTheRing,
+            mySignificantOther: event.value,
+          },
+        };
+      }),
+      setPrefferNotToSay: assign((context, event) => {
+        if (event.type !== "SET_PREFFER_NOT_TO_SAY") {
+          return { ...context };
+        }
+        return {
+          whoWillBeWearingTheRing: {
+            ...context.whoWillBeWearingTheRing,
+            preferNotToSay: event.value,
+          },
+        };
+      }),
+      setMe: assign((context, event) => {
+        if (event.type !== "SET_ME") {
+          return { ...context };
+        }
+        return {
+          whoWillBeWearingTheRing: {
+            ...context.whoWillBeWearingTheRing,
+            me: event.value,
+          },
+        };
       }),
     },
     guards: {
-      recipientIsMySignificantOther: (context) =>
-        context.recipient === "MY_SIGNIFICANT_OTHER",
-      receipentIsMe: (context) => context.recipient === "ME",
+      isMySignificantOtherFilled: (context) =>
+        context.whoWillBeWearingTheRing.mySignificantOther !== "" ||
+        context.whoWillBeWearingTheRing.preferNotToSay,
     },
   }
 );
