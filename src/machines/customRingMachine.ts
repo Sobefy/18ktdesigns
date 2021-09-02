@@ -1,5 +1,7 @@
 import { createMachine, assign } from "xstate";
 
+import { BudgetOptions } from "../../lib/types";
+
 interface CustomRingContext {
   whoWillBeWearingTheRing: {
     me: RecipientSetMeOptions;
@@ -14,7 +16,33 @@ interface CustomRingContext {
     stones: YourCenterStoneOptions[];
     imNotSure: boolean;
   };
+  setYourBudget: {
+    min: BudgetOptions;
+    max: BudgetOptions;
+    imNotSure: boolean;
+  };
 }
+
+const initialContext: CustomRingContext = {
+  whoWillBeWearingTheRing: {
+    me: "",
+    mySignificantOther: "",
+    preferNotToSay: false,
+  },
+  startsWithStyle: {
+    styles: [],
+    iHaveNoIdea: false,
+  },
+  yourCenterStone: {
+    stones: [],
+    imNotSure: false,
+  },
+  setYourBudget: {
+    min: 0,
+    max: 0,
+    imNotSure: false,
+  },
+};
 
 type StartstWithStylesOptions =
   | ""
@@ -93,6 +121,20 @@ type YourCenterStoneSetImNotSure = {
   type: "SET_IM_NOT_SURE";
 };
 
+type SetYourBudgetSetMin = {
+  type: "SET_MIN";
+  value: BudgetOptions;
+};
+
+type SetYourBudgetSetMax = {
+  type: "SET_MAX";
+  value: BudgetOptions;
+};
+
+type SetYourBudgetSetImNotSure = {
+  type: "SET_YOUR_BUDGET_SET_IM_NOT_SURE";
+};
+
 export type CustomRingEvents =
   | Next
   | Back
@@ -106,7 +148,10 @@ export type CustomRingEvents =
   | StartsWithStyleSetStyles
   | StartsWithStyleSetIHaveNoIdea
   | YourCenterStoneSetStones
-  | YourCenterStoneSetImNotSure;
+  | YourCenterStoneSetImNotSure
+  | SetYourBudgetSetMin
+  | SetYourBudgetSetMax
+  | SetYourBudgetSetImNotSure;
 
 type CustomRingState = {
   value:
@@ -117,22 +162,6 @@ type CustomRingState = {
     | "recipient.me"
     | "startsWithStyle";
   context: CustomRingContext;
-};
-
-const initialContext: CustomRingContext = {
-  whoWillBeWearingTheRing: {
-    me: "",
-    mySignificantOther: "",
-    preferNotToSay: false,
-  },
-  startsWithStyle: {
-    styles: [],
-    iHaveNoIdea: false,
-  },
-  yourCenterStone: {
-    stones: [],
-    imNotSure: false,
-  },
 };
 
 export const customRingMachine = createMachine<
@@ -203,7 +232,18 @@ export const customRingMachine = createMachine<
             actions: "setCenterStones",
           },
           SET_IM_NOT_SURE: { actions: "setImNotSure" },
-          NEXT: [{ target: "", cond: "isYourCenterStoneFilled" }],
+          NEXT: [{ target: "setYourBudget", cond: "isYourCenterStoneFilled" }],
+        },
+      },
+      setYourBudget: {
+        on: {
+          BACK: "yourCenterStone",
+          SET_MIN: { actions: "setMin" },
+          SET_MAX: { actions: "setMax" },
+          SET_YOUR_BUDGET_SET_IM_NOT_SURE: {
+            actions: "setYourBudgetSetImNotSure",
+          },
+          NEXT: [{ target: "", cond: "isSetYourBudgetFilled" }],
         },
       },
     },
@@ -291,6 +331,43 @@ export const customRingMachine = createMachine<
           },
         };
       }),
+      setMin: assign((context, event) => {
+        if (event.type !== "SET_MIN") {
+          return { ...context };
+        }
+        return {
+          setYourBudget: {
+            ...context.setYourBudget,
+            min: event.value,
+            imNotSure: false,
+          },
+        };
+      }),
+      setMax: assign((context, event) => {
+        if (event.type !== "SET_MAX") {
+          return { ...context };
+        }
+        return {
+          setYourBudget: {
+            ...context.setYourBudget,
+            max: event.value,
+            imNotSure: false,
+          },
+        };
+      }),
+      setYourBudgetSetImNotSure: assign((context, event) => {
+        if (event.type !== "SET_YOUR_BUDGET_SET_IM_NOT_SURE") {
+          return { ...context };
+        }
+        return {
+          setYourBudget: {
+            ...context.setYourBudget,
+            min: 0,
+            max: 0,
+            imNotSure: true,
+          },
+        };
+      }),
     },
     guards: {
       isMySignificantOtherFilled: (context) =>
@@ -302,6 +379,10 @@ export const customRingMachine = createMachine<
       isYourCenterStoneFilled: (context) =>
         context.yourCenterStone.stones.length > 0 ||
         context.yourCenterStone.imNotSure,
+      isSetYourBudgetFilled: (context) =>
+        context.setYourBudget.min !== 0 ||
+        context.setYourBudget.max !== 0 ||
+        context.setYourBudget.imNotSure,
     },
   }
 );
