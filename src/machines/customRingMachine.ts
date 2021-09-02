@@ -192,14 +192,18 @@ export const customRingMachine = createMachine<
             actions: "setIHaveNoIdea",
           },
           NEXT: [
-            { target: "yourCenterStone", cond: "isYourCenterStoneFilled" },
+            { target: "yourCenterStone", cond: "isStartsWithStyleFilled" },
           ],
         },
       },
       yourCenterStone: {
         on: {
-          SET_STONES: "",
-          SET_IM_NOT_SURE: "",
+          BACK: "startsWithStyle",
+          SET_STONES: {
+            actions: "setCenterStones",
+          },
+          SET_IM_NOT_SURE: { actions: "setImNotSure" },
+          NEXT: [{ target: "", cond: "isYourCenterStoneFilled" }],
         },
       },
     },
@@ -263,11 +267,38 @@ export const customRingMachine = createMachine<
           },
         };
       }),
+      setCenterStones: assign((context, event) => {
+        if (event.type !== "SET_STONES") {
+          return { ...context };
+        }
+        return {
+          yourCenterStone: {
+            ...context.yourCenterStone,
+            stones: event.stones,
+            imNotSure: false,
+          },
+        };
+      }),
+      setImNotSure: assign((context, event) => {
+        if (event.type !== "SET_IM_NOT_SURE") {
+          return { ...context };
+        }
+        return {
+          yourCenterStone: {
+            ...context.yourCenterStone,
+            imNotSure: true,
+            stones: [],
+          },
+        };
+      }),
     },
     guards: {
       isMySignificantOtherFilled: (context) =>
         context.whoWillBeWearingTheRing.mySignificantOther !== "" ||
         context.whoWillBeWearingTheRing.preferNotToSay,
+      isStartsWithStyleFilled: (context) =>
+        context.startsWithStyle.styles.length > 0 ||
+        context.startsWithStyle.iHaveNoIdea,
       isYourCenterStoneFilled: (context) =>
         context.yourCenterStone.stones.length > 0 ||
         context.yourCenterStone.imNotSure,
