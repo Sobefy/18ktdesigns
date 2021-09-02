@@ -10,6 +10,10 @@ interface CustomRingContext {
     styles: StartstWithStylesOptions[];
     iHaveNoIdea: boolean;
   };
+  yourCenterStone: {
+    stones: YourCenterStoneOptions[];
+    imNotSure: boolean;
+  };
 }
 
 type StartstWithStylesOptions =
@@ -18,6 +22,13 @@ type StartstWithStylesOptions =
   | "DROPPED_SOME_HINTS"
   | "I_KNOW_MY_SO_SENSE_OF_STYLE"
   | "I_HAVE_MY_OWN_IDEAS";
+
+type YourCenterStoneOptions =
+  | ""
+  | "DIAMOND"
+  | "COLORED_GEMSTONE"
+  | "MOISSANITE"
+  | "NO_STONE";
 
 type Next = {
   type: "NEXT";
@@ -64,6 +75,24 @@ type RecipientSetMe = {
   value: RecipientSetMeOptions;
 };
 
+type StartsWithStyleSetStyles = {
+  type: "SET_STYLES";
+  styles: StartstWithStylesOptions[];
+};
+
+type StartsWithStyleSetIHaveNoIdea = {
+  type: "SET_I_HAVE_NO_IDEA";
+};
+
+type YourCenterStoneSetStones = {
+  type: "SET_STONES";
+  stones: YourCenterStoneOptions[];
+};
+
+type YourCenterStoneSetImNotSure = {
+  type: "SET_IM_NOT_SURE";
+};
+
 export type CustomRingEvents =
   | Next
   | Back
@@ -73,7 +102,11 @@ export type CustomRingEvents =
   | RecipientSetMySignificantOther
   | RecipientMe
   | RecipientSetMe
-  | RecipientSetPrefferNotToSay;
+  | RecipientSetPrefferNotToSay
+  | StartsWithStyleSetStyles
+  | StartsWithStyleSetIHaveNoIdea
+  | YourCenterStoneSetStones
+  | YourCenterStoneSetImNotSure;
 
 type CustomRingState = {
   value:
@@ -95,6 +128,10 @@ const initialContext: CustomRingContext = {
   startsWithStyle: {
     styles: [],
     iHaveNoIdea: false,
+  },
+  yourCenterStone: {
+    stones: [],
+    imNotSure: false,
   },
 };
 
@@ -146,7 +183,24 @@ export const customRingMachine = createMachine<
         },
       },
       startsWithStyle: {
-        on: {},
+        on: {
+          BACK: "recipient.hist",
+          SET_STYLES: {
+            actions: "setStyles",
+          },
+          SET_I_HAVE_NO_IDEA: {
+            actions: "setIHaveNoIdea",
+          },
+          NEXT: [
+            { target: "yourCenterStone", cond: "isYourCenterStoneFilled" },
+          ],
+        },
+      },
+      yourCenterStone: {
+        on: {
+          SET_STONES: "",
+          SET_IM_NOT_SURE: "",
+        },
       },
     },
   },
@@ -185,11 +239,38 @@ export const customRingMachine = createMachine<
           },
         };
       }),
+      setStyles: assign((context, event) => {
+        if (event.type !== "SET_STYLES") {
+          return { ...context };
+        }
+        return {
+          startsWithStyle: {
+            ...context.startsWithStyle,
+            styles: event.styles,
+            iHaveNoIdea: false,
+          },
+        };
+      }),
+      setIHaveNoIdea: assign((context, event) => {
+        if (event.type !== "SET_I_HAVE_NO_IDEA") {
+          return { ...context };
+        }
+        return {
+          startsWithStyle: {
+            ...context.startsWithStyle,
+            iHaveNoIdea: true,
+            styles: [],
+          },
+        };
+      }),
     },
     guards: {
       isMySignificantOtherFilled: (context) =>
         context.whoWillBeWearingTheRing.mySignificantOther !== "" ||
         context.whoWillBeWearingTheRing.preferNotToSay,
+      isYourCenterStoneFilled: (context) =>
+        context.yourCenterStone.stones.length > 0 ||
+        context.yourCenterStone.imNotSure,
     },
   }
 );
