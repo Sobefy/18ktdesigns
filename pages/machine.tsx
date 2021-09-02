@@ -2,6 +2,7 @@ import { useMachine } from "@xstate/react";
 import { inspect } from "@xstate/inspect";
 
 import { customRingMachine } from "../src/machines/customRingMachine";
+import Landing from "../components/CreateCustomRing/Landing";
 
 process.browser &&
   inspect({
@@ -39,17 +40,7 @@ const Toggler = () => {
 
   return (
     <div>
-      {state.matches("landing") ? (
-        <div>
-          <h1>You are in landing</h1>
-          <button
-            className="bg-gray-700 text-white"
-            onClick={() => send("NEXT")}
-          >
-            Start
-          </button>
-        </div>
-      ) : null}
+      {state.matches("landing") ? <Landing send={send} /> : null}
       {state.matches("recipient") ? (
         <div>
           <button

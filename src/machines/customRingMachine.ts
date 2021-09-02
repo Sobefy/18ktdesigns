@@ -19,7 +19,7 @@ type StartstWithStylesOptions =
   | "I_KNOW_MY_SO_SENSE_OF_STYLE"
   | "I_HAVE_MY_OWN_IDEAS";
 
-type Next = {
+export type Next = {
   type: "NEXT";
 };
 
