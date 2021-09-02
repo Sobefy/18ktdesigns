@@ -1,8 +1,8 @@
 import NextButton from "../../Common/NextButton";
-import { Next } from "../../../src/machines/customRingMachine";
+import { CustomRingEvents } from "../../../src/machines/customRingMachine";
 
 interface LandingProps {
-  send(event: Next): void;
+  send(event: CustomRingEvents): void;
 }
 
 const Landing = ({ send }: LandingProps) => {

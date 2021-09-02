@@ -19,7 +19,7 @@ type StartstWithStylesOptions =
   | "I_KNOW_MY_SO_SENSE_OF_STYLE"
   | "I_HAVE_MY_OWN_IDEAS";
 
-export type Next = {
+type Next = {
   type: "NEXT";
 };
 
@@ -64,7 +64,7 @@ type RecipientSetMe = {
   value: RecipientSetMeOptions;
 };
 
-type CustomRingEvents =
+export type CustomRingEvents =
   | Next
   | Back
   | LandingDesignOtherJewerly
