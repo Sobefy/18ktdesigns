@@ -21,6 +21,10 @@ interface CustomRingContext {
     max: BudgetOptions;
     imNotSure: boolean;
   };
+  whenIsTheSpecialDate: {
+    specialDate: WhenIsTheSpecialDayOptions;
+    date: Date;
+  };
 }
 
 const initialContext: CustomRingContext = {
@@ -42,6 +46,10 @@ const initialContext: CustomRingContext = {
     max: 0,
     imNotSure: false,
   },
+  whenIsTheSpecialDate: {
+    specialDate: "",
+    date: new Date(),
+  },
 };
 
 type StartstWithStylesOptions =
@@ -57,6 +65,15 @@ type YourCenterStoneOptions =
   | "COLORED_GEMSTONE"
   | "MOISSANITE"
   | "NO_STONE";
+
+type WhenIsTheSpecialDayOptions =
+  | ""
+  | "I_HAVE_A_SPECIFIC_DATE"
+  | "NEXT_1_2_MONTHS"
+  | "NEXT_6_MONTHS"
+  | "NEXT_12_MONTHS"
+  | "OVER_A_YEAR"
+  | "IM_JUST_LOOKING";
 
 type Next = {
   type: "NEXT";
@@ -135,6 +152,16 @@ type SetYourBudgetSetImNotSure = {
   type: "SET_YOUR_BUDGET_SET_IM_NOT_SURE";
 };
 
+type WhenIsTheSpecialDateSetSpecialDate = {
+  type: "SET_SPECIAL_DATE";
+  value: WhenIsTheSpecialDayOptions;
+};
+
+type WhenIsTheSpecialDateSetDate = {
+  type: "SET_DATE";
+  date: Date;
+};
+
 export type CustomRingEvents =
   | Next
   | Back
@@ -151,7 +178,9 @@ export type CustomRingEvents =
   | YourCenterStoneSetImNotSure
   | SetYourBudgetSetMin
   | SetYourBudgetSetMax
-  | SetYourBudgetSetImNotSure;
+  | SetYourBudgetSetImNotSure
+  | WhenIsTheSpecialDateSetSpecialDate
+  | WhenIsTheSpecialDateSetDate;
 
 type CustomRingState = {
   value:
@@ -243,7 +272,17 @@ export const customRingMachine = createMachine<
           SET_YOUR_BUDGET_SET_IM_NOT_SURE: {
             actions: "setYourBudgetSetImNotSure",
           },
-          NEXT: [{ target: "", cond: "isSetYourBudgetFilled" }],
+          NEXT: [
+            { target: "whenIsTheSpecialDate", cond: "isSetYourBudgetFilled" },
+          ],
+        },
+      },
+      whenIsTheSpecialDate: {
+        on: {
+          BACK: "setYourBudget",
+          SET_SPECIAL_DATE: { actions: "setSpecialDate" },
+          SET_DATE: { actions: "setDate" },
+          NEXT: [{ target: "", cond: "isSpecialDateFilled" }],
         },
       },
     },
@@ -368,6 +407,28 @@ export const customRingMachine = createMachine<
           },
         };
       }),
+      setSpecialDate: assign((context, event) => {
+        if (event.type !== "SET_SPECIAL_DATE") {
+          return { ...context };
+        }
+        return {
+          whenIsTheSpecialDate: {
+            ...context.whenIsTheSpecialDate,
+            specialDate: event.value,
+          },
+        };
+      }),
+      setDate: assign((context, event) => {
+        if (event.type !== "SET_DATE") {
+          return { ...context };
+        }
+        return {
+          whenIsTheSpecialDate: {
+            ...context.whenIsTheSpecialDate,
+            date: event.date,
+          },
+        };
+      }),
     },
     guards: {
       isMySignificantOtherFilled: (context) =>
@@ -383,6 +444,8 @@ export const customRingMachine = createMachine<
         context.setYourBudget.min !== 0 ||
         context.setYourBudget.max !== 0 ||
         context.setYourBudget.imNotSure,
+      isSpecialDateFilled: (context) =>
+        context.whenIsTheSpecialDate.specialDate !== "",
     },
   }
 );
