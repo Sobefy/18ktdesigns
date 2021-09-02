@@ -9,7 +9,7 @@ process.browser &&
     iframe: false,
   });
 
-const Toggler = () => {
+const Machine = () => {
   const [state, send] = useMachine(customRingMachine, { devTools: true });
   const {
     whoWillBeWearingTheRing: { mySignificantOther },
@@ -99,4 +99,4 @@ const Toggler = () => {
   );
 };
 
-export default Toggler;
+export default Machine;
