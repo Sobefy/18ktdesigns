@@ -26,6 +26,7 @@ interface CustomRingContext {
     date: Date;
   };
   shipping: ShippingOptions;
+  howDidYouFindUs: HowDidYouFindUsOptions;
 }
 
 const initialContext: CustomRingContext = {
@@ -52,6 +53,7 @@ const initialContext: CustomRingContext = {
     date: new Date(),
   },
   shipping: "",
+  howDidYouFindUs: "",
 };
 
 type StartstWithStylesOptions =
@@ -78,6 +80,17 @@ type WhenIsTheSpecialDayOptions =
   | "IM_JUST_LOOKING";
 
 type ShippingOptions = "" | "US" | "CA" | "UK" | "AU" | "OTHER";
+
+type HowDidYouFindUsOptions =
+  | ""
+  | "INTERNET_SEARCH"
+  | "MY_SIGNIFICANT_OTHER"
+  | "FRIENDS_OR_FAMILY"
+  | "SOCIAL_MEDIA"
+  | "BLOG"
+  | "RADIO_OR_TV"
+  | "PRINT"
+  | "OTHER";
 
 type Next = {
   type: "NEXT";
@@ -171,6 +184,11 @@ type SetShipping = {
   value: ShippingOptions;
 };
 
+type SetHowDidYouFindUs = {
+  type: "SET_HOW_DID_YOU_FIND_US";
+  value: HowDidYouFindUsOptions;
+};
+
 export type CustomRingEvents =
   | Next
   | Back
@@ -190,7 +208,8 @@ export type CustomRingEvents =
   | SetYourBudgetSetImNotSure
   | WhenIsTheSpecialDateSetSpecialDate
   | WhenIsTheSpecialDateSetDate
-  | SetShipping;
+  | SetShipping
+  | SetHowDidYouFindUs;
 
 type CustomRingState = {
   value:
@@ -302,6 +321,13 @@ export const customRingMachine = createMachine<
             actions: "setShipping",
           },
           NEXT: [{ target: "", cond: "isShippingFilled" }],
+        },
+      },
+      howDidYouFindUs: {
+        on: {
+          BACK: "shipping",
+          SET_HOW_DID_YOU_FIND_US: { actions: "setHowDidYouFindUs" },
+          NEXT: [{ target: "", cond: "howDidYouFindUsIsFilled" }],
         },
       },
     },
@@ -456,6 +482,14 @@ export const customRingMachine = createMachine<
           shipping: event.value,
         };
       }),
+      setHowDidYouFindUs: assign((context, event) => {
+        if (event.type !== "SET_HOW_DID_YOU_FIND_US") {
+          return { ...context };
+        }
+        return {
+          howDidYouFindUs: event.value,
+        };
+      }),
     },
     guards: {
       isMySignificantOtherFilled: (context) =>
@@ -474,6 +508,7 @@ export const customRingMachine = createMachine<
       isSpecialDateFilled: (context) =>
         context.whenIsTheSpecialDate.specialDate !== "",
       isShippingFilled: (context) => context.shipping !== "",
+      howDidYouFindUsIsFilled: (context) => context.howDidYouFindUs !== "",
     },
   }
 );
