@@ -25,6 +25,7 @@ interface CustomRingContext {
     specialDate: WhenIsTheSpecialDayOptions;
     date: Date;
   };
+  shipping: ShippingOptions;
 }
 
 const initialContext: CustomRingContext = {
@@ -50,6 +51,7 @@ const initialContext: CustomRingContext = {
     specialDate: "",
     date: new Date(),
   },
+  shipping: "",
 };
 
 type StartstWithStylesOptions =
@@ -74,6 +76,8 @@ type WhenIsTheSpecialDayOptions =
   | "NEXT_12_MONTHS"
   | "OVER_A_YEAR"
   | "IM_JUST_LOOKING";
+
+type ShippingOptions = "" | "US" | "CA" | "UK" | "AU" | "OTHER";
 
 type Next = {
   type: "NEXT";
@@ -162,6 +166,11 @@ type WhenIsTheSpecialDateSetDate = {
   date: Date;
 };
 
+type SetShipping = {
+  type: "SET_SHIPPING";
+  value: ShippingOptions;
+};
+
 export type CustomRingEvents =
   | Next
   | Back
@@ -180,7 +189,8 @@ export type CustomRingEvents =
   | SetYourBudgetSetMax
   | SetYourBudgetSetImNotSure
   | WhenIsTheSpecialDateSetSpecialDate
-  | WhenIsTheSpecialDateSetDate;
+  | WhenIsTheSpecialDateSetDate
+  | SetShipping;
 
 type CustomRingState = {
   value:
@@ -282,7 +292,16 @@ export const customRingMachine = createMachine<
           BACK: "setYourBudget",
           SET_SPECIAL_DATE: { actions: "setSpecialDate" },
           SET_DATE: { actions: "setDate" },
-          NEXT: [{ target: "", cond: "isSpecialDateFilled" }],
+          NEXT: [{ target: "shipping", cond: "isSpecialDateFilled" }],
+        },
+      },
+      shipping: {
+        on: {
+          BACK: "whenIsTheSpecialDate",
+          SET_SHIPPING: {
+            actions: "setShipping",
+          },
+          NEXT: [{ target: "", cond: "isShippingFilled" }],
         },
       },
     },
@@ -429,6 +448,14 @@ export const customRingMachine = createMachine<
           },
         };
       }),
+      setShipping: assign((context, event) => {
+        if (event.type !== "SET_SHIPPING") {
+          return { ...context };
+        }
+        return {
+          shipping: event.value,
+        };
+      }),
     },
     guards: {
       isMySignificantOtherFilled: (context) =>
@@ -446,6 +473,7 @@ export const customRingMachine = createMachine<
         context.setYourBudget.imNotSure,
       isSpecialDateFilled: (context) =>
         context.whenIsTheSpecialDate.specialDate !== "",
+      isShippingFilled: (context) => context.shipping !== "",
     },
   }
 );
