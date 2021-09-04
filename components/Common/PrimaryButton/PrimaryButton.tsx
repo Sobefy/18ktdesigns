@@ -1,6 +1,5 @@
 interface PrimaryButtonProps {
   text: string;
-
   onClick?(): void;
   alternateButton?: boolean;
 }
