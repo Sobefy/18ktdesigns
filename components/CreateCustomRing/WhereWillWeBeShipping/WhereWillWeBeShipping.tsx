@@ -1,9 +1,9 @@
-import NextButton from "../../Common/NextButton";
 import Title from "../../Common/Title";
 import Description from "../../Common/Description";
 import BackButton from "../../Common/BackButton";
 import Select from "../../Common/Select";
 import { chooseACountry } from "../../../lib/consts";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const WherWillBeShipping = () => {
   return (
@@ -16,7 +16,7 @@ const WherWillBeShipping = () => {
           defaultOptionLabel="-- Choose a response --"
           options={chooseACountry}
         />
-        <NextButton text="Next" />
+        <PrimaryButton text="Next" />
       </div>
     </div>
   );

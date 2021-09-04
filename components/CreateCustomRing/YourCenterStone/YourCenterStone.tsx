@@ -2,10 +2,10 @@
 import BackButton from "../../Common/BackButton";
 import Checkbox from "../../Common/Checkbox";
 import Description from "../../Common/Description";
-import NextButton from "../../Common/NextButton";
 import Title from "../../Common/Title";
 import List from "../../Common/List";
 import { selectStone } from "../../../lib/consts";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const YourCenterStone = () => {
   return (
@@ -23,7 +23,7 @@ const YourCenterStone = () => {
             <Checkbox text="I'm not sure" />
           </label>
         </div>
-        <NextButton text="Next" />
+        <PrimaryButton text="Next" />
       </div>
     </div>
   );

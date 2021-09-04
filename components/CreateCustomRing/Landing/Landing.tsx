@@ -1,4 +1,4 @@
-import NextButton from "../../Common/NextButton";
+import PrimaryButton from "../../Common/PrimaryButton";
 import { CustomRingEvents } from "../../../src/machines/customRingMachine";
 
 interface LandingProps {
@@ -17,7 +17,7 @@ const Landing = ({ send }: LandingProps) => {
           looking for so we can give you the best experience possible.
         </p>
         <div className="flex flex-wrap">
-          <NextButton
+          <PrimaryButton
             text="Get Started"
             onClick={() => send({ type: "NEXT" })}
           />

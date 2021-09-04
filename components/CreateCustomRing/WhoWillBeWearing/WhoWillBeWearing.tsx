@@ -1,4 +1,3 @@
-import NextButton from "../../Common/NextButton";
 import Title from "../../Common/Title";
 import Description from "../../Common/Description";
 import Checkbox from "../../Common/Checkbox";
@@ -9,6 +8,7 @@ import {
   chooseRecipientOptions,
   selectResponseOptions,
 } from "../../../lib/consts";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const WhoWillBeWearing = () => {
   return (
@@ -40,7 +40,7 @@ const WhoWillBeWearing = () => {
         defaultOptionLabel="-- Select response --"
         options={selectResponseOptions}
       />
-      <NextButton text="Next" />
+      <PrimaryButton text="Next" />
     </>
   );
 };

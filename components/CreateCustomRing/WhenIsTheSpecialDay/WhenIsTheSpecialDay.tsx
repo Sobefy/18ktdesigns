@@ -1,10 +1,11 @@
-import NextButton from "../../Common/NextButton";
+import NextButton from "../../Common/PrimaryButton";
 import Title from "../../Common/Title";
 import Description from "../../Common/Description";
 import BackButton from "../../Common/BackButton/BackButton";
 import Select from "../../Common/Select";
 import { chooseAResponseOptions } from "../../../lib/consts";
 import Calendar from "../../Common/Calendar";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const WhenIsTheSpecialDay = () => {
   return (
@@ -20,7 +21,7 @@ const WhenIsTheSpecialDay = () => {
           options={chooseAResponseOptions}
         />
         <Calendar />
-        <NextButton text="Next" />
+        <PrimaryButton text="Next" />
       </div>
     </div>
   );
