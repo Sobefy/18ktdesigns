@@ -1,12 +1,14 @@
 import Header from "../components/CreateCustomRing/Header";
 import Hero from "../components/Home/Hero";
+import Services from "../components/Home/Services";
 
 const Home = () => {
   return (
-    <section className="relative md:pb-24 lg:pb-80">
+    <>
       <Header />
       <Hero />
-    </section>
+      <Services />
+    </>
   );
 };
 

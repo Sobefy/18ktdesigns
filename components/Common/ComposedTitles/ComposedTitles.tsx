@@ -15,7 +15,7 @@ const ComposedTitles = ({
       <h2
         className={
           alternateSize
-            ? "mt-8 mb-12 text-4xl lg:text-5xl font-semibold"
+            ? "mt-8 mb-12 text-4xl lg:text-5xl font-semibold max-w-full mx-auto"
             : "mt-8 mb-12 text-4xl font-semibold"
         }
       >
