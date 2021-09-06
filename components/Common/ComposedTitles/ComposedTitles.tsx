@@ -3,7 +3,6 @@ interface ComposedTitlesProps {
   subtitleText: string;
   alternateSize?: boolean;
   ctaTitle?: boolean;
-  ctaCollageTitle?: boolean;
 }
 
 const ComposedTitles = ({
@@ -11,21 +10,21 @@ const ComposedTitles = ({
   subtitleText,
   alternateSize = false,
   ctaTitle = false,
-  ctaCollageTitle = false,
 }: ComposedTitlesProps) => {
+  const getTitleClassName = () => {
+    if (ctaTitle) {
+      return "lg:text-6xl  max-w-full mx-auto";
+    }
+    if (alternateSize) {
+      return "lg:text-5xl  max-w-5xl mx-auto";
+    }
+    return "";
+  };
   return (
     <>
       <span className="font-semibold text-blue-400">{titleText}</span>
       <h2
-        className={
-          ctaCollageTitle
-            ? "text-xs text-blue-400 font-semibold"
-            : ctaTitle
-            ? "mt-8 mb-12 text-4xl lg:text-6xl font-semibold max-w-full mx-auto"
-            : alternateSize
-            ? "mt-8 mb-12 text-4xl lg:text-5xl font-semibold max-w-full mx-auto"
-            : "mt-8 mb-12 text-4xl font-semibold"
-        }
+        className={`mt-8 mb-12 text-4xl font-semibold font-heading ${getTitleClassName()}`}
       >
         {subtitleText}
       </h2>
