@@ -1,13 +1,13 @@
 import React, { createContext } from "react";
 import { useActor, useInterpret } from "@xstate/react";
+import { Event, Sender, State } from "xstate";
 
 import {
   CustomRingContext,
   CustomRingEvents,
   customRingMachine,
   CustomRingState,
-} from "../../src/machines/customRingMachine";
-import { Event, Sender, State } from "xstate";
+} from "@lib/machines/CreateCustomRing";
 
 type CreateCustomRingProviderProps = { children: React.ReactNode };
 

@@ -1,6 +1,7 @@
 import { createMachine, assign } from "xstate";
 
-import { BudgetOptions } from "../../lib/types";
+import { BudgetOptions } from "@lib/types";
+
 export interface CustomRingContext {
   whoWillBeWearingTheRing: {
     userSelection: "" | "ME" | "MY_SIGNIFICANT_OTHER";
