@@ -1,5 +1,5 @@
 import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
-import NextButton from "../../Common/NextButton";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const Landing = () => {
   const { send } = useCreateCustomRingMachine();
@@ -13,7 +13,10 @@ const Landing = () => {
         looking for so we can give you the best experience possible.
       </p>
       <div className="flex flex-wrap">
-        <NextButton text="Get Started" onClick={() => send({ type: "NEXT" })} />
+        <PrimaryButton
+          text="Get Started"
+          onClick={() => send({ type: "NEXT" })}
+        />
         <a
           className="block w-full px-8 py-4 mb-2 text-sm font-medium text-center rounded md:w-auto borderhover:border-gray-300"
           href="#"

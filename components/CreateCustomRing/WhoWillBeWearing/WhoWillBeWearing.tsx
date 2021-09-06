@@ -1,4 +1,3 @@
-import NextButton from "../../Common/NextButton";
 import Title from "../../Common/Title";
 import Description from "../../Common/Description";
 import Checkbox from "../../Common/Checkbox";
@@ -9,11 +8,11 @@ import {
   chooseRecipientOptions,
   selectResponseOptions,
 } from "../../../lib/consts";
-import React from "react";
 import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const WhoWillBeWearing = () => {
-  const { state, send, nextState } = useCreateCustomRingMachine();
+  const { state, send } = useCreateCustomRingMachine();
   const {
     whoWillBeWearingTheRing: {
       userSelection,
@@ -124,7 +123,7 @@ const WhoWillBeWearing = () => {
           />
         </>
       ) : null}
-      {canContinue ? <NextButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
     </>
   );
 };

@@ -1,9 +1,10 @@
-import NextButton from "../../Common/NextButton";
+import NextButton from "../../Common/PrimaryButton";
 import Title from "../../Common/Title";
 import Description from "../../Common/Description";
 import BackButton from "../../Common/BackButton/BackButton";
 import Select from "../../Common/Select";
 import { chooseAResponse } from "../../../lib/consts";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const HowDidYouFindUs = () => {
   return (
@@ -16,7 +17,7 @@ const HowDidYouFindUs = () => {
           defaultOptionLabel="-- Choose a response --"
           options={chooseAResponse}
         />
-        <NextButton text="Next" />
+        <PrimaryButton text="Next" />
       </div>
     </div>
   );

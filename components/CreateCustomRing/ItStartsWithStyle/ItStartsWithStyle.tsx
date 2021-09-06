@@ -1,10 +1,10 @@
 import BackButton from "../../Common/BackButton";
 import Title from "../../Common/Title";
 import Description from "../../Common/Description";
-import NextButton from "../../Common/NextButton";
 import List from "../../Common/List";
 import Checkbox from "../../Common/Checkbox";
 import { selectAllThatApply } from "../../../lib/consts";
+import PrimaryButton from "../../Common/PrimaryButton";
 
 const ItStartsWithStyle = () => {
   return (
@@ -23,7 +23,7 @@ const ItStartsWithStyle = () => {
 
       <Checkbox text="I have no ideas yet - I just want an amazing ring!" />
 
-      <NextButton text="Next" />
+      <PrimaryButton text="Next" />
     </>
   );
 };
