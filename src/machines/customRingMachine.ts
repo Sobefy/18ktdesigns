@@ -1,9 +1,9 @@
 import { createMachine, assign } from "xstate";
 
 import { BudgetOptions } from "../../lib/types";
-
-interface CustomRingContext {
+export interface CustomRingContext {
   whoWillBeWearingTheRing: {
+    userSelection: "" | "ME" | "MY_SIGNIFICANT_OTHER";
     me: RecipientSetMeOptions;
     mySignificantOther: string;
     preferNotToSay: boolean;
@@ -31,6 +31,7 @@ interface CustomRingContext {
 
 const initialContext: CustomRingContext = {
   whoWillBeWearingTheRing: {
+    userSelection: "",
     me: "",
     mySignificantOther: "",
     preferNotToSay: false,
@@ -126,11 +127,12 @@ type RecipientSetPrefferNotToSay = {
   value: boolean;
 };
 
-type RecipientSetMeOptions =
+export type RecipientSetMeOptions =
   | ""
   | "SHOPPING_AROUND"
   | "BUYING_MY_OWN_RING"
-  | "SHOPPING_TOGHETER";
+  | "SHOPPING_TOGHETER"
+  | "MY_SO_AND_I_ARE_SHOPPING_TOGHETER";
 
 type RecipientSetMe = {
   type: "SET_ME";
@@ -211,7 +213,7 @@ export type CustomRingEvents =
   | SetShipping
   | SetHowDidYouFindUs;
 
-type CustomRingState = {
+export type CustomRingState = {
   value:
     | "landing"
     | "recipient"
@@ -239,9 +241,33 @@ export const customRingMachine = createMachine<
         initial: "idle",
         on: {
           BACK: "landing",
-          IDLE: "recipient.idle",
-          MY_SIGNIFICANT_OTHER: "recipient.mySignificantOther",
-          ME: "recipient.me",
+          IDLE: {
+            target: "recipient.idle",
+            actions: assign((context) => ({
+              whoWillBeWearingTheRing: {
+                ...context.whoWillBeWearingTheRing,
+                userSelection: "",
+              },
+            })),
+          },
+          MY_SIGNIFICANT_OTHER: {
+            target: "recipient.mySignificantOther",
+            actions: assign((context) => ({
+              whoWillBeWearingTheRing: {
+                ...context.whoWillBeWearingTheRing,
+                userSelection: "MY_SIGNIFICANT_OTHER",
+              },
+            })),
+          },
+          ME: {
+            target: "recipient.me",
+            actions: assign({
+              whoWillBeWearingTheRing: (context) => ({
+                ...context.whoWillBeWearingTheRing,
+                userSelection: "ME",
+              }),
+            }),
+          },
           NEXT: [
             { target: "startsWithStyle", in: "#createCustomRing.recipient.me" },
             {
@@ -342,6 +368,7 @@ export const customRingMachine = createMachine<
           whoWillBeWearingTheRing: {
             ...context.whoWillBeWearingTheRing,
             mySignificantOther: event.value,
+            preferNotToSay: false,
           },
         };
       }),
@@ -352,6 +379,7 @@ export const customRingMachine = createMachine<
         return {
           whoWillBeWearingTheRing: {
             ...context.whoWillBeWearingTheRing,
+            mySignificantOther: "",
             preferNotToSay: event.value,
           },
         };

@@ -1,12 +1,16 @@
 interface InputProps {
   text: string;
+  value: string;
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
-const Input = ({ text }: InputProps) => {
+const Input = ({ text, value, onChange }: InputProps) => {
   return (
     <input
-      className="bg-white text-sm w-full outline-none p-4  rounded text-center shadow-md"
+      className="w-full p-4 text-sm text-center bg-white rounded shadow-md outline-none"
       type="text"
       placeholder={text}
+      value={value}
+      onChange={onChange}
     />
   );
 };

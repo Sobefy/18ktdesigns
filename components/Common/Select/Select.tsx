@@ -1,27 +1,16 @@
 interface SelectProps {
-  defaultOptionLabel: string;
+  value: string;
   options: { id: number; value: string; label: string }[];
+  onChange(e: React.ChangeEvent<HTMLSelectElement>): void;
 }
 
-const Select = ({ defaultOptionLabel, options }: SelectProps) => {
+const Select = ({ value, options, onChange }: SelectProps) => {
   return (
     <select
-      className="
-        cursor-pointer
-        text-center
-        w-full
-        p-4
-        mb-6  
-        text-sm 
-        rounded
-        font-medium
-        leading-normal
-        bg-white
-        border-gray-200 border
-       
-    "
+      className="w-full p-4 mb-6 text-sm font-medium leading-normal text-center bg-white border border-gray-200 rounded cursor-pointer"
+      value={value}
+      onChange={onChange}
     >
-      <option>{defaultOptionLabel}</option>
       {options.map((option) => (
         <option key={option.id} value={option.value}>
           {option.label}
