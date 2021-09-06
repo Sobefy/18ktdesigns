@@ -10,6 +10,7 @@ import {
 } from "../../../lib/consts";
 import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
 import PrimaryButton from "../../Common/PrimaryButton";
+import { RecipientMeOptions } from "@lib/machines/CreateCustomRing/types";
 
 const WhoWillBeWearing = () => {
   const { state, send } = useCreateCustomRingMachine();
@@ -32,13 +33,13 @@ const WhoWillBeWearing = () => {
     const value = e.target.value;
     switch (value) {
       case "":
-        send({ type: "IDLE" });
+        send("IDLE");
         break;
       case "MY_SIGNIFICANT_OTHER":
-        send({ type: "MY_SIGNIFICANT_OTHER" });
+        send("MY_SIGNIFICANT_OTHER");
         break;
       case "ME":
-        send({ type: "ME" });
+        send("ME");
         break;
       default:
         break;
@@ -46,24 +47,8 @@ const WhoWillBeWearing = () => {
   };
 
   const handleMe = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value;
-    // TODO: Make this simplier
-    switch (value) {
-      case "IDLE":
-        send({ type: "SET_ME", value: "" });
-        break;
-      case "SHOPPING_AROUND":
-        send({ type: "SET_ME", value: "SHOPPING_AROUND" });
-        break;
-      case "BUYING_MY_OWN_RING":
-        send({ type: "SET_ME", value: "BUYING_MY_OWN_RING" });
-        break;
-      case "MY_SO_AND_I_ARE_SHOPPING_TOGHETER":
-        send({ type: "SET_ME", value: "MY_SO_AND_I_ARE_SHOPPING_TOGHETER" });
-        break;
-      default:
-        break;
-    }
+    const value = e.target.value as RecipientMeOptions;
+    send({ type: "SET_ME", value });
   };
 
   const handleSoFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -3,21 +3,20 @@ import { useActor, useInterpret } from "@xstate/react";
 import { Event, Sender, State } from "xstate";
 
 import {
-  CustomRingContext,
   CustomRingEvents,
   customRingMachine,
-  CustomRingState,
 } from "@lib/machines/CreateCustomRing";
+import { Context, MachineStates } from "@lib/machines/CreateCustomRing/types";
 
 type CreateCustomRingProviderProps = { children: React.ReactNode };
 
 export const CreateCustomRingContext = createContext<
   | {
-      state: State<CustomRingContext, CustomRingEvents, any, CustomRingState>;
+      state: State<Context, CustomRingEvents, any, MachineStates>;
       send: Sender<CustomRingEvents>;
       nextState(
         e: Event<CustomRingEvents>
-      ): State<CustomRingContext, CustomRingEvents, any, CustomRingState>;
+      ): State<Context, CustomRingEvents, any, MachineStates>;
     }
   | undefined
 >(undefined);
