@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import { ListOption } from "../../../lib/types";
-import SelectedSvg from "../SelectedSvg";
+import { ListOption } from "@lib/types";
+import SelectedSvg from "@components/Common/SelectedSvg";
 
 interface ListProps {
   options: ListOption[];
@@ -34,7 +34,7 @@ const List = ({ options }: ListProps) => {
         const itemIsSelected = selectedItems.includes(id);
         return (
           <li
-            className="relative bg-white cursor-pointer w-full p-4 my-4 rounded border-gray-200 border"
+            className="relative w-full p-4 my-4 bg-white border border-gray-200 rounded cursor-pointer"
             key={id}
             value={value}
             onClick={() => handleItemClick(id)}

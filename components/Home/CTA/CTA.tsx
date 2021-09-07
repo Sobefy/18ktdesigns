@@ -3,7 +3,7 @@ import Description from "../../Common/Description";
 import PrimaryButton from "../../Common/PrimaryButton";
 const CTA = () => {
   return (
-    <div className="bg-blue-50 py-20">
+    <div className="py-20 bg-blue-50">
       <div className="container px-4 mx-auto">
         <ComposedTitles subtitleText="let's build your ring." ctaTitle={true} />
         <div className="flex flex-wrap items-center">

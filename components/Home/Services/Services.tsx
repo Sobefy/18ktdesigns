@@ -5,49 +5,25 @@ const Services = () => {
   return (
     <div className="relative py-20">
       <img
-        className="hidden lg:block absolute bottom-0 left-0 mb-40"
+        className="absolute bottom-0 left-0 hidden mb-40 lg:block"
         src="zeus-assets/icons/dots/blue-dot-left-bars.svg"
         alt=""
       />
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap -mx-4">
-          <div
-            className="
-                relative
-                w-full
-                lg:w-1/2
-                px-4
-                order-last
-                lg:order-first
-                flex
-                items-center
-              "
-          >
+          <div className="relative flex items-center order-last w-full px-4 lg:w-1/2 lg:order-first">
             <img src="images/blob-ring.png" alt="" />
           </div>
-          <div className="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+          <div className="w-full px-4 mb-6 lg:w-1/2 lg:mb-0">
             <ComposedTitles subtitleText="Work with former jewelry brand designers" />
             <div className="relative flex flex-wrap -mx-4 -mb-12">
-              <div className="relative w-full lg:w-1/2 px-4 mb-12">
+              <div className="relative w-full px-4 mb-12 lg:w-1/2">
                 <img
-                  className="hidden lg:block absolute top-0 left-0 ml-24 -mt-10"
+                  className="absolute top-0 left-0 hidden ml-24 -mt-10 lg:block"
                   src="zeus-assets/icons/line-little-top.svg"
                   alt=""
                 />
-                <span
-                  className="
-                        flex
-                        items-center
-                        justify-center
-                        w-12
-                        h-12
-                        mb-6
-                        lg:mb-8
-                        rounded-full
-                        bg-blue-50
-                        text-sm
-                      "
-                >
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   1
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">
@@ -58,21 +34,8 @@ const Services = () => {
                   specifications.
                 </p>
               </div>
-              <div className="w-full lg:w-1/2 px-4 mb-12">
-                <span
-                  className="
-                        flex
-                        items-center
-                        justify-center
-                        w-12
-                        h-12
-                        mb-6
-                        lg:mb-8
-                        rounded-full
-                        bg-blue-50
-                        text-sm
-                      "
-                >
+              <div className="w-full px-4 mb-12 lg:w-1/2">
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   2
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">
@@ -83,26 +46,13 @@ const Services = () => {
                   perfect gems and diamonds for your piece.
                 </p>
               </div>
-              <div className="relative w-full lg:w-1/2 px-4 mb-12">
+              <div className="relative w-full px-4 mb-12 lg:w-1/2">
                 <img
-                  className="hidden lg:block absolute top-0 left-0 -mt-24 ml-24"
+                  className="absolute top-0 left-0 hidden ml-24 -mt-24 lg:block"
                   src="zeus-assets/icons/line-little.svg"
                   alt=""
                 />
-                <span
-                  className="
-                        flex
-                        items-center
-                        justify-center
-                        w-12
-                        h-12
-                        mb-6
-                        lg:mb-8
-                        rounded-full
-                        bg-blue-50
-                        text-sm
-                      "
-                >
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   3
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">
@@ -113,21 +63,8 @@ const Services = () => {
                   designers.
                 </p>
               </div>
-              <div className="w-full lg:w-1/2 px-4 mb-12">
-                <span
-                  className="
-                        flex
-                        items-center
-                        justify-center
-                        w-12
-                        h-12
-                        mb-6
-                        lg:mb-8
-                        rounded-full
-                        bg-blue-50
-                        text-sm
-                      "
-                >
+              <div className="w-full px-4 mb-12 lg:w-1/2">
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   4
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">

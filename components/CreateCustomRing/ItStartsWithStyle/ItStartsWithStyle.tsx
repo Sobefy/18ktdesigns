@@ -1,16 +1,34 @@
-import BackButton from "../../Common/BackButton";
-import Title from "../../Common/Title";
-import Description from "../../Common/Description";
-import List from "../../Common/List";
-import Checkbox from "../../Common/Checkbox";
-import { selectAllThatApply } from "../../../lib/consts";
-import PrimaryButton from "../../Common/PrimaryButton";
+import { selectAllThatApply } from "@lib/consts";
+import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
+import BackButton from "@components/Common/BackButton";
+import Title from "@components/Common/Title";
+import Description from "@components/Common/Description";
+import List from "@components/Common/List";
+import Checkbox from "@components/Common/Checkbox";
+import PrimaryButton from "@components/Common/PrimaryButton";
 
 const ItStartsWithStyle = () => {
+  const {
+    state: {
+      context: {
+        startsWithStyle: { iHaveNoIdea },
+      },
+    },
+    send,
+  } = useCreateCustomRingMachine();
+
+  const handleBack = () => {
+    send("BACK");
+  };
+
+  const handleIHaveNoIdea = () => {
+    send("SET_I_HAVE_NO_IDEA");
+  };
+
   return (
     <>
       <div className="flex">
-        <BackButton text="" />
+        <BackButton onClick={handleBack} />
         <Title text="It Starts With Style" />
       </div>
       <Description
@@ -18,11 +36,12 @@ const ItStartsWithStyle = () => {
           quite yet?"
       />
       <Description text="SELECT ALL THAT APPLY" />
-
       <List options={selectAllThatApply} />
-
-      <Checkbox text="I have no ideas yet - I just want an amazing ring!" />
-
+      <Checkbox
+        text="I have no ideas yet - I just want an amazing ring!"
+        checked={iHaveNoIdea}
+        onChange={handleIHaveNoIdea}
+      />
       <PrimaryButton text="Next" />
     </>
   );

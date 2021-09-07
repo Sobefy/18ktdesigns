@@ -1,9 +1,10 @@
 import { inspect } from "@xstate/inspect";
 
-import Landing from "../Landing";
-import WhoWillBeWearing from "../WhoWillBeWearing";
-import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
+import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
 import { States } from "@lib/machines/CreateCustomRing/types";
+import Landing from "@components/CreateCustomRing/Landing";
+import WhoWillBeWearing from "@components/CreateCustomRing/WhoWillBeWearing";
+import ItStartsWithStyle from "@components/CreateCustomRing/ItStartsWithStyle";
 
 process.browser &&
   inspect({
@@ -17,19 +18,8 @@ const Machine = () => {
     <>
       {state.matches(States.landing) ? <Landing /> : null}
       {state.matches(States.recipient) ? <WhoWillBeWearing /> : null}
-      {/* {state.value === "style" ? (
-        <div>
-          <h1>You are in style</h1>
-          <input placeholder="who?" />
-          <button className="text-white bg-red-700">Back</button>
-          <button
-            className="text-white bg-gray-700"
-            onClick={() => send("NEXT")}
-          >
-            Next
-          </button>
-        </div>
-      ) : null}
+      {state.matches(States.startsWithStyle) ? <ItStartsWithStyle /> : null}
+      {/*
       {state.value === "end" ? (
         <div>
           <h1>You reached the end</h1>
