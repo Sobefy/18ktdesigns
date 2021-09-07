@@ -16,13 +16,7 @@ const Testimonials = () => {
         alt=""
       />
       <div className="container px-4 mx-auto">
-        <div className="flex items-center justify-between">
-          <SlideButtons directionLeft={true} />
-          <div className="max-w-3xl mx-auto text-center">
-            <Carousel />
-          </div>
-          <SlideButtons />
-        </div>
+        <Carousel loop />
       </div>
     </div>
   );

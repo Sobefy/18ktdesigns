@@ -1,4 +1,4 @@
-import { CarouselItems, ListOption } from "../types";
+import { CarouselItem, ListOption } from "../types";
 
 export const selectStone: ListOption[] = [
   {
@@ -750,7 +750,7 @@ export const selectResponseOptions = [
   },
 ];
 
-export const CarouselCard: CarouselItems[] = [
+export const carouselData: CarouselItem[] = [
   {
     id: 1,
     value: "ryanandsandy",

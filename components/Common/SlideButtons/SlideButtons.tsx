@@ -1,11 +1,18 @@
 interface slideButtonsProps {
+  onClick(): void;
   directionLeft?: boolean;
 }
-const SlideButtons = ({ directionLeft = false }: slideButtonsProps) => {
+const SlideButtons = ({
+  directionLeft = false,
+  onClick,
+}: slideButtonsProps) => {
   return (
     <>
       {directionLeft ? (
-        <button className="hidden mr-5 border rounded-full lg:block w-14 h-14 hover:bg-gray-50">
+        <button
+          className="hidden mr-5 border rounded-full lg:block w-14 h-14 hover:bg-gray-50"
+          onClick={onClick}
+        >
           <svg
             className="mx-auto"
             width="19"
@@ -35,6 +42,7 @@ const SlideButtons = ({ directionLeft = false }: slideButtonsProps) => {
       ) : (
         <button
           className="hidden border rounded-full lg:block w-14 h-14 hover:bg-gray-50 "
+          onClick={onClick}
         >
           <svg
             className="mx-auto"
