@@ -8,13 +8,67 @@ import {
   chooseRecipientOptions,
   selectResponseOptions,
 } from "../../../lib/consts";
+import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
 import PrimaryButton from "../../Common/PrimaryButton";
+import { RecipientMeOptions } from "@lib/machines/CreateCustomRing/types";
 
 const WhoWillBeWearing = () => {
+  const { state, send } = useCreateCustomRingMachine();
+  const {
+    whoWillBeWearingTheRing: {
+      userSelection,
+      mySignificantOther,
+      me,
+      preferNotToSay,
+    },
+  } = state.context;
+
+  const canContinue =
+    state.matches("recipient.me") ||
+    mySignificantOther !== "" ||
+    preferNotToSay;
+
+  const handleChooseRecipient = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    // TODO: Make this simplier
+    const value = e.target.value;
+    switch (value) {
+      case "":
+        send("IDLE");
+        break;
+      case "MY_SIGNIFICANT_OTHER":
+        send("MY_SIGNIFICANT_OTHER");
+        break;
+      case "ME":
+        send("ME");
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleMe = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value as RecipientMeOptions;
+    send({ type: "SET_ME", value });
+  };
+
+  const handleSoFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    send({ type: "SET_MY_SIGNIFICANT_OTHER", value });
+  };
+
+  const handleIdPreferNotToSay = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const checked = e.target.checked;
+    send({ type: "SET_PREFFER_NOT_TO_SAY", value: checked });
+  };
+
+  const handleNext = () => {
+    send("NEXT");
+  };
+
   return (
     <>
       <div className="flex">
-        <BackButton text="" />
+        <BackButton onClick={() => send({ type: "BACK" })} />
         <Title text="Who Will Be Wearing The Ring?" />
       </div>
       <Description
@@ -22,25 +76,39 @@ const WhoWillBeWearing = () => {
           own ring?"
       />
       <Select
-        defaultOptionLabel="-- Choose recipient --"
         options={chooseRecipientOptions}
+        value={userSelection}
+        onChange={handleChooseRecipient}
       />
-
-      <Description text="Who’s the lucky guy or gal?" />
-
-      <Input text="Your S/O's First Name" />
-
-      <Checkbox text="I'd prefer not to say" />
-
-      <Description
-        text="Looking around for a ring someone might surprise you with later, or are
+      {state.matches("recipient.mySignificantOther") ? (
+        <>
+          <Description text="Who’s the lucky guy or gal?" />
+          <Input
+            text="Your S/O's First Name"
+            value={mySignificantOther}
+            onChange={handleSoFirstName}
+          />
+          <Checkbox
+            text="I'd prefer not to say"
+            checked={preferNotToSay}
+            onChange={handleIdPreferNotToSay}
+          />
+        </>
+      ) : null}
+      {state.matches("recipient.me") ? (
+        <>
+          <Description
+            text="Looking around for a ring someone might surprise you with later, or are
         you planning to purchase your own ring?"
-      />
-      <Select
-        defaultOptionLabel="-- Select response --"
-        options={selectResponseOptions}
-      />
-      <PrimaryButton text="Next" />
+          />
+          <Select
+            value={me}
+            options={selectResponseOptions}
+            onChange={handleMe}
+          />
+        </>
+      ) : null}
+      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
     </>
   );
 };

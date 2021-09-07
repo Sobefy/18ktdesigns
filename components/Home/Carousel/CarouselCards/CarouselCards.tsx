@@ -25,7 +25,7 @@ const CarouselCards = ({ carouselInfo }: CarouselCardProps) => {
         return (
           <div
             className="inline-flex items-center w-full h-48 text-white bg-green-500 justify-items-center"
-            style={{ transform: "translateX(-100%)" }}
+            style={{ transform: "translateX(-0%)" }}
             key={id}
           >
             <p className="mx-auto mb-12 text-xl" key={id}>

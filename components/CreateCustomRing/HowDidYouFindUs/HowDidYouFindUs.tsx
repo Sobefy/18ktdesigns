@@ -8,9 +8,9 @@ import PrimaryButton from "../../Common/PrimaryButton";
 
 const HowDidYouFindUs = () => {
   return (
-    <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
-      <div className="lg:w-3/5 max-w-2xl">
-        <BackButton text="Back" />
+    <div className="w-full px-4 py-40 m-auto lg:px-52 lg:py-44">
+      <div className="max-w-2xl lg:w-3/5">
+        <BackButton />
         <Title text="How Did You Find Us?" />
         <Description text="Whether you stumbled across us on your own, or heard about us from a friend, letting us know how you found your way to us will help us out!" />
         <Select

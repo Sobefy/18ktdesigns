@@ -718,32 +718,34 @@ export const chooseACountry = [
 ];
 
 export const chooseRecipientOptions = [
+  { id: 0, value: "", label: "-- Choose recipient --" },
   {
     id: 1,
-    value: "mySignificantOther",
+    value: "MY_SIGNIFICANT_OTHER",
     label: "My significant other",
   },
   {
     id: 2,
-    value: "me",
+    value: "ME",
     label: "Me",
   },
 ];
 
 export const selectResponseOptions = [
+  { id: 0, value: "IDLE", label: "-- Select response --" },
   {
     id: 1,
-    value: "shoppingAround",
+    value: "SHOPPING_AROUND",
     label: "Shopping around",
   },
   {
     id: 2,
-    value: "planningToBuyMyOwnRing",
+    value: "BUYING_MY_OWN_RING",
     label: "Planning to buy my own ring",
   },
   {
     id: 3,
-    value: "mySOAndIAreShoppingTogether",
+    value: "MY_SO_AND_I_ARE_SHOPPING_TOGHETER",
     label: "My S/O and i are shopping together",
   },
 ];

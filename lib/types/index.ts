@@ -7,6 +7,7 @@ export type ListOption = {
   imageHeight?: number;
   imageUnit?: "px" | "rem";
 };
+<<<<<<< HEAD
 
 export type CarouselItems = {
   id: number;
@@ -78,3 +79,5 @@ export type BudgetOptions =
   | 23000
   | 24000
   | 24001;
+=======
+>>>>>>> f533ee495e2b627927d144759474693c9ce4ff56

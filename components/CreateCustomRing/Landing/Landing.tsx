@@ -1,48 +1,30 @@
+import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
 import PrimaryButton from "../../Common/PrimaryButton";
-import { CustomRingEvents } from "../../../src/machines/customRingMachine";
 
-interface LandingProps {
-  send(event: CustomRingEvents): void;
-}
-
-const Landing = ({ send }: LandingProps) => {
+const Landing = () => {
+  const { send } = useCreateCustomRingMachine();
   return (
-    <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
-      <div className="lg:w-3/5 max-w-2xl">
-        <h2 className="mb-6 lg:mb-12 text-4xl lg:text-5xl font-semibold">
-          Let&apos;s create your custom ring
-        </h2>
-        <p className="mb-6 lg:mb-14 text-gray-500 leading-relaxed">
-          Before we begin, we&apos;d like to learn a bit about what you&apos;re
-          looking for so we can give you the best experience possible.
-        </p>
-        <div className="flex flex-wrap">
-          <PrimaryButton
-            text="Get Started"
-            onClick={() => send({ type: "NEXT" })}
-          />
-          <a
-            className="
-                    block
-                    w-full
-                    md:w-auto
-                    text-center
-                    mb-2
-                    py-4
-                    px-8
-                    text-sm
-                    font-medium
-                    rounded
-                    border
-                    hover:border-gray-300
-                  "
-            href="#"
-          >
-            Design other jewelry
-          </a>
-        </div>
+    <>
+      <h2 className="mb-6 text-4xl font-semibold lg:mb-12 lg:text-5xl">
+        Let&apos;s create your custom ring
+      </h2>
+      <p className="mb-6 leading-relaxed text-gray-500 lg:mb-14">
+        Before we begin, we&apos;d like to learn a bit about what you&apos;re
+        looking for so we can give you the best experience possible.
+      </p>
+      <div className="flex flex-wrap">
+        <PrimaryButton
+          text="Get Started"
+          onClick={() => send({ type: "NEXT" })}
+        />
+        <a
+          className="block w-full px-8 py-4 mb-2 text-sm font-medium text-center rounded md:w-auto borderhover:border-gray-300"
+          href="#"
+        >
+          Design other jewelry
+        </a>
       </div>
-    </div>
+    </>
   );
 };
 export default Landing;

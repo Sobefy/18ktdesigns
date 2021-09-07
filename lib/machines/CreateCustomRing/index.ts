@@ -1,37 +1,24 @@
 import { createMachine, assign } from "xstate";
 
-import { BudgetOptions } from "../../lib/types";
+import {
+  Context,
+  HowDidYouFindUsOptions,
+  RecipientMeOptions,
+  RecipientStates,
+  RecipientUserSelections,
+  ShippingOptions,
+  StartsWithStyleOptions,
+  States,
+  WhenIsTheSpecialDayOptions,
+  YourCenterStoneOptions,
+  BudgetOptions,
+  MachineStates,
+} from "@lib/machines/CreateCustomRing/types";
 
-interface CustomRingContext {
+const initialContext: Context = {
   whoWillBeWearingTheRing: {
-    me: RecipientSetMeOptions;
-    mySignificantOther: string;
-    preferNotToSay: boolean;
-  };
-  startsWithStyle: {
-    styles: StartstWithStylesOptions[];
-    iHaveNoIdea: boolean;
-  };
-  yourCenterStone: {
-    stones: YourCenterStoneOptions[];
-    imNotSure: boolean;
-  };
-  setYourBudget: {
-    min: BudgetOptions;
-    max: BudgetOptions;
-    imNotSure: boolean;
-  };
-  whenIsTheSpecialDate: {
-    specialDate: WhenIsTheSpecialDayOptions;
-    date: Date;
-  };
-  shipping: ShippingOptions;
-  howDidYouFindUs: HowDidYouFindUsOptions;
-}
-
-const initialContext: CustomRingContext = {
-  whoWillBeWearingTheRing: {
-    me: "",
+    userSelection: RecipientUserSelections.EMPTY,
+    me: RecipientMeOptions.EMPTY,
     mySignificantOther: "",
     preferNotToSay: false,
   },
@@ -49,48 +36,12 @@ const initialContext: CustomRingContext = {
     imNotSure: false,
   },
   whenIsTheSpecialDate: {
-    specialDate: "",
+    specialDate: WhenIsTheSpecialDayOptions.EMTPY,
     date: new Date(),
   },
-  shipping: "",
-  howDidYouFindUs: "",
+  shipping: ShippingOptions.EMPTY,
+  howDidYouFindUs: HowDidYouFindUsOptions.EMPTY,
 };
-
-type StartstWithStylesOptions =
-  | ""
-  | "I_HAVE_IMAGES"
-  | "DROPPED_SOME_HINTS"
-  | "I_KNOW_MY_SO_SENSE_OF_STYLE"
-  | "I_HAVE_MY_OWN_IDEAS";
-
-type YourCenterStoneOptions =
-  | ""
-  | "DIAMOND"
-  | "COLORED_GEMSTONE"
-  | "MOISSANITE"
-  | "NO_STONE";
-
-type WhenIsTheSpecialDayOptions =
-  | ""
-  | "I_HAVE_A_SPECIFIC_DATE"
-  | "NEXT_1_2_MONTHS"
-  | "NEXT_6_MONTHS"
-  | "NEXT_12_MONTHS"
-  | "OVER_A_YEAR"
-  | "IM_JUST_LOOKING";
-
-type ShippingOptions = "" | "US" | "CA" | "UK" | "AU" | "OTHER";
-
-type HowDidYouFindUsOptions =
-  | ""
-  | "INTERNET_SEARCH"
-  | "MY_SIGNIFICANT_OTHER"
-  | "FRIENDS_OR_FAMILY"
-  | "SOCIAL_MEDIA"
-  | "BLOG"
-  | "RADIO_OR_TV"
-  | "PRINT"
-  | "OTHER";
 
 type Next = {
   type: "NEXT";
@@ -126,20 +77,14 @@ type RecipientSetPrefferNotToSay = {
   value: boolean;
 };
 
-type RecipientSetMeOptions =
-  | ""
-  | "SHOPPING_AROUND"
-  | "BUYING_MY_OWN_RING"
-  | "SHOPPING_TOGHETER";
-
 type RecipientSetMe = {
   type: "SET_ME";
-  value: RecipientSetMeOptions;
+  value: RecipientMeOptions;
 };
 
 type StartsWithStyleSetStyles = {
   type: "SET_STYLES";
-  styles: StartstWithStylesOptions[];
+  styles: StartsWithStyleOptions[];
 };
 
 type StartsWithStyleSetIHaveNoIdea = {
@@ -211,67 +156,86 @@ export type CustomRingEvents =
   | SetShipping
   | SetHowDidYouFindUs;
 
-type CustomRingState = {
-  value:
-    | "landing"
-    | "recipient"
-    | "recipient.idle"
-    | "recipient.mySignificantOther"
-    | "recipient.me"
-    | "startsWithStyle";
-  context: CustomRingContext;
-};
-
 export const customRingMachine = createMachine<
-  CustomRingContext,
+  Context,
   CustomRingEvents,
-  CustomRingState
+  MachineStates
 >(
   {
     id: "createCustomRing",
-    initial: "landing",
+    initial: States.landing,
     context: initialContext,
     states: {
-      landing: {
-        on: { NEXT: "recipient.hist", DESIGN_OTHER_JEWERLY: {} },
-      },
-      recipient: {
-        initial: "idle",
+      [States.landing]: {
         on: {
-          BACK: "landing",
-          IDLE: "recipient.idle",
-          MY_SIGNIFICANT_OTHER: "recipient.mySignificantOther",
-          ME: "recipient.me",
+          NEXT: `${States.recipient}.${RecipientStates.hist}`,
+          DESIGN_OTHER_JEWERLY: {},
+        },
+      },
+      [States.recipient]: {
+        initial: RecipientStates.idle,
+        on: {
+          BACK: States.landing,
+          IDLE: {
+            target: `${States.recipient}.${RecipientStates.idle}`,
+            actions: assign((context) => ({
+              whoWillBeWearingTheRing: {
+                ...context.whoWillBeWearingTheRing,
+                userSelection: RecipientUserSelections.EMPTY,
+              },
+            })),
+          },
+          MY_SIGNIFICANT_OTHER: {
+            target: `${States.recipient}.${RecipientStates.mySignificantOther}`,
+            actions: assign((context) => ({
+              whoWillBeWearingTheRing: {
+                ...context.whoWillBeWearingTheRing,
+                userSelection: RecipientUserSelections.MY_SIGNIFICANT_OTHER,
+              },
+            })),
+          },
+          ME: {
+            target: `${States.recipient}.${RecipientStates.me}`,
+            actions: assign({
+              whoWillBeWearingTheRing: (context) => ({
+                ...context.whoWillBeWearingTheRing,
+                userSelection: RecipientUserSelections.ME,
+              }),
+            }),
+          },
           NEXT: [
-            { target: "startsWithStyle", in: "#createCustomRing.recipient.me" },
             {
-              target: "startsWithStyle",
+              target: States.startsWithStyle,
+              in: "#createCustomRing.recipient.me",
+            },
+            {
+              target: States.startsWithStyle,
               in: "#createCustomRing.recipient.mySignificantOther",
               cond: "isMySignificantOtherFilled",
             },
           ],
         },
         states: {
-          idle: {},
-          mySignificantOther: {
+          [RecipientStates.idle]: {},
+          [RecipientStates.mySignificantOther]: {
             on: {
               SET_MY_SIGNIFICANT_OTHER: { actions: "setMySignificantOther" },
               SET_PREFFER_NOT_TO_SAY: { actions: "setPrefferNotToSay" },
             },
           },
-          me: {
+          [RecipientStates.me]: {
             on: {
               SET_ME: { actions: "setMe" },
             },
           },
-          hist: {
+          [RecipientStates.hist]: {
             type: "history",
           },
         },
       },
-      startsWithStyle: {
+      [States.startsWithStyle]: {
         on: {
-          BACK: "recipient.hist",
+          BACK: `${States.recipient}.${RecipientStates.hist}`,
           SET_STYLES: {
             actions: "setStyles",
           },
@@ -279,53 +243,58 @@ export const customRingMachine = createMachine<
             actions: "setIHaveNoIdea",
           },
           NEXT: [
-            { target: "yourCenterStone", cond: "isStartsWithStyleFilled" },
+            { target: States.yourCenterStone, cond: "isStartsWithStyleFilled" },
           ],
         },
       },
-      yourCenterStone: {
+      [States.yourCenterStone]: {
         on: {
-          BACK: "startsWithStyle",
+          BACK: States.startsWithStyle,
           SET_STONES: {
             actions: "setCenterStones",
           },
           SET_IM_NOT_SURE: { actions: "setImNotSure" },
-          NEXT: [{ target: "setYourBudget", cond: "isYourCenterStoneFilled" }],
+          NEXT: [
+            { target: States.setYourBudget, cond: "isYourCenterStoneFilled" },
+          ],
         },
       },
-      setYourBudget: {
+      [States.setYourBudget]: {
         on: {
-          BACK: "yourCenterStone",
+          BACK: States.yourCenterStone,
           SET_MIN: { actions: "setMin" },
           SET_MAX: { actions: "setMax" },
           SET_YOUR_BUDGET_SET_IM_NOT_SURE: {
             actions: "setYourBudgetSetImNotSure",
           },
           NEXT: [
-            { target: "whenIsTheSpecialDate", cond: "isSetYourBudgetFilled" },
+            {
+              target: States.whenIsTheSpecialDate,
+              cond: "isSetYourBudgetFilled",
+            },
           ],
         },
       },
-      whenIsTheSpecialDate: {
+      [States.whenIsTheSpecialDate]: {
         on: {
-          BACK: "setYourBudget",
+          BACK: States.setYourBudget,
           SET_SPECIAL_DATE: { actions: "setSpecialDate" },
           SET_DATE: { actions: "setDate" },
           NEXT: [{ target: "shipping", cond: "isSpecialDateFilled" }],
         },
       },
-      shipping: {
+      [States.shipping]: {
         on: {
-          BACK: "whenIsTheSpecialDate",
+          BACK: States.whenIsTheSpecialDate,
           SET_SHIPPING: {
             actions: "setShipping",
           },
-          NEXT: [{ target: "", cond: "isShippingFilled" }],
+          NEXT: [{ target: States.howDidYouFindUs, cond: "isShippingFilled" }],
         },
       },
-      howDidYouFindUs: {
+      [States.howDidYouFindUs]: {
         on: {
-          BACK: "shipping",
+          BACK: States.shipping,
           SET_HOW_DID_YOU_FIND_US: { actions: "setHowDidYouFindUs" },
           NEXT: [{ target: "", cond: "howDidYouFindUsIsFilled" }],
         },
@@ -342,6 +311,7 @@ export const customRingMachine = createMachine<
           whoWillBeWearingTheRing: {
             ...context.whoWillBeWearingTheRing,
             mySignificantOther: event.value,
+            preferNotToSay: false,
           },
         };
       }),
@@ -352,6 +322,7 @@ export const customRingMachine = createMachine<
         return {
           whoWillBeWearingTheRing: {
             ...context.whoWillBeWearingTheRing,
+            mySignificantOther: "",
             preferNotToSay: event.value,
           },
         };
