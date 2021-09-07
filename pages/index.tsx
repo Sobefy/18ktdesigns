@@ -1,8 +1,8 @@
 import Header from "../components/CreateCustomRing/Header";
 import Hero from "../components/Home/Hero";
 import Services from "../components/Home/Services";
-import CTA from '../components/Home/CTA/CTA';
-import CTACollage from "../components/Home/CTACollage";
+import CTA from "../components/Home/CTA/CTA";
+import Testimonials from "../components/Home/Testimonials";
 
 const Home = () => {
   return (
@@ -10,8 +10,8 @@ const Home = () => {
       <Header />
       <Hero />
       <Services />
-      <CTA/>
-      <CTACollage/>
+      <CTA />
+      <Testimonials />
     </>
   );
 };

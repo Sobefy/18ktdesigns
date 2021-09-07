@@ -1,4 +1,4 @@
-import { ListOption } from "../types";
+import { CarouselItems, ListOption } from "../types";
 
 export const selectStone: ListOption[] = [
   {
@@ -745,5 +745,50 @@ export const selectResponseOptions = [
     id: 3,
     value: "mySOAndIAreShoppingTogether",
     label: "My S/O and i are shopping together",
+  },
+];
+
+export const CarouselCard: CarouselItems[] = [
+  {
+    id: 1,
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
+    testimonial: "Ah si, me gusta muchísimo este volado",
+    image: "/zeus-assets/images/picture.png",
+    imageWidth: 80,
+    imageHeight: 80,
+    imageUnit: "px",
+    objectFit: "object-cover",
+    objectPosition: "object-top",
+    borderRadius: "rounded-full",
+    marriedSince: "Married on 08/20/2020",
+  },
+  {
+    id: 2,
+    value: "betoandedgardo",
+    label: "Beto & Edgardo",
+    testimonial: "Fascinados con nuestros anillos",
+    image: "/zeus-assets/images/picture.png",
+    imageWidth: 80,
+    imageHeight: 80,
+    imageUnit: "px",
+    objectFit: "object-cover",
+    objectPosition: "object-top",
+    borderRadius: "rounded-full",
+    marriedSince: "Married on 09/06/2021",
+  },
+  {
+    id: 3,
+    value: "oscarandpaola",
+    label: "Oscar & Paola",
+    testimonial: "Yo ni me quería casar pero, me doblegué a la presión social",
+    image: "/zeus-assets/images/picture.png",
+    imageWidth: 80,
+    imageHeight: 80,
+    imageUnit: "px",
+    objectFit: "object-cover",
+    objectPosition: "object-top",
+    borderRadius: "rounded-full",
+    marriedSince: "Married on 09/06/2021",
   },
 ];
