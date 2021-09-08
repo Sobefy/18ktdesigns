@@ -23,16 +23,18 @@ const CTACollage = () => {
           <div className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
             <div className="max-w-lg">
               <ComposedTitles
+                titleSize="sm"
                 titleText="What's new at Shuffle"
                 subtitleText="We've been part of more than 500 celebrations"
               />
-
               <Description
-                ctaCollageSubDescription={true}
                 text="Our work speaks for itself. We have designed more than 1000
                   rings up to date."
               />
-              <PrimaryButton ctaCollageButton={true} text="Start a Project" />
+              <PrimaryButton
+                buttonLocated="ctaCollageButton"
+                text="Start a Project"
+              />
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">

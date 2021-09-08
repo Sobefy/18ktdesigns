@@ -1,33 +1,50 @@
 interface ComposedTitlesProps {
   titleText?: string;
-  subtitleText: string;
-  alternateSize?: boolean;
-  ctaTitle?: boolean;
+  subtitleText?: string;
+  titleSize?: "sm" | "md";
+  subtitleSize?: "sm" | "md" | "lg" | "xl";
 }
 
 const ComposedTitles = ({
-  titleText,
-  subtitleText,
-  alternateSize = false,
-  ctaTitle = false,
+  titleText = "",
+  subtitleText = "",
+  titleSize = "md",
+  subtitleSize = "md",
 }: ComposedTitlesProps) => {
-  const getTitleClassName = () => {
-    if (ctaTitle) {
-      return "lg:text-6xl  max-w-full mx-auto";
+  const getSubtitleClassName = () => {
+    switch (subtitleSize) {
+      case "xl":
+        return "lg:text-6xl  max-w-full mx-auto";
+      case "lg":
+        return "lg:text-5xl  max-w-5xl mx-auto mb-12";
+      case "md":
+          return "mb-10 lg:mb-16 text-4xl";
+      case "sm":
+        return "text-3xl";
+      default:
+        return "";
     }
-    if (alternateSize) {
-      return "lg:text-5xl  max-w-5xl mx-auto";
+  };
+  const getTitleClassName = () => {
+    if (titleSize === "sm") {
+      return "text-xs";
     }
     return "";
   };
   return (
     <>
-      <span className="font-semibold text-blue-400">{titleText}</span>
-      <h2
-        className={`mt-8 mb-12 text-4xl font-semibold font-heading ${getTitleClassName()}`}
-      >
-        {subtitleText}
-      </h2>
+      {titleText ? (
+        <span className={`font-semibold text-blue-400 ${getTitleClassName()}`}>
+          {titleText}
+        </span>
+      ) : null}
+      {subtitleText ? (
+        <h2
+          className={`mt-8 font-semibold font-heading ${getSubtitleClassName()}`}
+        >
+          {subtitleText}
+        </h2>
+      ) : null}
     </>
   );
 };

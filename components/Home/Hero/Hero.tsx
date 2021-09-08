@@ -5,12 +5,12 @@ import PrimaryDescription from "../../Common/PrimaryDescription";
 const Hero = () => {
   return (
     <div className="relative md:pb-24 lg:pb-80">
-      <div className="pt-44 pb-32 md:pb-64 bg-blue-50">
+      <div className="pb-32 pt-44 md:pb-64 bg-blue-50">
         <div className="container px-4 mx-auto mb-12 text-center">
           <ComposedTitles
             titleText="Welcome to 18KT Designs"
             subtitleText="We're changing the way you buy an engagement ring."
-            alternateSize={true}
+            subtitleSize="lg"
           />
           <PrimaryDescription
             text="Work with a professional team of jewelry designers and
@@ -18,27 +18,27 @@ const Hero = () => {
               engagement rings and wedding bands for your special occasion."
           />
           <PrimaryButton text="Start a Project" />
-          <PrimaryButton text="View Past Work" alternateButton={true} />
+          <PrimaryButton text="View Past Work" buttonLocated="alternateButton" />
         </div>
-        <div className="lg:absolute inset-x-0 max-w-3xl mx-auto px-4">
+        <div className="inset-x-0 max-w-3xl px-4 mx-auto lg:absolute">
           <img
-            className="lg:absolute top-0 left-0 h-96 w-full md:mt-20 mx-auto rounded-lg object-cover"
+            className="top-0 left-0 object-cover w-full mx-auto rounded-lg lg:absolute h-96 md:mt-20"
             src="/images/happy-couple-engaged-couple-engagement-ring-couple-in-love-t20-29Zp7E.jpg"
             alt=""
           />
         </div>
         <img
-          className="hidden lg:block lg:absolute top-0 left-0 mt-32"
+          className="top-0 left-0 hidden mt-32 lg:block lg:absolute"
           src="zeus-assets/icons/dots/red-dot-left-bars.svg"
           alt=""
         />
         <img
-          className="hidden lg:block lg:absolute bottom-0 right-0 mb-80"
+          className="bottom-0 right-0 hidden lg:block lg:absolute mb-80"
           src="zeus-assets/icons/dots/yellow-dot-right-shield-blue-line.svg"
           alt=""
         />
         <img
-          className="lg:hidden absolute bottom-0 right-0"
+          className="absolute bottom-0 right-0 lg:hidden"
           src="zeus-assets/icons/dots/yellow-dot-right-shield-blue-line.svg"
           alt=""
         />

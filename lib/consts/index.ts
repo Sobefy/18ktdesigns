@@ -1,5 +1,55 @@
 import { ListOption } from "../types";
 
+export const socialNetworkLinks = [
+  {
+    id: 1,
+    value: "facebook",
+    url: "https://translate.google.com/",
+  },
+  {
+    id: 2,
+    value: "facebook",
+    url: "https://translate.google.com/",
+
+  },
+  {
+    id: 3,
+    value: "facebook",
+    url: "https://translate.google.com/",
+  },
+  {
+    id: 4,
+    value: "facebook",
+    url: "https://translate.google.com/",
+    
+  },
+];
+export const listFooter = [
+  {
+    id: 1,
+    value: "partnerships",
+    label: "Partnerships",
+    url:"https://translate.google.com/",
+  },
+  {
+    id: 2,
+    value: "affiliates",
+    label: "Affiliates",
+    url:"https://twitter.com/",
+  },
+  {
+    id: 3,
+    value: "press",
+    label: "Press",
+    url:"https://translate.google.com/",
+  },
+  {
+    id: 4,
+    value: "privacyPolicy",
+    label: "Privacy Policy",
+    url:"https://twitter.com/",
+  },
+];
 export const selectStone: ListOption[] = [
   {
     id: 1,
@@ -81,7 +131,6 @@ export const chooseAResponse = [
     label: "Other",
   },
 ];
-
 export const selectAllThatApply = [
   {
     id: 1,
