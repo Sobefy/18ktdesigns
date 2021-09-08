@@ -23,9 +23,12 @@ const BlogCarousel = ({ loop = false }: BlogCarouselProps) => {
     <>
       <div className="flex flex-wrap items-end mb-6 -mx-4 lg:mb-14">
         <div className="w-full px-4 lg:w-3/5">
-          <ComposedTitles titleText="Past Works" />
+          <ComposedTitles titleText="Past Works" titleSize="sm" />
           <div className="mt-8 sm:mb-2 lg:mb-0">
-            <ComposedTitles subtitleText="Some of our recent projects" />
+            <ComposedTitles
+              subtitleText="Some of our recent projects"
+              subtitleSize="md"
+            />
           </div>
         </div>
 

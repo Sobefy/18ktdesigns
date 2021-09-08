@@ -28,9 +28,12 @@ const Carousel = ({ loop = false }: CarouselProps) => {
         onClick={() => updateIndex(activeIndex - 1)}
       />
       <div className="max-w-3xl mx-auto text-center">
-        <ComposedTitles titleText="Testimonials" />
+        <ComposedTitles titleText="Testimonials" titleSize="sm" />
         <div className="mt-8 mb-10">
-          <ComposedTitles subtitleText="500+ happy couples served!" />
+          <ComposedTitles
+            subtitleText="500+ happy couples served!"
+            subtitleSize="md"
+          />
         </div>
         <div className="overflow-hidden">
           <div

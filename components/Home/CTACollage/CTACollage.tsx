@@ -28,7 +28,10 @@ const CTACollage = () => {
                 titleSize="sm"
               />
               <div className="mt-8 mb-6 lg:mb-10">
-                <ComposedTitles subtitleText="We've been part of more than 500 celebrations" />
+                <ComposedTitles
+                  subtitleText="We've been part of more than 500 celebrations"
+                  subtitleSize="md"
+                />
               </div>
               <div className="mb-6 lg:mb-12">
                 <PrimaryDescription
