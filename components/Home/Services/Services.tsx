@@ -1,3 +1,5 @@
+import PrimaryDescription from "@components/Common/PrimaryDescription";
+import ServicesCards from "@components/Common/ServicesCards";
 import ComposedTitles from "../../Common/ComposedTitles";
 
 /* eslint-disable @next/next/no-img-element */
@@ -15,10 +17,12 @@ const Services = () => {
             <img src="images/blob-ring.png" alt="" />
           </div>
           <div className="w-full px-4 mb-6 lg:w-1/2 lg:mb-0">
-            <ComposedTitles
-              subtitleText="Work with former jewelry brand designers"
-              subtitleSize="md"
-            />
+            <div className="mb-10 lg:mb-16">
+              <ComposedTitles
+                subtitleText="Work with former jewelry brand designers"
+                subtitleSize="md"
+              />
+            </div>
             <div className="relative flex flex-wrap -mx-4 -mb-12">
               <div className="relative w-full px-4 mb-12 lg:w-1/2">
                 <img
@@ -26,28 +30,26 @@ const Services = () => {
                   src="zeus-assets/icons/line-little-top.svg"
                   alt=""
                 />
-                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
-                  1
-                </span>
-                <h3 className="mb-4 text-2xl font-semibold font-heading">
-                  Sketching
-                </h3>
-                <p className="text-xl text-gray-500">
-                  We&apos;ll sketch your piece based on your personal taste and
-                  specifications.
-                </p>
+                <ServicesCards position="1" />
+                <div className="mb-4">
+                  <ComposedTitles subtitleText="Sketching" subtitleSize />
+                </div>
+                <PrimaryDescription
+                  text="We'll sketch your piece based on your personal taste and
+                  specifications."
+                  textSize="gray"
+                />
               </div>
               <div className="w-full px-4 mb-12 lg:w-1/2">
-                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
-                  2
-                </span>
-                <h3 className="mb-4 text-2xl font-semibold font-heading">
-                  Gems &amp; Diamonds
-                </h3>
-                <p className="text-xl text-gray-500">
-                  Our experts will be by your side and work hard to find the
-                  perfect gems and diamonds for your piece.
-                </p>
+                <ServicesCards position="2" />
+                <div className="mb-4">
+                  <ComposedTitles subtitleText="Gems & Diamonds" subtitleSize />
+                </div>
+                <PrimaryDescription
+                  text="Our experts will be by your side and work hard to find the
+                  perfect gems and diamonds for your piece."
+                  textSize="gray"
+                />
               </div>
               <div className="relative w-full px-4 mb-12 lg:w-1/2">
                 <img
@@ -55,28 +57,29 @@ const Services = () => {
                   src="zeus-assets/icons/line-little.svg"
                   alt=""
                 />
-                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
-                  3
-                </span>
-                <h3 className="mb-4 text-2xl font-semibold font-heading">
-                  Put it all together.
-                </h3>
-                <p className="text-xl text-gray-500">
-                  We then send our design to our manufacturing team of industry
-                  designers.
-                </p>
+                <ServicesCards position="3" />
+                <div className="mb-4">
+                  <ComposedTitles
+                    subtitleText="Put it all together."
+                    subtitleSize
+                  />
+                </div>
+                <PrimaryDescription
+                  text="We then send our design to our manufacturing team of
+                  industry designers."
+                  textSize="gray"
+                />
               </div>
               <div className="w-full px-4 mb-12 lg:w-1/2">
-                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
-                  4
-                </span>
-                <h3 className="mb-4 text-2xl font-semibold font-heading">
-                  Budget friendly
-                </h3>
-                <p className="text-xl text-gray-500">
-                  We can work with your budget yet create something unique and
-                  memorable.
-                </p>
+                <ServicesCards position="4" />
+                <div className="mb-4">
+                  <ComposedTitles subtitleText="Budget friendly" subtitleSize />
+                </div>
+                <PrimaryDescription
+                  text="We can work with your budget yet create something unique
+                      and memorable."
+                  textSize="gray"
+                />
               </div>
             </div>
           </div>

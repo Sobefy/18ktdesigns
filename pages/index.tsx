@@ -6,6 +6,7 @@ import CTACollage from "../components/Home/CTACollage";
 import Newsletter from "../components/Home/NewsLetter/Newsletter";
 import Footer from "@components/Home/Footer";
 import Testimonials from "../components/Home/Testimonials";
+import RecentProjects from "@components/Home/RecentProjects/RecentProjects";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Testimonials />
+      <RecentProjects />
       <CTA />
       <CTACollage />
       <Newsletter />
