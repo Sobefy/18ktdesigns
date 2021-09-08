@@ -1,4 +1,3 @@
-import SlideButtons from "../../Common/SlideButtons";
 import Carousel from "../Carousel/Carousel";
 
 /* eslint-disable @next/next/no-img-element */

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import ComposedTitles from "@components/Common/ComposedTitles";
 import CarouselCard from "../CarouselCard";
 import { carouselData } from "../../../../lib/consts";
 import SlideButtons from "@components/Common/SlideButtons";
@@ -28,9 +28,13 @@ const Carousel = ({ loop = false }: CarouselProps) => {
         onClick={() => updateIndex(activeIndex - 1)}
       />
       <div className="max-w-3xl mx-auto text-center">
+        <ComposedTitles
+          titleText="Testimonials"
+          subtitleText="500+ happy couples served!"
+        />
         <div className="overflow-hidden">
           <div
-            className="transition duration-300 whitespace-nowrap"
+            className="transition duration-300 whitespace-nowrap "
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
           >
             {carouselData.map((carousel) => (

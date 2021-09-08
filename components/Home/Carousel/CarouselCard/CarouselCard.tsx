@@ -1,4 +1,5 @@
 import { CarouselItem } from "../../../../lib/types";
+import Image from "next/image";
 
 interface CarouselCardProps {
   data: CarouselItem;
@@ -14,20 +15,27 @@ const CarouselCard = ({ data }: CarouselCardProps) => {
     imageWidth = 80,
     imageHeight = 80,
     imageUnit = "px",
-    objectFit,
-    objectPosition,
-    borderRadius,
     marriedSince,
   } = data;
 
   return (
-    <div
-      className="inline-flex items-center w-full h-48 text-white bg-green-500 justify-items-center"
-      key={id}
-    >
-      <p className="mx-auto mb-12 text-xl" key={id}>
-        {testimonial}
-      </p>
+    <div className="inline-flex flex-col items-center w-full max-w-3xl justify-items-center">
+      <div className="mx-auto mb-12">
+        <p className="text-xl text-gray-500 ">{testimonial}</p>
+      </div>
+
+      <div className="mx-auto mb-8">
+        {image ? (
+          <Image
+            src={image}
+            alt={value}
+            width={`${imageWidth}${imageUnit}`}
+            height={`${imageHeight}${imageUnit}`}
+          />
+        ) : null}
+      </div>
+      <p className="mb-2 text-2xl font-semibold font-heading">{label}</p>
+      <p className="text-gray-500">{marriedSince}</p>
     </div>
   );
 };
