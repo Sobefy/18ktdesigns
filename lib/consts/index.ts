@@ -1,4 +1,4 @@
-import { CarouselItem, ListOption } from "../types";
+import { CarouselItem, ListOption, BlogCarouselItem } from "../types";
 
 export const socialNetworkLinks = [
   {
@@ -804,7 +804,8 @@ export const carouselData: CarouselItem[] = [
     id: 1,
     value: "ryanandsandy",
     label: "Ryan & Sandy",
-    testimonial: "Ah si, me gusta muchísimo este volado",
+    testimonial:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
     image: "/zeus-assets/images/02.png",
     imageWidth: 80,
     imageHeight: 80,
@@ -815,7 +816,8 @@ export const carouselData: CarouselItem[] = [
     id: 2,
     value: "betoandedgardo",
     label: "Beto & Edgardo",
-    testimonial: "Fascinados con nuestros anillos",
+    testimonial:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
     image: "/zeus-assets/images/02.png",
     imageWidth: 80,
     imageHeight: 80,
@@ -826,11 +828,48 @@ export const carouselData: CarouselItem[] = [
     id: 3,
     value: "oscarandpaola",
     label: "Oscar & Paola",
-    testimonial: "Yo ni me quería casar pero, me doblegué a la presión social",
+    testimonial:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
     image: "/zeus-assets/images/02.png",
     imageWidth: 80,
     imageHeight: 80,
     imageUnit: "px",
-    marriedSince: "Married on 09/06/2021",
+    marriedSince: "Married on 10/27/2018",
+  },
+];
+
+export const blogCarouselData: BlogCarouselItem[] = [
+  {
+    id: 1,
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
+    summary:
+      "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
+    image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
+    imageWidth: 864,
+    imageHeight: 384,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    value: "betoandedgardo",
+    label: "Beto & Edgardo",
+    summary:
+      "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
+    image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
+    imageWidth: 864,
+    imageHeight: 384,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    value: "oscarandpaola",
+    label: "Oscar & Paola",
+    summary:
+      "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
+    image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
+    imageWidth: 864,
+    imageHeight: 384,
+    imageUnit: "px",
   },
 ];
