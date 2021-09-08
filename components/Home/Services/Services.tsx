@@ -32,7 +32,7 @@ const Services = () => {
                 />
                 <ServicesCards position="1" />
                 <div className="mb-4">
-                  <ComposedTitles subtitleText="Sketching" subtitleSize />
+                  <ComposedTitles subtitleText="Sketching" />
                 </div>
                 <PrimaryDescription
                   text="We'll sketch your piece based on your personal taste and
@@ -43,7 +43,7 @@ const Services = () => {
               <div className="w-full px-4 mb-12 lg:w-1/2">
                 <ServicesCards position="2" />
                 <div className="mb-4">
-                  <ComposedTitles subtitleText="Gems & Diamonds" subtitleSize />
+                  <ComposedTitles subtitleText="Gems & Diamonds" />
                 </div>
                 <PrimaryDescription
                   text="Our experts will be by your side and work hard to find the
@@ -59,10 +59,7 @@ const Services = () => {
                 />
                 <ServicesCards position="3" />
                 <div className="mb-4">
-                  <ComposedTitles
-                    subtitleText="Put it all together."
-                    subtitleSize
-                  />
+                  <ComposedTitles subtitleText="Put it all together." />
                 </div>
                 <PrimaryDescription
                   text="We then send our design to our manufacturing team of
@@ -73,7 +70,7 @@ const Services = () => {
               <div className="w-full px-4 mb-12 lg:w-1/2">
                 <ServicesCards position="4" />
                 <div className="mb-4">
-                  <ComposedTitles subtitleText="Budget friendly" subtitleSize />
+                  <ComposedTitles subtitleText="Budget friendly" />
                 </div>
                 <PrimaryDescription
                   text="We can work with your budget yet create something unique

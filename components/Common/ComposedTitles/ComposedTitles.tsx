@@ -8,8 +8,8 @@ interface ComposedTitlesProps {
 const ComposedTitles = ({
   titleText = "",
   subtitleText = "",
-  titleSize = "md",
-  subtitleSize = "md",
+  titleSize,
+  subtitleSize,
 }: ComposedTitlesProps) => {
   const getSubtitleClassName = () => {
     switch (subtitleSize) {
