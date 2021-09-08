@@ -17,9 +17,6 @@ export type CarouselItem = {
   imageWidth?: number;
   imageHeight?: number;
   imageUnit?: "px" | "rem";
-  objectFit?: string;
-  objectPosition?: string;
-  borderRadius?: string;
   marriedSince?: string | number;
 };
 
