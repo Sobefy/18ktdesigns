@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import { ListOption } from "../../../lib/types";
-import SelectedSvg from "../SelectedSvg";
+import { ListOption } from "@lib/types";
+import SelectedSvg from "@components/Common/SelectedSvg";
 
 interface ListProps {
   options: ListOption[];

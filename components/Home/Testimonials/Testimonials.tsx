@@ -1,3 +1,6 @@
+import SlideButtons from "../../Common/SlideButtons";
+import Carousel from "../Carousel/Carousel";
+
 /* eslint-disable @next/next/no-img-element */
 const Testimonials = () => {
   return (
@@ -12,6 +15,9 @@ const Testimonials = () => {
         src="zeus-assets/icons/dots/yellow-dot-right-shield.svg"
         alt=""
       />
+      <div className="container px-4 mx-auto">
+        <Carousel loop />
+      </div>
     </div>
   );
 };

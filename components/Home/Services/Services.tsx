@@ -11,13 +11,14 @@ const Services = () => {
       />
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap -mx-4">
-          <div
-            className="relative flex items-center order-last w-full px-4 lg:w-1/2 lg:order-first"
-          >
+          <div className="relative flex items-center order-last w-full px-4 lg:w-1/2 lg:order-first">
             <img src="images/blob-ring.png" alt="" />
           </div>
           <div className="w-full px-4 mb-6 lg:w-1/2 lg:mb-0">
-            <ComposedTitles subtitleText="Work with former jewelry brand designers" subtitleSize="md" />
+            <ComposedTitles
+              subtitleText="Work with former jewelry brand designers"
+              subtitleSize="md"
+            />
             <div className="relative flex flex-wrap -mx-4 -mb-12">
               <div className="relative w-full px-4 mb-12 lg:w-1/2">
                 <img
@@ -25,9 +26,7 @@ const Services = () => {
                   src="zeus-assets/icons/line-little-top.svg"
                   alt=""
                 />
-                <span
-                  className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50"
-                >
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   1
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">
@@ -39,9 +38,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="w-full px-4 mb-12 lg:w-1/2">
-                <span
-                  className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50"
-                >
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   2
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">
@@ -58,9 +55,7 @@ const Services = () => {
                   src="zeus-assets/icons/line-little.svg"
                   alt=""
                 />
-                <span
-                  className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50"
-                >
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   3
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">
@@ -72,9 +67,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="w-full px-4 mb-12 lg:w-1/2">
-                <span
-                  className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50"
-                >
+                <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
                   4
                 </span>
                 <h3 className="mb-4 text-2xl font-semibold font-heading">

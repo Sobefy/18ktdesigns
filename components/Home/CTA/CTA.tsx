@@ -1,5 +1,4 @@
 import ComposedTitles from "../../Common/ComposedTitles/ComposedTitles";
-import Description from "../../Common/Description";
 import PrimaryButton from "../../Common/PrimaryButton";
 const CTA = () => {
   return (
@@ -10,15 +9,9 @@ const CTA = () => {
           subtitleSize="xl"
         />
         <div className="flex flex-wrap items-center">
-          <div className="inline-block max-w-xl mb-6 md:mb-0">
-            <Description
-              ctaDescription
-              text="Drop us a line, and we'll get in touch."
-            />
-            <Description
-              ctaDescription
-              text="We'll see if we're a match and how we can help each other."
-            />
+          <div className="inline-block max-w-xl mb-6 md:mb-0"> 
+          <p className="text-xl">Drop us a line, and we&apos;ll get in touch.</p>
+          <p className="text-xl">We&apos;ll see if we&apos;re a match and how we can help each other.</p>
           </div>
           <PrimaryButton buttonLocated="ctaButton" text="Start a Project" />
         </div>
