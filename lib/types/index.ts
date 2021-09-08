@@ -20,6 +20,17 @@ export type CarouselItem = {
   marriedSince?: string | number;
 };
 
+export type BlogCarouselItem = {
+  id: number;
+  value: string;
+  label: string;
+  summary?: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL

@@ -19,7 +19,7 @@ const CarouselCard = ({ data }: CarouselCardProps) => {
   } = data;
 
   return (
-    <div className="inline-flex flex-col items-center w-full max-w-3xl justify-items-center">
+    <div className="inline-flex flex-col items-center w-full whitespace-normal justify-items-center">
       <div className="mx-auto mb-12">
         <p className="text-xl text-gray-500 ">{testimonial}</p>
       </div>
