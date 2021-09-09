@@ -31,6 +31,12 @@ export type BlogCarouselItem = {
   imageUnit?: "px" | "rem";
 };
 
+export type ServicesInfo = {
+  id: number;
+  title: string;
+  description: string;
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL

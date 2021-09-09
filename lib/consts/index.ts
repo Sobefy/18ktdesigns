@@ -1,4 +1,9 @@
-import { CarouselItem, ListOption, BlogCarouselItem } from "../types";
+import {
+  CarouselItem,
+  ListOption,
+  BlogCarouselItem,
+  ServicesInfo,
+} from "../types";
 
 export const socialNetworkLinks = [
   {
@@ -10,7 +15,6 @@ export const socialNetworkLinks = [
     id: 2,
     value: "facebook",
     url: "https://translate.google.com/",
-
   },
   {
     id: 3,
@@ -21,7 +25,6 @@ export const socialNetworkLinks = [
     id: 4,
     value: "facebook",
     url: "https://translate.google.com/",
-    
   },
 ];
 export const listFooter = [
@@ -29,25 +32,25 @@ export const listFooter = [
     id: 1,
     value: "partnerships",
     label: "Partnerships",
-    url:"https://translate.google.com/",
+    url: "https://translate.google.com/",
   },
   {
     id: 2,
     value: "affiliates",
     label: "Affiliates",
-    url:"https://twitter.com/",
+    url: "https://twitter.com/",
   },
   {
     id: 3,
     value: "press",
     label: "Press",
-    url:"https://translate.google.com/",
+    url: "https://translate.google.com/",
   },
   {
     id: 4,
     value: "privacyPolicy",
     label: "Privacy Policy",
-    url:"https://twitter.com/",
+    url: "https://twitter.com/",
   },
 ];
 export const selectStone: ListOption[] = [
@@ -871,5 +874,32 @@ export const blogCarouselData: BlogCarouselItem[] = [
     imageWidth: 864,
     imageHeight: 384,
     imageUnit: "px",
+  },
+];
+
+export const servicesData: ServicesInfo[] = [
+  {
+    id: 1,
+    title: "Sketching",
+    description:
+      "We'll sketch your piece based on your personal taste and specifications.",
+  },
+  {
+    id: 2,
+    title: "Gems & Diamonds",
+    description:
+      "Our experts will be by your side and work hard to find the perfect gems and diamonds for your piece.",
+  },
+  {
+    id: 3,
+    title: "Put it all together.",
+    description:
+      "We then send our design to our manufacturing team of industry designers.",
+  },
+  {
+    id: 4,
+    title: "Budget friendly",
+    description:
+      "We can work with your budget yet create something unique and memorable.",
   },
 ];

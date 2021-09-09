@@ -1,6 +1,6 @@
-import PrimaryDescription from "@components/Common/PrimaryDescription";
-import ServicesCards from "@components/Common/ServicesCards";
+import { servicesData } from "@lib/consts";
 import ComposedTitles from "../../Common/ComposedTitles";
+import ServicesCard from "./ServicesCard";
 
 /* eslint-disable @next/next/no-img-element */
 const Services = () => {
@@ -24,60 +24,9 @@ const Services = () => {
               />
             </div>
             <div className="relative flex flex-wrap -mx-4 -mb-12">
-              <div className="relative w-full px-4 mb-12 lg:w-1/2">
-                <img
-                  className="absolute top-0 left-0 hidden ml-24 -mt-10 lg:block"
-                  src="zeus-assets/icons/line-little-top.svg"
-                  alt=""
-                />
-                <ServicesCards position="1" />
-                <div className="mb-4">
-                  <ComposedTitles subtitleText="Sketching" />
-                </div>
-                <PrimaryDescription
-                  text="We'll sketch your piece based on your personal taste and
-                  specifications."
-                  textSize="gray"
-                />
-              </div>
-              <div className="w-full px-4 mb-12 lg:w-1/2">
-                <ServicesCards position="2" />
-                <div className="mb-4">
-                  <ComposedTitles subtitleText="Gems & Diamonds" />
-                </div>
-                <PrimaryDescription
-                  text="Our experts will be by your side and work hard to find the
-                  perfect gems and diamonds for your piece."
-                  textSize="gray"
-                />
-              </div>
-              <div className="relative w-full px-4 mb-12 lg:w-1/2">
-                <img
-                  className="absolute top-0 left-0 hidden ml-24 -mt-24 lg:block"
-                  src="zeus-assets/icons/line-little.svg"
-                  alt=""
-                />
-                <ServicesCards position="3" />
-                <div className="mb-4">
-                  <ComposedTitles subtitleText="Put it all together." />
-                </div>
-                <PrimaryDescription
-                  text="We then send our design to our manufacturing team of
-                  industry designers."
-                  textSize="gray"
-                />
-              </div>
-              <div className="w-full px-4 mb-12 lg:w-1/2">
-                <ServicesCards position="4" />
-                <div className="mb-4">
-                  <ComposedTitles subtitleText="Budget friendly" />
-                </div>
-                <PrimaryDescription
-                  text="We can work with your budget yet create something unique
-                      and memorable."
-                  textSize="gray"
-                />
-              </div>
+              {servicesData.map((services) => (
+                <ServicesCard key={services.id} data={services} />
+              ))}
             </div>
           </div>
         </div>
