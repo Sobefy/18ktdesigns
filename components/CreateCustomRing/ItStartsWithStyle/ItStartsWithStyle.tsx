@@ -11,7 +11,7 @@ const ItStartsWithStyle = () => {
   const {
     state: {
       context: {
-        startsWithStyle: { iHaveNoIdea },
+        startsWithStyle: { styles, iHaveNoIdea },
       },
     },
     send,
@@ -36,7 +36,7 @@ const ItStartsWithStyle = () => {
           quite yet?"
       />
       <Description text="SELECT ALL THAT APPLY" />
-      <List options={selectAllThatApply} />
+      <List options={selectAllThatApply} value={styles} />
       <Checkbox
         text="I have no ideas yet - I just want an amazing ring!"
         checked={iHaveNoIdea}
