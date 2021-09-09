@@ -1,5 +1,6 @@
+import PrimaryDescription from "@components/Common/PrimaryDescription";
 import ComposedTitles from "../../Common/ComposedTitles";
-import Description from "../../Common/Description";
+
 import PrimaryButton from "../../Common/PrimaryButton";
 
 /* eslint-disable @next/next/no-img-element */
@@ -23,14 +24,22 @@ const CTACollage = () => {
           <div className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
             <div className="max-w-lg">
               <ComposedTitles
-                titleSize="sm"
                 titleText="What's new at Shuffle"
-                subtitleText="We've been part of more than 500 celebrations"
+                titleSize="sm"
               />
-              <Description
-                text="Our work speaks for itself. We have designed more than 1000
+              <div className="mt-8 mb-6 lg:mb-10">
+                <ComposedTitles
+                  subtitleText="We've been part of more than 500 celebrations"
+                  subtitleSize="md"
+                />
+              </div>
+              <div className="mb-6 lg:mb-12">
+                <PrimaryDescription
+                  text="Our work speaks for itself. We have designed more than 1000
                   rings up to date."
-              />
+                  textSize="gray"
+                />
+              </div>
               <PrimaryButton
                 buttonLocated="ctaCollageButton"
                 text="Start a Project"

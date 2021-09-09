@@ -8,21 +8,21 @@ interface ComposedTitlesProps {
 const ComposedTitles = ({
   titleText = "",
   subtitleText = "",
-  titleSize = "md",
-  subtitleSize = "md",
+  titleSize,
+  subtitleSize,
 }: ComposedTitlesProps) => {
   const getSubtitleClassName = () => {
     switch (subtitleSize) {
       case "xl":
         return "lg:text-6xl  max-w-full mx-auto";
       case "lg":
-        return "lg:text-5xl  max-w-5xl mx-auto mb-12";
+        return "lg:text-5xl";
       case "md":
-          return "mb-10 lg:mb-16 text-4xl";
+        return " text-4xl";
       case "sm":
         return "text-3xl";
       default:
-        return "";
+        return "text-2xl";
     }
   };
   const getTitleClassName = () => {
@@ -39,9 +39,7 @@ const ComposedTitles = ({
         </span>
       ) : null}
       {subtitleText ? (
-        <h2
-          className={`mt-8 font-semibold font-heading ${getSubtitleClassName()}`}
-        >
+        <h2 className={`font-semibold font-heading ${getSubtitleClassName()}`}>
           {subtitleText}
         </h2>
       ) : null}

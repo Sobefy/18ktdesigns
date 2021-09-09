@@ -7,18 +7,27 @@ const Hero = () => {
     <div className="relative md:pb-24 lg:pb-80">
       <div className="pb-32 pt-44 md:pb-64 bg-blue-50">
         <div className="container px-4 mx-auto mb-12 text-center">
-          <ComposedTitles
-            titleText="Welcome to 18KT Designs"
-            subtitleText="We're changing the way you buy an engagement ring."
-            subtitleSize="lg"
-          />
-          <PrimaryDescription
-            text="Work with a professional team of jewelry designers and
+          <ComposedTitles titleText="Welcome to 18KT Designs" />
+          <div className="max-w-5xl mx-auto mt-8 mb-12">
+            <ComposedTitles
+              subtitleText="We're changing the way you buy an engagement ring."
+              subtitleSize="lg"
+            />
+          </div>
+          <div className="max-w-3xl mx-auto mb-12">
+            <PrimaryDescription
+              text="Work with a professional team of jewelry designers and
               manufacturers to get your dream piece tailor made. We design
               engagement rings and wedding bands for your special occasion."
-          />
+              textSize="gray"
+            />
+          </div>
+
           <PrimaryButton text="Start a Project" />
-          <PrimaryButton text="View Past Work" buttonLocated="alternateButton" />
+          <PrimaryButton
+            text="View Past Work"
+            buttonLocated="alternateButton"
+          />
         </div>
         <div className="inset-x-0 max-w-3xl px-4 mx-auto lg:absolute">
           <img
