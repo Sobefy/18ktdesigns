@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { listFooter, socialNetworkLinks } from "@lib/consts";
+import SvgSocial from "../../Common/SvgSocial/SvgSocial";
+
 const Footer = () => {
-  const  date = new Date();
+  const date = new Date();
   return (
     <div className="py-10 lg:py-20">
       <div className="container px-4 mx-auto mb-12 md:mb-20">
@@ -37,8 +39,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  
-                  
+                  <SvgSocial ico={option.value} />
                 </a>
               </li>
             ))}
@@ -46,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="px-4 pt-8 text-sm text-center text-gray-500 border-t">
-        All rights reserved © 18kt Designs - A Beachside Merchants Company - 
+        All rights reserved © 18kt Designs - A Beachside Merchants Company -
         {date.getFullYear()}
       </p>
     </div>
