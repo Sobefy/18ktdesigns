@@ -1,3 +1,4 @@
+import { StartsWithStyleOptions } from "@lib/machines/CreateCustomRing/types";
 import { CarouselItem, ListOption, BlogCarouselItem } from "../types";
 
 export const socialNetworkLinks = [
@@ -10,7 +11,6 @@ export const socialNetworkLinks = [
     id: 2,
     value: "facebook",
     url: "https://translate.google.com/",
-
   },
   {
     id: 3,
@@ -21,7 +21,6 @@ export const socialNetworkLinks = [
     id: 4,
     value: "facebook",
     url: "https://translate.google.com/",
-    
   },
 ];
 export const listFooter = [
@@ -29,25 +28,25 @@ export const listFooter = [
     id: 1,
     value: "partnerships",
     label: "Partnerships",
-    url:"https://translate.google.com/",
+    url: "https://translate.google.com/",
   },
   {
     id: 2,
     value: "affiliates",
     label: "Affiliates",
-    url:"https://twitter.com/",
+    url: "https://twitter.com/",
   },
   {
     id: 3,
     value: "press",
     label: "Press",
-    url:"https://translate.google.com/",
+    url: "https://translate.google.com/",
   },
   {
     id: 4,
     value: "privacyPolicy",
     label: "Privacy Policy",
-    url:"https://twitter.com/",
+    url: "https://twitter.com/",
   },
 ];
 export const selectStone: ListOption[] = [
@@ -134,23 +133,23 @@ export const chooseAResponse = [
 export const selectAllThatApply = [
   {
     id: 1,
-    value: "iHaveImagesOfASpecificRing",
+    value: StartsWithStyleOptions.I_HAVE_IMAGES,
     label: "I have images of a specific ring (or rings) I can Share.",
   },
   {
     id: 2,
-    value: "mySignificantOtherHasDroppedSomeHints",
+    value: StartsWithStyleOptions.DROPPED_SOME_HINTS,
     label:
       "My significant other has dropped some hints or given me some ideas.",
   },
   {
     id: 3,
-    value: "iKnowMySignificantOther",
+    value: StartsWithStyleOptions.I_KNOW_MY_SO_SENSE_OF_STYLE,
     label: "I know my significant other’s sense of style pretty well.",
   },
   {
     id: 4,
-    value: "HaveSomeDesignIdeasOfMyOwn.",
+    value: StartsWithStyleOptions.I_HAVE_MY_OWN_IDEAS,
     label: "I have some design ideas of my own.",
   },
 ];

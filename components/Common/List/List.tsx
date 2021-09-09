@@ -4,12 +4,17 @@ import { useState } from "react";
 import { ListOption } from "@lib/types";
 import SelectedSvg from "@components/Common/SelectedSvg";
 
-interface ListProps {
+interface ListProps<T> {
+  selectedItems: (keyof T)[];
   options: ListOption[];
+  setSelectedItems(items: (keyof T)[]]): void; 
 }
-const List = ({ options}: ListProps) => {
-  const [selectedItems, setSelectedItems] = useState<number[]>([]);
-  const handleItemClick = (id: number) => {
+const List = <T,>({
+  selectedItems,
+  options,
+  setSelectedItems,
+}: ListProps<T>) => {
+  const handleItemClick = (id: keyof T) => {
     const itemIsSelected = selectedItems.includes(id);
     if (itemIsSelected) {
       const filteredItems = selectedItems.filter((item) => item !== id);
@@ -37,7 +42,7 @@ const List = ({ options}: ListProps) => {
             className="relative w-full p-4 my-4 bg-white border border-gray-200 rounded cursor-pointer"
             key={id}
             value={value}
-            onClick={() => handleItemClick(id)}
+            onClick={() => handleItemClick(value)}
           >
             {itemIsSelected ? <SelectedSvg /> : null}
             {image ? (

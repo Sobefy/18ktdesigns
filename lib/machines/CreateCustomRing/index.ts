@@ -354,10 +354,11 @@ export const customRingMachine = createMachine<
         if (event.type !== "SET_I_HAVE_NO_IDEA") {
           return { ...context };
         }
+        const newValue = !context.startsWithStyle.iHaveNoIdea;
         return {
           startsWithStyle: {
             ...context.startsWithStyle,
-            iHaveNoIdea: true,
+            iHaveNoIdea: newValue,
             styles: [],
           },
         };
