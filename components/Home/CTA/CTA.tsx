@@ -23,7 +23,7 @@ const CTA = () => {
               textSize="blue"
             />
           </div>
-          <div className="inline-block w-full ml-auto">
+          <div className="inline-block w-full ml-auto md:w-auto">
             <PrimaryButton buttonLocated="lg" text="Start a Project" />
           </div>
         </div>
