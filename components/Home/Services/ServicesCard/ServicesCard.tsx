@@ -1,7 +1,6 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import { ServicesInfo } from "@lib/types";
-import { useState } from "react";
 
 interface ServicesCardProps {
   data: ServicesInfo;

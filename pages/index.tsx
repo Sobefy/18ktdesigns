@@ -7,6 +7,8 @@ import Newsletter from "../components/Home/NewsLetter/Newsletter";
 import Footer from "@components/Home/Footer";
 import Testimonials from "../components/Home/Testimonials";
 import RecentProjects from "@components/Home/RecentProjects/RecentProjects";
+import TabGroup from '../components/Home/TabGroup/TabGroup';
+
 
 const Home = () => {
   return (
@@ -18,6 +20,7 @@ const Home = () => {
       <RecentProjects />
       <CTA />
       <CTACollage />
+      <TabGroup/>
       <Newsletter />
       <Footer />
     </>

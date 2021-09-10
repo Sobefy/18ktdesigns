@@ -1,29 +1,61 @@
+import { StartsWithStyleOptions } from "@lib/machines/CreateCustomRing/types";
 import {
   CarouselItem,
   ListOption,
   BlogCarouselItem,
   ServicesInfo,
+  JewelryTypes,
 } from "../types";
 
+export const cards: JewelryTypes[] = [
+  {
+    id: 1,
+    title: "Earrings",
+    content:
+      "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
+    img: "/images/tabGroup1.jpg",
+  },
+  {
+    id: 2,
+    title: "Bracelets",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    img: "/images/tabGroup1.jpg",
+  },
+  {
+    id: 3,
+    title: "Chains",
+    content:
+      "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
+    img: "/images/tabGroup1.jpg",
+  },
+  {
+    id: 4,
+    title: "Rings",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    img: "/images/tabGroup1.jpg",
+  },
+];
 export const socialNetworkLinks = [
   {
     id: 1,
-    value: "facebook",
+    value: "fb",
     url: "https://translate.google.com/",
   },
   {
     id: 2,
-    value: "facebook",
+    value: "tw",
     url: "https://translate.google.com/",
   },
   {
     id: 3,
-    value: "facebook",
+    value: "ig",
     url: "https://translate.google.com/",
   },
   {
     id: 4,
-    value: "facebook",
+    value: "li",
     url: "https://translate.google.com/",
   },
 ];
@@ -137,23 +169,23 @@ export const chooseAResponse = [
 export const selectAllThatApply = [
   {
     id: 1,
-    value: "iHaveImagesOfASpecificRing",
+    value: StartsWithStyleOptions.I_HAVE_IMAGES,
     label: "I have images of a specific ring (or rings) I can Share.",
   },
   {
     id: 2,
-    value: "mySignificantOtherHasDroppedSomeHints",
+    value: StartsWithStyleOptions.DROPPED_SOME_HINTS,
     label:
       "My significant other has dropped some hints or given me some ideas.",
   },
   {
     id: 3,
-    value: "iKnowMySignificantOther",
+    value: StartsWithStyleOptions.I_KNOW_MY_SO_SENSE_OF_STYLE,
     label: "I know my significant other’s sense of style pretty well.",
   },
   {
     id: 4,
-    value: "HaveSomeDesignIdeasOfMyOwn.",
+    value: StartsWithStyleOptions.I_HAVE_MY_OWN_IDEAS,
     label: "I have some design ideas of my own.",
   },
 ];
