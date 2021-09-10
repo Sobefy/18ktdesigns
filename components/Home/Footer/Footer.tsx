@@ -30,7 +30,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex justify-center">
-          <ul className="flex flex-wrap items-center justify-center mb-8 space-x-8 text-sm ">
+          <ul className="flex flex-wrap items-center justify-center mb-8 text-sm ">
             {socialNetworkLinks.map((option) => (
               <li key={option.id} className="mb-2 md:mb-0">
                 <a

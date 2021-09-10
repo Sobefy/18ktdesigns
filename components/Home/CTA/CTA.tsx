@@ -13,7 +13,7 @@ const CTA = () => {
         </div>
 
         <div className="flex flex-wrap items-center">
-          <div className="inline-block max-w-xl mb-6 md:mb-16">
+          <div className="inline-block max-w-xl mb-6 md:mb-0">
             <PrimaryDescription
               text="Drop us a line, and we'll get in touch."
               textSize="blue"
@@ -23,7 +23,9 @@ const CTA = () => {
               textSize="blue"
             />
           </div>
-          <PrimaryButton buttonLocated="ctaButton" text="Start a Project" />
+          <div className="inline-block w-full ml-auto">
+            <PrimaryButton buttonLocated="lg" text="Start a Project" />
+          </div>
         </div>
       </div>
     </div>

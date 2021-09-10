@@ -14,6 +14,7 @@ export const cards: JewelryTypes[] = [
     content:
       "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
     img: "/images/tabGroup1.jpg",
+    textButton: "Shop Earrings",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const cards: JewelryTypes[] = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: "/images/tabGroup1.jpg",
+    textButton: "Shop Bracelets",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const cards: JewelryTypes[] = [
     content:
       "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
     img: "/images/tabGroup1.jpg",
+    textButton: "Shop Chains",
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ export const cards: JewelryTypes[] = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: "/images/tabGroup1.jpg",
+    textButton: "Shop Rings",
   },
 ];
 export const socialNetworkLinks = [

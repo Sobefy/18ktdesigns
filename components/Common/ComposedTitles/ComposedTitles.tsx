@@ -14,9 +14,9 @@ const ComposedTitles = ({
   const getSubtitleClassName = () => {
     switch (subtitleSize) {
       case "xl":
-        return "lg:text-6xl  max-w-full mx-auto";
+        return "text-4xl lg:text-6xl  max-w-full mx-auto";
       case "lg":
-        return "lg:text-5xl";
+        return "text-4xl lg:text-5xl";
       case "md":
         return " text-4xl";
       case "sm":

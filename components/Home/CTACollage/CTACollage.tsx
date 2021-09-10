@@ -29,7 +29,7 @@ const CTACollage = () => {
               />
               <div className="mt-8 mb-6 lg:mb-10">
                 <ComposedTitles
-                  subtitleText="We've been part of more than 500 celebrations"
+                  subtitleText="We've been part of more than 500 celebrations."
                   subtitleSize="md"
                 />
               </div>
@@ -40,10 +40,9 @@ const CTACollage = () => {
                   textSize="gray"
                 />
               </div>
-              <PrimaryButton
-                buttonLocated="ctaCollageButton"
-                text="Start a Project"
-              />
+              <div className="inline-block">
+                <PrimaryButton buttonLocated="md" text="Start a Project" />
+              </div>
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">

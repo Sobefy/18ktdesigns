@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { cards } from "@lib/consts";
-import { JewelryTypes } from "@lib/types";
+
 import ComposedTitles from "@components/Common/ComposedTitles";
-import ImageTab from "@components/Common/ImageTab";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import Description from "@components/Common/Description";
 /* eslint-disable @next/next/no-img-element */
-interface TabGroupProps {
-  cardsData: JewelryTypes;
-}
-export const TabGroup = ({ cardsData }: TabGroupProps) => {
+
+export const TabGroup = () => {
   const [toggle, setToggle] = useState(1);
   const toggleTab = (index: number) => {
     setToggle(index);
   };
+  const filteredCard = cards.filter((card) => card.id === toggle);
   return (
     <>
       <div className="container pt-20 mx-auto mb-2 ">
@@ -52,10 +52,30 @@ export const TabGroup = ({ cardsData }: TabGroupProps) => {
                       </li>
                     ))}
                   </ul>
-                  if (card.id === toggle) {cards.filter((card) => card != id)}
+                  <div className="max-w-md" key={filteredCard[0].id}>
+                    <div className="mb-4 lg:mb-10">
+                      <ComposedTitles
+                        subtitleText={filteredCard[0].title}
+                        subtitleSize="md"
+                      />
+                    </div>
+                    <div className="mb-6 leading-loose text-gray-500 lg:mb-10">
+                      <Description text={filteredCard[0].content} />
+                    </div>
+                    <div className="inline-block mb-10 lg:mb-0">
+                      <PrimaryButton
+                        text={filteredCard[0].textButton}
+                        buttonLocated="lg"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div className="relative w-full px-4 lg:w-1/2">
-                  <ImageTab toggle={toggle} />
+                  <img
+                    className="rounded-xl"
+                    src={filteredCard[0].img}
+                    alt={filteredCard[0].title}
+                  />
                 </div>
               </div>
             </div>

@@ -42,6 +42,7 @@ export type JewelryTypes = {
   title: string;
   content: string;
   img: string;
+  textButton: string;
 };
 
 export type BudgetOptions =

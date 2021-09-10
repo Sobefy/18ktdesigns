@@ -22,12 +22,12 @@ const Hero = () => {
               textSize="gray"
             />
           </div>
-
-          <PrimaryButton text="Start a Project" />
-          <PrimaryButton
-            text="View Past Work"
-            buttonLocated="alternateButton"
-          />
+          <div className="inline-block w-full mb-2 mr-4">
+            <PrimaryButton text="Start a Project" buttonLocated="md" />
+          </div>
+          <div className="inline-block w-full mr-4">
+            <PrimaryButton text="View Past Work" buttonLocated="gray" />
+          </div>
         </div>
         <div className="inset-x-0 max-w-3xl px-4 mx-auto lg:absolute">
           <img
