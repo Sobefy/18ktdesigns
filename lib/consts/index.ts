@@ -853,8 +853,8 @@ export const carouselData: CarouselItem[] = [
   },
   {
     id: 2,
-    value: "betoandedgardo",
-    label: "Beto & Edgardo",
+    value: "ryanandsandy",
+    label: "Ryan and Sandy",
     testimonial:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
     image: "/zeus-assets/images/02.png",
@@ -865,8 +865,8 @@ export const carouselData: CarouselItem[] = [
   },
   {
     id: 3,
-    value: "oscarandpaola",
-    label: "Oscar & Paola",
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
     testimonial:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
     image: "/zeus-assets/images/02.png",
@@ -891,8 +891,8 @@ export const blogCarouselData: BlogCarouselItem[] = [
   },
   {
     id: 2,
-    value: "betoandedgardo",
-    label: "Beto & Edgardo",
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
     summary:
       "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
     image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
@@ -902,8 +902,8 @@ export const blogCarouselData: BlogCarouselItem[] = [
   },
   {
     id: 3,
-    value: "oscarandpaola",
-    label: "Oscar & Paola",
+    value: "ryanandsandy",
+    label: "Ryan and Sandy",
     summary:
       "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
     image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",

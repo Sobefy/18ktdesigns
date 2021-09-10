@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ComposedTitles from "@components/Common/ComposedTitles";
 import CarouselCard from "../CarouselCard";
 import { carouselData } from "../../../../lib/consts";
 import SlideButtons from "@components/Common/SlideButtons";
+import { useSwipeable } from "react-swipeable";
 
 interface CarouselProps {
   loop?: boolean;
@@ -21,12 +22,19 @@ const Carousel = ({ loop = false }: CarouselProps) => {
     setActiveIndex(newIndex);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1),
+  });
+
   return (
-    <div className="flex items-center justify-between">
+    <div {...handlers} className="flex items-center justify-between">
       <SlideButtons
         directionLeft
         onClick={() => updateIndex(activeIndex - 1)}
+        responsive="desktop"
       />
+
       <div className="max-w-3xl mx-auto text-center">
         <ComposedTitles titleText="Testimonials" titleSize="sm" />
         <div className="mt-8 mb-10">
@@ -45,8 +53,24 @@ const Carousel = ({ loop = false }: CarouselProps) => {
             ))}
           </div>
         </div>
+
+        <div className="mt-8 ">
+          <SlideButtons
+            directionLeft
+            onClick={() => updateIndex(activeIndex - 1)}
+            responsive="mobile"
+          />
+          <SlideButtons
+            onClick={() => updateIndex(activeIndex + 1)}
+            responsive="mobile"
+          />
+        </div>
       </div>
-      <SlideButtons onClick={() => updateIndex(activeIndex + 1)} />
+
+      <SlideButtons
+        responsive="desktop"
+        onClick={() => updateIndex(activeIndex + 1)}
+      />
     </div>
   );
 };

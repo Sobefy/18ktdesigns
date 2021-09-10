@@ -24,7 +24,7 @@ const PrimaryButton = ({
   };
   return (
     <button
-      className={`  py-4 text-center  text-sm font-medium leading-normal rounded transition duration-200 ${getButtonClassName()}`}
+      className={` md:w-auto w-full py-4 text-center  text-sm font-medium leading-normal rounded transition duration-200 ${getButtonClassName()}`}
       onClick={onClick}
     >
       {text}
