@@ -6,24 +6,28 @@ export const cards = [
     title: "Earrings",
     content: "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
     img :"/images/tabGroup1.jpg",
+    txtButton: "Shop Earrings"
   },
   {
     id: 2,
     title: "Bracelets",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img :"/images/tabGroup1.jpg",
+    txtButton: "Shop Bracelets"
   },
   {
     id: 3,
     title: "Chains",
     content: "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
     img :"/images/tabGroup1.jpg",
+    txtButton: "Shop Chains"
   },
   {
     id: 4,
     title: "Rings",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img :"/images/tabGroup1.jpg",
+    txtButton: "Shop Rings"
   },
 ];
 export const socialNetworkLinks = [
