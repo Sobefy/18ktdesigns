@@ -5,8 +5,9 @@ import { ServicesInfo } from "@lib/types";
 
 interface ServicesCardProps {
   data: ServicesInfo;
+  index: number;
 }
-const ServicesCard = ({ data }: ServicesCardProps) => {
+const ServicesCard = ({ data, index }: ServicesCardProps) => {
   const { id, title, description } = data;
   const printSvgTop = () => {
     if (id == 1) {
@@ -25,7 +26,7 @@ const ServicesCard = ({ data }: ServicesCardProps) => {
       {printSvgTop()}
       {printSvgBottom()}
       <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
-        {id}
+        {index + 1}
       </span>
       <div className="mb-4">
         <ComposedTitles subtitleText={title} />
