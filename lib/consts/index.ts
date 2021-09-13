@@ -5,7 +5,9 @@ import {
   BlogCarouselItem,
   ServicesInfo,
   JewelryTypes,
-} from "../types";
+  SocialNetworkLinkType,
+  ListFooterType,
+} from "@lib/types";
 
 export const cards: JewelryTypes[] = [
   {
@@ -41,7 +43,7 @@ export const cards: JewelryTypes[] = [
     textButton: "Shop Rings",
   },
 ];
-export const socialNetworkLinks = [
+export const socialNetworkLinks: SocialNetworkLinkType[] = [
   {
     id: 1,
     socialIcon: "fb",
@@ -67,7 +69,7 @@ export const socialNetworkLinks = [
     target: "_blank",
   },
 ];
-export const listFooter = [
+export const listFooter: ListFooterType[] = [
   {
     id: 1,
     value: "partnerships",

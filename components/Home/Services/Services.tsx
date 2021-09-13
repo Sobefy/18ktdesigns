@@ -1,6 +1,6 @@
 import { servicesData } from "@lib/consts";
-import ComposedTitles from "../../Common/ComposedTitles";
-import ServicesCard from "./ServicesCard";
+import ComposedTitles from "@components/Common/ComposedTitles";
+import ServicesCard from "@components/Home/Services/ServicesCard";
 
 /* eslint-disable @next/next/no-img-element */
 const Services = () => {

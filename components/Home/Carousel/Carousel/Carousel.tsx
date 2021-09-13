@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ComposedTitles from "@components/Common/ComposedTitles";
 import CarouselCard from "../CarouselCard";
-import { carouselData } from "../../../../lib/consts";
+import { carouselData } from "@lib/consts";
 import SlideButtons from "@components/Common/SlideButtons";
 import { useSwipeable } from "react-swipeable";
 

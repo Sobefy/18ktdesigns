@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { listFooter, socialNetworkLinks } from "@lib/consts";
-import SvgSocial from "../../Common/SvgSocial/SvgSocial";
+import SvgSocial from "@components/Common/SvgSocial/SvgSocial";
 
 const Footer = () => {
   const date = new Date();

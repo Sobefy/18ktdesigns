@@ -14,8 +14,8 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
   };
 
   return (
-    <div className="absolute w-full py-8 px-4 xl:px-10 top-0 left-0 z-50">
-      <nav className="flex justify-between items-center">
+    <div className="absolute top-0 left-0 z-50 w-full px-4 py-8 xl:px-10">
+      <nav className="flex items-center justify-between">
         <a className="inline-block mr-auto text-lg font-semibold" href="#">
           <img
             className={`${alternateNav ? "h-7" : "h-16"}`}
@@ -24,20 +24,13 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
             width="auto"
           />
         </a>
-        <div className="lg:hidden ml-auto">
+        <div className="ml-auto lg:hidden">
           <button
-            className="
-                  navbar-burger
-                  flex
-                  items-center
-                  p-3
-                  hover:bg-gray-50
-                  rounded
-                "
+            className="flex items-center p-3 rounded  navbar-burger hover:bg-gray-50"
             onClick={handleHamburgerClick}
           >
             <svg
-              className="block h-4 w-4"
+              className="block w-4 h-4"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -47,7 +40,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
           </button>
         </div>
 
-        <div className="hidden lg:flex w-auto lg:w-3/5 lg:pl-16 ">
+        <div className="hidden w-auto lg:flex lg:w-3/5 lg:pl-16 ">
           {alternateNav ? null : (
             <ul className="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12">
               <li>
@@ -74,20 +67,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
           )}
           <div className={alternateNav ? "ml-auto" : "null"}>
             <a
-              className="
-                    inline-block
-                    py-3
-                    px-8
-                    text-sm
-                    leading-normal
-                    font-medium
-                    bg-red-50
-                    hover:bg-red-100
-                    text-red-500
-                    rounded
-                    transition
-                    duration-200
-                  "
+              className="inline-block px-8 py-3 text-sm font-medium leading-normal text-red-500 transition duration-200 rounded  bg-red-50 hover:bg-red-100"
               href="#"
             >
               {alternateNav ? "Chat with someone" : "Start a Project"}
@@ -96,23 +76,10 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
         </div>
       </nav>
       {navOpen ? (
-        <div className="navbar-menu relative z-50 ">
-          <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <div className="relative z-50 navbar-menu ">
+          <div className="fixed inset-0 bg-gray-800 opacity-25 navbar-backdrop"></div>
           <nav
-            className="
-              fixed
-              top-0
-              left-0
-              bottom-0
-              flex flex-col
-              w-5/6
-              max-w-sm
-              py-6
-              px-6
-              bg-white
-              border-r
-              overflow-y-auto
-            "
+            className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r "
           >
             <div className="flex items-center mb-8">
               <a
@@ -132,13 +99,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
               </a>
               <button className="navbar-close" onClick={handleHamburgerClick}>
                 <svg
-                  className="
-                    h-6
-                    w-6
-                    text-gray-500
-                    cursor-pointer
-                    hover:text-gray-500
-                  "
+                  className="w-6 h-6 text-gray-500 cursor-pointer  hover:text-gray-500"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -158,15 +119,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                 <ul>
                   <li className="mb-1">
                     <a
-                      className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
+                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
                       href="#"
                     >
                       How it works
@@ -174,15 +127,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                   </li>
                   <li className="mb-1">
                     <a
-                      className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
+                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
                       href="#"
                     >
                       Testimonials
@@ -190,15 +135,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                   </li>
                   <li className="mb-1">
                     <a
-                      className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
+                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
                       href="#"
                     >
                       About Us
@@ -206,15 +143,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
                   </li>
                   <li className="mb-1">
                     <a
-                      className="
-                      block
-                      p-4
-                      text-sm
-                      font-medium
-                      text-gray-900
-                      hover:bg-gray-50
-                      rounded
-                    "
+                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
                       href="#"
                     >
                       Shop Jewelry
@@ -226,19 +155,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
             <div className="mt-auto">
               <div className="pt-6">
                 <a
-                  className="
-                    block
-                    py-3
-                    text-center text-sm
-                    leading-normal
-                    bg-red-50
-                    hover:bg-red-100
-                    text-red-300
-                    font-semibold
-                    rounded
-                    transition
-                    duration-200
-                  "
+                  className="block py-3 text-sm font-semibold leading-normal text-center text-red-300 transition duration-200 rounded  bg-red-50 hover:bg-red-100"
                   href="#"
                 >
                   {alternateNav ? "Chat with someone" : "Start a Project"}

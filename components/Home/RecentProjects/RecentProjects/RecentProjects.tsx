@@ -1,4 +1,4 @@
-import BlogCarousel from "../BlogCarousel/BlogCarousel";
+import BlogCarousel from "@components/Home/RecentProjects/BlogCarousel/BlogCarousel";
 
 /* eslint-disable @next/next/no-img-element */
 const RecentProjects = () => {

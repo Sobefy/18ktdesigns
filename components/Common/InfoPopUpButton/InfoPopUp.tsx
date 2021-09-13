@@ -1,4 +1,4 @@
-import InfoSvg from "../InfoSvg";
+import InfoSvg from "@components/Common/InfoSvg";
 
 const InfoPopUp = () => {
   return (

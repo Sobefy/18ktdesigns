@@ -1,16 +1,15 @@
-import NextButton from "../../Common/PrimaryButton";
-import Title from "../../Common/Title";
-import Description from "../../Common/Description";
-import BackButton from "../../Common/BackButton/BackButton";
-import Select from "../../Common/Select";
-import { chooseAResponseOptions } from "../../../lib/consts";
-import Calendar from "../../Common/Calendar";
-import PrimaryButton from "../../Common/PrimaryButton";
+import Title from "@components/Common/Title";
+import Description from "@components/Common/Description";
+import BackButton from "@components/Common/BackButton/BackButton";
+import Select from "@components/Common/Select";
+import { chooseAResponseOptions } from "@lib/consts";
+import Calendar from "@components/Common/Calendar";
+import PrimaryButton from "@components/Common/PrimaryButton";
 
 const WhenIsTheSpecialDay = () => {
   return (
-    <div className="w-full m-auto px-4 lg:px-52 py-40 lg:py-44">
-      <div className="lg:w-3/5 max-w-2xl">
+    <div className="w-full px-4 py-40 m-auto lg:px-52 lg:py-44">
+      <div className="max-w-2xl lg:w-3/5">
         <BackButton text="Back" />
         <Title text="When's The Special Day" />
         <Description text="If you have a planned proposal in mind, let us know so we can make sure your project stays on track." />

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import ComposedTitles from "../../Common/ComposedTitles";
-import PrimaryButton from "../../Common/PrimaryButton";
-import PrimaryDescription from "../../Common/PrimaryDescription";
+import ComposedTitles from "@components/Common/ComposedTitles";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import PrimaryDescription from "@components/Common/PrimaryDescription";
 const Hero = () => {
   return (
     <div className="relative md:pb-24 lg:pb-80">

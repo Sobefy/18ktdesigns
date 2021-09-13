@@ -1,4 +1,4 @@
-import { CarouselItem } from "../../../../lib/types";
+import { CarouselItem } from "@lib/types";
 import Image from "next/image";
 
 interface CarouselCardProps {

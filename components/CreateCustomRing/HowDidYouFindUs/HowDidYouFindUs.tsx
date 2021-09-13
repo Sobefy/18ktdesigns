@@ -1,10 +1,9 @@
-import NextButton from "../../Common/PrimaryButton";
-import Title from "../../Common/Title";
-import Description from "../../Common/Description";
-import BackButton from "../../Common/BackButton/BackButton";
-import Select from "../../Common/Select";
-import { chooseAResponse } from "../../../lib/consts";
-import PrimaryButton from "../../Common/PrimaryButton";
+import Title from "@components/Common/Title";
+import Description from "@components/Common/Description";
+import BackButton from "@components/Common/BackButton/BackButton";
+import Select from "@components/Common/Select";
+import { chooseAResponse } from "@lib/consts";
+import PrimaryButton from "@components/Common/PrimaryButton";
 
 const HowDidYouFindUs = () => {
   return (

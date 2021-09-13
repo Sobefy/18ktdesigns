@@ -1,6 +1,6 @@
 import PrimaryDescription from "@components/Common/PrimaryDescription";
-import ComposedTitles from "../../Common/ComposedTitles/ComposedTitles";
-import PrimaryButton from "../../Common/PrimaryButton";
+import ComposedTitles from "@components/Common/ComposedTitles/ComposedTitles";
+import PrimaryButton from "@components/Common/PrimaryButton";
 const CTA = () => {
   return (
     <div className="py-20 bg-blue-50">
