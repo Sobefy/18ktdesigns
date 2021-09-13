@@ -7,7 +7,6 @@ interface CarouselCardProps {
 
 const CarouselCard = ({ data }: CarouselCardProps) => {
   const {
-    id,
     value,
     label,
     testimonial,
@@ -33,7 +32,6 @@ const CarouselCard = ({ data }: CarouselCardProps) => {
           />
         </div>
       ) : null}
-
       <p className="mb-2 text-2xl font-semibold font-heading">{label}</p>
       <p className="text-gray-500">{marriedSince}</p>
     </div>

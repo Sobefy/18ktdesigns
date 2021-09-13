@@ -1,8 +1,7 @@
 interface BackButtonProps {
   onClick?(): void;
-  text: string;
 }
-const BackButton = ({ onClick, text }: BackButtonProps) => {
+const BackButton = ({ onClick }: BackButtonProps) => {
   return (
     <button className="pr-4 mb-6" onClick={onClick}>
       <svg
@@ -17,7 +16,6 @@ const BackButton = ({ onClick, text }: BackButtonProps) => {
           clipRule="evenodd"
         />
       </svg>
-      {text}
     </button>
   );
 };

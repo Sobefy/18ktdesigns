@@ -36,8 +36,8 @@ const initialContext: Context = {
     imNotSure: false,
   },
   whenIsTheSpecialDate: {
-    specialDate: WhenIsTheSpecialDayOptions.EMTPY,
-    date: new Date(),
+    specialDate: WhenIsTheSpecialDayOptions.EMPTY,
+    date: null,
   },
   shipping: ShippingOptions.EMPTY,
   howDidYouFindUs: HowDidYouFindUsOptions.EMPTY,
@@ -434,6 +434,7 @@ export const customRingMachine = createMachine<
           whenIsTheSpecialDate: {
             ...context.whenIsTheSpecialDate,
             specialDate: event.value,
+            date: null,
           },
         };
       }),
