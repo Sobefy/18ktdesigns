@@ -1,10 +1,10 @@
-import Title from "../../Common/Title";
-import Description from "../../Common/Description";
-import BackButton from "../../Common/BackButton/BackButton";
-import Select from "../../Common/Select";
-import { chooseAResponseOptions } from "../../../lib/consts";
-import Calendar from "../../Common/Calendar";
-import PrimaryButton from "../../Common/PrimaryButton";
+import Title from "@components/Common/Title";
+import Description from "@components/Common/Description";
+import BackButton from "@components/Common/BackButton/BackButton";
+import Select from "@components/Common/Select";
+import { chooseAResponseOptions } from "@lib/consts";
+import Calendar from "@components/Common/Calendar";
+import PrimaryButton from "@components/Common/PrimaryButton";
 import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
 import { WhenIsTheSpecialDayOptions } from "@lib/machines/CreateCustomRing/types";
 

@@ -1,6 +1,6 @@
 interface PrimaryButtonProps {
   text: string;
-  onClick?(): void;
+  onClick(): void;
   size?: "lg" | "md" | "sm" | "gray";
 }
 const PrimaryButton = ({ text, onClick, size }: PrimaryButtonProps) => {

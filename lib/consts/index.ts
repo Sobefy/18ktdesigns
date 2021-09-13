@@ -1,4 +1,5 @@
 import {
+  ShippingOptions,
   StartsWithStyleOptions,
   WhenIsTheSpecialDayOptions,
 } from "@lib/machines/CreateCustomRing/types";
@@ -795,28 +796,33 @@ export const chooseAResponseOptions = [
 
 export const chooseACountry = [
   {
+    id: 0,
+    value: ShippingOptions.EMPTY,
+    label: "-- Choose a response --",
+  },
+  {
     id: 1,
-    value: "unitedStates",
+    value: ShippingOptions.US,
     label: "United States",
   },
   {
     id: 2,
-    value: "canada",
+    value: ShippingOptions.CA,
     label: "Canada",
   },
   {
     id: 3,
-    value: "unitedKingdom",
+    value: ShippingOptions.UK,
     label: " United Kingdom",
   },
   {
     id: 4,
-    value: "australia",
+    value: ShippingOptions.AU,
     label: "Australia",
   },
   {
     id: 5,
-    value: "other",
+    value: ShippingOptions.OTHER,
     label: "Other",
   },
 ];
