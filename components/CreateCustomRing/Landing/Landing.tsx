@@ -1,5 +1,5 @@
-import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
-import PrimaryButton from "../../Common/PrimaryButton";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
 
 const Landing = () => {
   const { send } = useCreateCustomRingMachine();

@@ -1,16 +1,16 @@
-import Title from "../../Common/Title";
-import Description from "../../Common/Description";
-import Checkbox from "../../Common/Checkbox";
-import Input from "../../Common/Input";
-import BackButton from "../../Common/BackButton";
-import Select from "../../Common/Select";
+import Title from "@components/Common/Title";
+import Description from "@components/Common/Description";
+import Checkbox from "@components/Common/Checkbox";
+import Input from "@components/Common/Input";
+import BackButton from "@components/Common/BackButton";
+import Select from "@components/Common/Select";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import { chooseRecipientOptions, selectResponseOptions } from "@lib/consts";
+import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
 import {
-  chooseRecipientOptions,
-  selectResponseOptions,
-} from "../../../lib/consts";
-import { useCreateCustomRingMachine } from "../../../lib/context/createCustomRing";
-import PrimaryButton from "../../Common/PrimaryButton";
-import { RecipientMeOptions } from "@lib/machines/CreateCustomRing/types";
+  RecipientMeOptions,
+  RecipientUserSelections,
+} from "@lib/machines/CreateCustomRing/types";
 
 const WhoWillBeWearing = () => {
   const { state, send } = useCreateCustomRingMachine();
@@ -75,7 +75,7 @@ const WhoWillBeWearing = () => {
         text="Are you designing a ring for your significant other, or designing your
           own ring?"
       />
-      <Select
+      <Select<RecipientUserSelections>
         options={chooseRecipientOptions}
         value={userSelection}
         onChange={handleChooseRecipient}
@@ -103,7 +103,7 @@ const WhoWillBeWearing = () => {
             text="Looking around for a ring someone might surprise you with later, or are
         you planning to purchase your own ring?"
           />
-          <Select
+          <Select<RecipientMeOptions>
             value={me}
             options={selectResponseOptions}
             onChange={handleMe}

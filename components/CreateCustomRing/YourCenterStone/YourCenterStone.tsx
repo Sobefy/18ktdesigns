@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
-import BackButton from "../../Common/BackButton";
-import Checkbox from "../../Common/Checkbox";
-import Description from "../../Common/Description";
-import Title from "../../Common/Title";
-import List from "../../Common/List";
-import { selectStone } from "../../../lib/consts";
-import PrimaryButton from "../../Common/PrimaryButton";
+import BackButton from "@components/Common/BackButton";
+import Checkbox from "@components/Common/Checkbox";
+import Description from "@components/Common/Description";
+import Title from "@components/Common/Title";
+import List from "@components/Common/List";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import { selectStone } from "@lib/consts";
 import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
 import { YourCenterStoneOptions } from "@lib/machines/CreateCustomRing/types";
 
