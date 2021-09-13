@@ -1,6 +1,6 @@
 interface PrimaryButtonProps {
   text: string;
-  onClick?(): void;
+  onClick(): void;
   buttonLocated?: "lg" | "md" | "sm" | "gray";
 }
 const PrimaryButton = ({

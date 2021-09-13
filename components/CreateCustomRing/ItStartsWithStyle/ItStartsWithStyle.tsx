@@ -18,6 +18,8 @@ const ItStartsWithStyle = () => {
     send,
   } = useCreateCustomRingMachine();
 
+  const canContinue = styles.length > 0 || iHaveNoIdea;
+
   const handleBack = () => {
     send("BACK");
   };
@@ -51,7 +53,7 @@ const ItStartsWithStyle = () => {
         checked={iHaveNoIdea}
         onChange={handleIHaveNoIdea}
       />
-      <PrimaryButton text="Next" onClick={handleNext} />
+      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
     </>
   );
 };
