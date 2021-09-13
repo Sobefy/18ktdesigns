@@ -69,6 +69,7 @@ export const TabGroup = () => {
                       <PrimaryButton
                         text={filteredCardSelected.textButton}
                         size="lg"
+                        onClick={() => {}}
                       />
                     </div>
                   </div>
