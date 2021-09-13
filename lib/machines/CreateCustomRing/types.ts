@@ -60,7 +60,7 @@ export interface Context {
   };
   whenIsTheSpecialDate: {
     specialDate: WhenIsTheSpecialDayOptions;
-    date: Date;
+    date: Date | null;
   };
   shipping: ShippingOptions;
   howDidYouFindUs: HowDidYouFindUsOptions;
@@ -88,7 +88,7 @@ export enum StartsWithStyleOptions {
 }
 
 export enum YourCenterStoneOptions {
-  EMTPY = "",
+  EMPTY = "",
   DIAMOND = "DIAMOND",
   COLORED_GEMSTONE = "COLORED_GEMSTONE",
   MOISSANITE = "MOISSANITE",
@@ -96,7 +96,7 @@ export enum YourCenterStoneOptions {
 }
 
 export enum WhenIsTheSpecialDayOptions {
-  EMTPY = "",
+  EMPTY = "",
   I_HAVE_A_SPECIFIC_DATE = "I_HAVE_A_SPECIFIC_DATE",
   NEXT_1_2_MONTHS = "NEXT_1_2_MONTHS",
   NEXT_6_MONTHS = "NEXT_6_MONTHS",

@@ -1,4 +1,7 @@
-import { StartsWithStyleOptions } from "@lib/machines/CreateCustomRing/types";
+import {
+  StartsWithStyleOptions,
+  WhenIsTheSpecialDayOptions,
+} from "@lib/machines/CreateCustomRing/types";
 import {
   CarouselItem,
   ListOption,
@@ -746,33 +749,38 @@ export const maxPrice = [
 
 export const chooseAResponseOptions = [
   {
+    id: 0,
+    value: WhenIsTheSpecialDayOptions.EMPTY,
+    label: "-- Choose a response --",
+  },
+  {
     id: 1,
-    value: "yesIHaveASpecificDate",
+    value: WhenIsTheSpecialDayOptions.I_HAVE_A_SPECIFIC_DATE,
     label: "Yes, I have a specific date",
   },
   {
     id: 2,
-    value: "noSpecificDateButSoon",
+    value: WhenIsTheSpecialDayOptions.NEXT_1_2_MONTHS,
     label: "No specific date, but soon (in the nex 1-2 months)",
   },
   {
     id: 3,
-    value: "noSpecificDateButSometime",
+    value: WhenIsTheSpecialDayOptions.NEXT_6_MONTHS,
     label: "No specific date, but sometime in the next 6 months",
   },
   {
     id: 4,
-    value: "withinTheNext",
+    value: WhenIsTheSpecialDayOptions.NEXT_12_MONTHS,
     label: "Within the next 12 months",
   },
   {
     id: 5,
-    value: "overAYearFromNow",
+    value: WhenIsTheSpecialDayOptions.OVER_A_YEAR,
     label: "Over a year from now",
   },
   {
     id: 6,
-    value: "imJustLookingForNow",
+    value: WhenIsTheSpecialDayOptions.IM_JUST_LOOKING,
     label: "I'm just looking for now",
   },
 ];
