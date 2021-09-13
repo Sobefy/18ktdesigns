@@ -1,7 +1,7 @@
-import FbSvg from "./SocialsSvg/FbSvg";
-import IgSvg from "./SocialsSvg/IgSvg";
-import LiSvg from "./SocialsSvg/LiSvg";
-import TwSvg from "./SocialsSvg/TwSvg";
+import FbSvg from "@components/Common/SvgSocial/SocialsSvg/FbSvg";
+import IgSvg from "@components/Common/SvgSocial/SocialsSvg/IgSvg";
+import LiSvg from "@components/Common/SvgSocial/SocialsSvg/LiSvg";
+import TwSvg from "@components/Common/SvgSocial/SocialsSvg/TwSvg";
 
 interface SvgIconsProps {
   ico: string;

@@ -1,4 +1,4 @@
-import SlideButtonSvg from "../SlideButtonSvg";
+import SlideButtonSvg from "@components/Common/SlideButtonSvg";
 
 interface slideButtonsProps {
   onClick(): void;

@@ -4,7 +4,7 @@ import { cards } from "@lib/consts";
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryButton from "@components/Common/PrimaryButton";
 import Description from "@components/Common/Description";
-import { JewelryTypes } from "@lib/types";
+
 /* eslint-disable @next/next/no-img-element */
 
 export const TabGroup = () => {

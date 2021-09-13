@@ -1,7 +1,7 @@
 import PrimaryDescription from "@components/Common/PrimaryDescription";
-import ComposedTitles from "../../Common/ComposedTitles";
+import ComposedTitles from "@components/Common/ComposedTitles";
 
-import PrimaryButton from "../../Common/PrimaryButton";
+import PrimaryButton from "@components/Common/PrimaryButton";
 
 /* eslint-disable @next/next/no-img-element */
 const CTACollage = () => {

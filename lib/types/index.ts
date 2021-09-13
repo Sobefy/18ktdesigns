@@ -45,6 +45,21 @@ export type JewelryTypes = {
   textButton: string;
 };
 
+export type SocialNetworkLinkType = {
+  id: number;
+  socialIcon: string;
+  url: string;
+  target: string;
+};
+
+export type ListFooterType = {
+  id: number;
+  value: string;
+  label: string;
+  url: string;
+  target: string;
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL

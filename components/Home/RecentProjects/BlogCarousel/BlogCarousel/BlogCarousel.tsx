@@ -2,7 +2,7 @@ import { useState } from "react";
 import { blogCarouselData } from "@lib/consts";
 import ComposedTitles from "@components/Common/ComposedTitles";
 import SlideButtons from "@components/Common/SlideButtons";
-import BlogCarouselCard from "../BlogCarouselCard";
+import BlogCarouselCard from "@components/Home/RecentProjects/BlogCarousel/BlogCarouselCard";
 import { useSwipeable } from "react-swipeable";
 
 interface BlogCarouselProps {

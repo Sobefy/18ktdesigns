@@ -1,4 +1,4 @@
-import Carousel from "../Carousel/Carousel";
+import Carousel from "@components/Home/Carousel/Carousel";
 
 /* eslint-disable @next/next/no-img-element */
 const Testimonials = () => {
