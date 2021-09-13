@@ -1,4 +1,5 @@
 import {
+  HowDidYouFindUsOptions,
   ShippingOptions,
   StartsWithStyleOptions,
   WhenIsTheSpecialDayOptions,
@@ -140,45 +141,50 @@ export const selectStone: ListOption[] = [
   },
 ];
 
-export const chooseAResponse = [
+export const howDidYouFindUsList = [
+  {
+    id: 0,
+    value: HowDidYouFindUsOptions.EMPTY,
+    label: "-- Choose a response --",
+  },
   {
     id: 1,
-    value: "internetSearch",
+    value: HowDidYouFindUsOptions.INTERNET_SEARCH,
     label: "Internet search (Google, Bing, etc..)",
   },
   {
     id: 2,
-    value: "mySignificantOther",
+    value: HowDidYouFindUsOptions.MY_SIGNIFICANT_OTHER,
     label: "My significant other",
   },
   {
     id: 3,
-    value: "friendOrFamily",
+    value: HowDidYouFindUsOptions.FRIENDS_OR_FAMILY,
     label: "Friends or family",
   },
   {
     id: 4,
-    value: "socialMedia",
+    value: HowDidYouFindUsOptions.SOCIAL_MEDIA,
     label: "Social media (Facebook, Pinterest, etc.)",
   },
   {
     id: 5,
-    value: "blogOrOtherWebsite",
+    value: HowDidYouFindUsOptions.BLOG,
     label: "Blog or other website (Buzzfeed, etc)",
   },
   {
     id: 6,
-    value: "radioTv",
+    value: HowDidYouFindUsOptions.RADIO_OR_TV,
     label: "Radio / TV",
   },
   {
     id: 7,
-    value: "print",
+    value: HowDidYouFindUsOptions.PRINT,
     label: "Print (Magazine, newspaper, etc.)",
   },
   {
     id: 8,
-    value: "other",
+    value: HowDidYouFindUsOptions.OTHER,
     label: "Other",
   },
 ];

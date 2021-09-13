@@ -9,6 +9,7 @@ import WhenIsTheSpecialDay from "@components/CreateCustomRing/WhenIsTheSpecialDa
 import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
 import { States } from "@lib/machines/CreateCustomRing/types";
 import WhereWillWeBeShipping from "../WhereWillWeBeShipping";
+import HowDidYouFindUs from "../HowDidYouFindUs";
 
 process.browser &&
   inspect({
@@ -29,6 +30,7 @@ const Machine = () => {
         <WhenIsTheSpecialDay />
       ) : null}
       {state.matches(States.shipping) ? <WhereWillWeBeShipping /> : null}
+      {state.matches(States.howDidYouFindUs) ? <HowDidYouFindUs /> : null}
       {/*
       {state.value === "end" ? (
         <div>
