@@ -4,6 +4,7 @@ import SvgSocial from "../../Common/SvgSocial/SvgSocial";
 
 const Footer = () => {
   const date = new Date();
+  const currentYear = date.getFullYear();
   return (
     <div className="py-10 lg:py-20">
       <div className="container px-4 mx-auto mb-12 md:mb-20">
@@ -20,7 +21,7 @@ const Footer = () => {
                 <a
                   className="font-medium hover:text-gray-600"
                   href={option.url}
-                  target="_blank"
+                  target={option.target}
                   rel="noreferrer"
                 >
                   {option.label}
@@ -36,10 +37,10 @@ const Footer = () => {
                 <a
                   className="flex items-center justify-center w-10 h-10 mr-4 rounded-full bg-gray-50"
                   href={option.url}
-                  target="_blank"
+                  target={option.target}
                   rel="noreferrer"
                 >
-                  <SvgSocial ico={option.value} />
+                  <SvgSocial ico={option.socialIcon} />
                 </a>
               </li>
             ))}
@@ -48,7 +49,7 @@ const Footer = () => {
       </div>
       <p className="px-4 pt-8 text-sm text-center text-gray-500 border-t">
         All rights reserved © 18kt Designs - A Beachside Merchants Company -
-        {date.getFullYear()}
+        {currentYear}
       </p>
     </div>
   );

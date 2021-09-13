@@ -65,7 +65,7 @@ export const TabGroup = () => {
                     <div className="inline-block mb-10 lg:mb-0">
                       <PrimaryButton
                         text={filteredCard[0].textButton}
-                        buttonLocated="lg"
+                        size="lg"
                       />
                     </div>
                   </div>

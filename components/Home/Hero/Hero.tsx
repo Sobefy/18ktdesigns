@@ -23,10 +23,10 @@ const Hero = () => {
             />
           </div>
           <div className="inline-block w-full mb-2 mr-4 md:w-auto">
-            <PrimaryButton text="Start a Project" buttonLocated="md" />
+            <PrimaryButton text="Start a Project" size="md" />
           </div>
           <div className="inline-block w-full mr-4 md:w-auto">
-            <PrimaryButton text="View Past Work" buttonLocated="gray" />
+            <PrimaryButton text="View Past Work" size="gray" />
           </div>
         </div>
         <div className="inset-x-0 max-w-3xl px-4 mx-auto lg:absolute">

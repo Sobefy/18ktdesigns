@@ -8,14 +8,15 @@ interface ServicesCardProps {
 }
 const ServicesCard = ({ data }: ServicesCardProps) => {
   const { id, title, description } = data;
+  const currentIndex = index + 1;
   const printSvgTop = () => {
-    if (id == 1) {
+    if (id === 1) {
       return <ServicesSvg />;
     }
     return "";
   };
   const printSvgBottom = () => {
-    if (id == 3) {
+    if (id === 3) {
       return <ServicesSvg bottom />;
     }
     return "";
@@ -25,7 +26,7 @@ const ServicesCard = ({ data }: ServicesCardProps) => {
       {printSvgTop()}
       {printSvgBottom()}
       <span className="flex items-center justify-center w-12 h-12 mb-6 text-sm rounded-full lg:mb-8 bg-blue-50">
-        {id}
+        {currentIndex}
       </span>
       <div className="mb-4">
         <ComposedTitles subtitleText={title} />

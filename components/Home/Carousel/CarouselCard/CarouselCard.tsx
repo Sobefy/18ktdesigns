@@ -23,17 +23,17 @@ const CarouselCard = ({ data }: CarouselCardProps) => {
       <div className="mx-auto mb-12">
         <p className="text-xl text-gray-500 ">{testimonial}</p>
       </div>
-
-      <div className="mx-auto mb-8">
-        {image ? (
+      {image ? (
+        <div className="mx-auto mb-8">
           <Image
             src={image}
             alt={value}
             width={`${imageWidth}${imageUnit}`}
             height={`${imageHeight}${imageUnit}`}
           />
-        ) : null}
-      </div>
+        </div>
+      ) : null}
+
       <p className="mb-2 text-2xl font-semibold font-heading">{label}</p>
       <p className="text-gray-500">{marriedSince}</p>
     </div>
