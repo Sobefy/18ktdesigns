@@ -1,27 +1,73 @@
-import Title from "../../Common/Title";
-import Description from "../../Common/Description";
-import Select from "../../Common/Select";
-import Checkbox from "../../Common/Checkbox";
+import Title from "@components/Common/Title";
+import Description from "@components/Common/Description";
+import Select from "@components/Common/Select";
+import Checkbox from "@components/Common/Checkbox";
+import InfoPopUp from "@components/Common/InfoPopUpButton";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import BackButton from "@components/Common/BackButton";
+import { minPrice, maxPrice } from "@lib/consts";
+import { useCreateCustomRingMachine } from "@lib/context/createCustomRing";
+import { BudgetOptions } from "@lib/types";
 
-import InfoPopUp from "../../Common/InfoPopUpButton";
-import { minPrice, maxPrice } from "../../../lib/consts";
-import PrimaryButton from "../../Common/PrimaryButton";
 const SetYourBudget = () => {
+  const {
+    state: {
+      context: {
+        setYourBudget: { min, max, imNotSure },
+      },
+    },
+    send,
+  } = useCreateCustomRingMachine();
+
+  const canContinue = min !== 0 || max !== 0 || imNotSure;
+
+  const handleBack = () => {
+    send("BACK");
+  };
+
+  const handleNext = () => {
+    send("NEXT");
+  };
+
+  const handleImNotSure = () => {
+    send("SET_YOUR_BUDGET_SET_IM_NOT_SURE");
+  };
+
+  const handleMin = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value as unknown as BudgetOptions;
+    send({ type: "SET_MIN", value });
+  };
+
+  const handleMax = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value as unknown as BudgetOptions;
+    send({ type: "SET_MAX", value });
+  };
+
   return (
-    <div className="w-full px-4 py-40 m-auto lg:px-52 lg:py-44">
-      <div className="max-w-2xl lg:w-3/5">
-        <div className="flex">
-          <BackButton />
-          <Title text="Set Your Budget" />
-          <InfoPopUp />
-        </div>
-        <Description text="If you have a specific price point in mind, let us know so we can help guide you towards options that fit your budget." />
-        <Select defaultOptionLabel="Min" options={minPrice} />
-        <Select defaultOptionLabel="Max" options={maxPrice} />
-        <Checkbox text="I'm not sure" />
-        <PrimaryButton text="Next" />
+    <>
+      <div className="flex">
+        <BackButton onClick={handleBack} />
+        <Title text="Set Your Budget" />
+        <InfoPopUp />
       </div>
-    </div>
+      <Description text="If you have a specific price point in mind, let us know so we can help guide you towards options that fit your budget." />
+      <Select<BudgetOptions>
+        options={minPrice}
+        value={min}
+        onChange={handleMin}
+      />
+      <Select<BudgetOptions>
+        options={maxPrice}
+        value={max}
+        onChange={handleMax}
+      />
+      <Checkbox
+        text="I'm not sure"
+        checked={imNotSure}
+        onChange={handleImNotSure}
+      />
+      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+    </>
   );
 };
 export default SetYourBudget;

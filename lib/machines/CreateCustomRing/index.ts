@@ -416,12 +416,13 @@ export const customRingMachine = createMachine<
         if (event.type !== "SET_YOUR_BUDGET_SET_IM_NOT_SURE") {
           return { ...context };
         }
+        const newValue = !context.setYourBudget.imNotSure;
         return {
           setYourBudget: {
             ...context.setYourBudget,
             min: 0,
             max: 0,
-            imNotSure: true,
+            imNotSure: newValue,
           },
         };
       }),
