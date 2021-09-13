@@ -1,15 +1,19 @@
 import Image from "next/image";
-import { useState } from "react";
 
-import { ListOption } from "../../../lib/types";
-import SelectedSvg from "../SelectedSvg";
+import { ListOption } from "@lib/types";
+import SelectedSvg from "@components/Common/SelectedSvg";
 
-interface ListProps {
+interface ListProps<I> {
+  selectedItems: I[];
   options: ListOption[];
+  setSelectedItems(items: I[]): void;
 }
-const List = ({ options }: ListProps) => {
-  const [selectedItems, setSelectedItems] = useState<number[]>([]);
-  const handleItemClick = (id: number) => {
+const List = <I,>({
+  selectedItems,
+  options,
+  setSelectedItems,
+}: ListProps<I>) => {
+  const handleItemClick = (id: I) => {
     const itemIsSelected = selectedItems.includes(id);
     if (itemIsSelected) {
       const filteredItems = selectedItems.filter((item) => item !== id);
@@ -31,13 +35,13 @@ const List = ({ options }: ListProps) => {
           imageHeight = 42,
           imageUnit = "px",
         } = option;
-        const itemIsSelected = selectedItems.includes(id);
+        const itemIsSelected = selectedItems.includes(value as unknown as I);
         return (
           <li
-            className="relative bg-white cursor-pointer w-full p-4 my-4 rounded border-gray-200 border"
+            className="relative w-full p-4 my-4 bg-white border border-gray-200 rounded cursor-pointer"
             key={id}
             value={value}
-            onClick={() => handleItemClick(id)}
+            onClick={() => handleItemClick(value as unknown as I)}
           >
             {itemIsSelected ? <SelectedSvg /> : null}
             {image ? (

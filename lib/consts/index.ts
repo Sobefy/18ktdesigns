@@ -1,5 +1,109 @@
-import { ListOption } from "../types";
+import {
+  HowDidYouFindUsOptions,
+  ShippingOptions,
+  StartsWithStyleOptions,
+  WhenIsTheSpecialDayOptions,
+} from "@lib/machines/CreateCustomRing/types";
+import {
+  CarouselItem,
+  ListOption,
+  BlogCarouselItem,
+  ServicesInfo,
+  JewelryTypes,
+  SocialNetworkLinkType,
+  ListFooterType,
+} from "@lib/types";
 
+export const cards: JewelryTypes[] = [
+  {
+    id: 1,
+    title: "Earrings",
+    content:
+      "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
+    img: "/images/tabGroup1.jpg",
+    textButton: "Shop Earrings",
+  },
+  {
+    id: 2,
+    title: "Bracelets",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    img: "/images/tabGroup1.jpg",
+    textButton: "Shop Bracelets",
+  },
+  {
+    id: 3,
+    title: "Chains",
+    content:
+      "A short message that will bring your customers into the world of your imagination. And will allow them to become more familiar with your brand.",
+    img: "/images/tabGroup1.jpg",
+    textButton: "Shop Chains",
+  },
+  {
+    id: 4,
+    title: "Rings",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    img: "/images/tabGroup1.jpg",
+    textButton: "Shop Rings",
+  },
+];
+export const socialNetworkLinks: SocialNetworkLinkType[] = [
+  {
+    id: 1,
+    socialIcon: "fb",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+  {
+    id: 2,
+    socialIcon: "tw",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+  {
+    id: 3,
+    socialIcon: "ig",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+  {
+    id: 4,
+    socialIcon: "li",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+];
+export const listFooter: ListFooterType[] = [
+  {
+    id: 1,
+    value: "partnerships",
+    label: "Partnerships",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+  {
+    id: 2,
+    value: "affiliates",
+    label: "Affiliates",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+  {
+    id: 3,
+    value: "press",
+    label: "Press",
+    url: "https://translate.google.com/",
+    target: "_blank",
+  },
+  {
+    id: 4,
+    value: "privacyPolicy",
+    label: "Privacy Policy",
+    url: "https://twitter.com/",
+    target: "_blank",
+  },
+];
 export const selectStone: ListOption[] = [
   {
     id: 1,
@@ -39,69 +143,73 @@ export const selectStone: ListOption[] = [
   },
 ];
 
-export const chooseAResponse = [
+export const howDidYouFindUsList = [
+  {
+    id: 0,
+    value: HowDidYouFindUsOptions.EMPTY,
+    label: "-- Choose a response --",
+  },
   {
     id: 1,
-    value: "internetSearch",
+    value: HowDidYouFindUsOptions.INTERNET_SEARCH,
     label: "Internet search (Google, Bing, etc..)",
   },
   {
     id: 2,
-    value: "mySignificantOther",
+    value: HowDidYouFindUsOptions.MY_SIGNIFICANT_OTHER,
     label: "My significant other",
   },
   {
     id: 3,
-    value: "friendOrFamily",
+    value: HowDidYouFindUsOptions.FRIENDS_OR_FAMILY,
     label: "Friends or family",
   },
   {
     id: 4,
-    value: "socialMedia",
+    value: HowDidYouFindUsOptions.SOCIAL_MEDIA,
     label: "Social media (Facebook, Pinterest, etc.)",
   },
   {
     id: 5,
-    value: "blogOrOtherWebsite",
+    value: HowDidYouFindUsOptions.BLOG,
     label: "Blog or other website (Buzzfeed, etc)",
   },
   {
     id: 6,
-    value: "radioTv",
+    value: HowDidYouFindUsOptions.RADIO_OR_TV,
     label: "Radio / TV",
   },
   {
     id: 7,
-    value: "print",
+    value: HowDidYouFindUsOptions.PRINT,
     label: "Print (Magazine, newspaper, etc.)",
   },
   {
     id: 8,
-    value: "other",
+    value: HowDidYouFindUsOptions.OTHER,
     label: "Other",
   },
 ];
-
 export const selectAllThatApply = [
   {
     id: 1,
-    value: "iHaveImagesOfASpecificRing",
+    value: StartsWithStyleOptions.I_HAVE_IMAGES,
     label: "I have images of a specific ring (or rings) I can Share.",
   },
   {
     id: 2,
-    value: "mySignificantOtherHasDroppedSomeHints",
+    value: StartsWithStyleOptions.DROPPED_SOME_HINTS,
     label:
       "My significant other has dropped some hints or given me some ideas.",
   },
   {
     id: 3,
-    value: "iKnowMySignificantOther",
+    value: StartsWithStyleOptions.I_KNOW_MY_SO_SENSE_OF_STYLE,
     label: "I know my significant other’s sense of style pretty well.",
   },
   {
     id: 4,
-    value: "HaveSomeDesignIdeasOfMyOwn.",
+    value: StartsWithStyleOptions.I_HAVE_MY_OWN_IDEAS,
     label: "I have some design ideas of my own.",
   },
 ];
@@ -658,92 +766,206 @@ export const maxPrice = [
 
 export const chooseAResponseOptions = [
   {
+    id: 0,
+    value: WhenIsTheSpecialDayOptions.EMPTY,
+    label: "-- Choose a response --",
+  },
+  {
     id: 1,
-    value: "yesIHaveASpecificDate",
+    value: WhenIsTheSpecialDayOptions.I_HAVE_A_SPECIFIC_DATE,
     label: "Yes, I have a specific date",
   },
   {
     id: 2,
-    value: "noSpecificDateButSoon",
+    value: WhenIsTheSpecialDayOptions.NEXT_1_2_MONTHS,
     label: "No specific date, but soon (in the nex 1-2 months)",
   },
   {
     id: 3,
-    value: "noSpecificDateButSometime",
+    value: WhenIsTheSpecialDayOptions.NEXT_6_MONTHS,
     label: "No specific date, but sometime in the next 6 months",
   },
   {
     id: 4,
-    value: "withinTheNext",
+    value: WhenIsTheSpecialDayOptions.NEXT_12_MONTHS,
     label: "Within the next 12 months",
   },
   {
     id: 5,
-    value: "overAYearFromNow",
+    value: WhenIsTheSpecialDayOptions.OVER_A_YEAR,
     label: "Over a year from now",
   },
   {
     id: 6,
-    value: "imJustLookingForNow",
+    value: WhenIsTheSpecialDayOptions.IM_JUST_LOOKING,
     label: "I'm just looking for now",
   },
 ];
 
 export const chooseACountry = [
   {
+    id: 0,
+    value: ShippingOptions.EMPTY,
+    label: "-- Choose a response --",
+  },
+  {
     id: 1,
-    value: "unitedStates",
+    value: ShippingOptions.US,
     label: "United States",
   },
   {
     id: 2,
-    value: "canada",
+    value: ShippingOptions.CA,
     label: "Canada",
   },
   {
     id: 3,
-    value: "unitedKingdom",
+    value: ShippingOptions.UK,
     label: " United Kingdom",
   },
   {
     id: 4,
-    value: "australia",
+    value: ShippingOptions.AU,
     label: "Australia",
   },
   {
     id: 5,
-    value: "other",
+    value: ShippingOptions.OTHER,
     label: "Other",
   },
 ];
 
 export const chooseRecipientOptions = [
+  { id: 0, value: "", label: "-- Choose recipient --" },
   {
     id: 1,
-    value: "mySignificantOther",
+    value: "MY_SIGNIFICANT_OTHER",
     label: "My significant other",
   },
   {
     id: 2,
-    value: "me",
+    value: "ME",
     label: "Me",
   },
 ];
 
 export const selectResponseOptions = [
+  { id: 0, value: "IDLE", label: "-- Select response --" },
   {
     id: 1,
-    value: "shoppingAround",
+    value: "SHOPPING_AROUND",
     label: "Shopping around",
   },
   {
     id: 2,
-    value: "planningToBuyMyOwnRing",
+    value: "BUYING_MY_OWN_RING",
     label: "Planning to buy my own ring",
   },
   {
     id: 3,
-    value: "mySOAndIAreShoppingTogether",
+    value: "MY_SO_AND_I_ARE_SHOPPING_TOGHETER",
     label: "My S/O and i are shopping together",
+  },
+];
+
+export const carouselData: CarouselItem[] = [
+  {
+    id: 1,
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
+    testimonial:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
+    image: "/zeus-assets/images/02.png",
+    imageWidth: 80,
+    imageHeight: 80,
+    imageUnit: "px",
+    marriedSince: "Married on 08/20/2020",
+  },
+  {
+    id: 2,
+    value: "ryanandsandy",
+    label: "Ryan and Sandy",
+    testimonial:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
+    image: "/zeus-assets/images/02.png",
+    imageWidth: 80,
+    imageHeight: 80,
+    imageUnit: "px",
+    marriedSince: "Married on 09/06/2021",
+  },
+  {
+    id: 3,
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
+    testimonial:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque sem eget, scelerisque dolor.",
+    image: "/zeus-assets/images/02.png",
+    imageWidth: 80,
+    imageHeight: 80,
+    imageUnit: "px",
+    marriedSince: "Married on 10/27/2018",
+  },
+];
+
+export const blogCarouselData: BlogCarouselItem[] = [
+  {
+    id: 1,
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
+    summary:
+      "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
+    image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
+    imageWidth: 864,
+    imageHeight: 384,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    value: "ryanandsandy",
+    label: "Ryan & Sandy",
+    summary:
+      "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
+    image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
+    imageWidth: 864,
+    imageHeight: 384,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    value: "ryanandsandy",
+    label: "Ryan and Sandy",
+    summary:
+      "When Ryan needed to find Sandy the perfect engagement ring. He looked no further than us blah and more text here.",
+    image: "/images/waiter-giving-engagement-ring-to-groom-37LT4WV.jpg",
+    imageWidth: 864,
+    imageHeight: 384,
+    imageUnit: "px",
+  },
+];
+
+export const servicesData: ServicesInfo[] = [
+  {
+    id: 1,
+    title: "Sketching",
+    description:
+      "We'll sketch your piece based on your personal taste and specifications.",
+  },
+  {
+    id: 2,
+    title: "Gems & Diamonds",
+    description:
+      "Our experts will be by your side and work hard to find the perfect gems and diamonds for your piece.",
+  },
+  {
+    id: 3,
+    title: "Put it all together.",
+    description:
+      "We then send our design to our manufacturing team of industry designers.",
+  },
+  {
+    id: 4,
+    title: "Budget friendly",
+    description:
+      "We can work with your budget yet create something unique and memorable.",
   },
 ];
