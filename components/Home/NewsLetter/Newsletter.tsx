@@ -38,7 +38,11 @@ const Newsletter = () => {
                 <span className="absolute top-0 left-0 inline-block px-1 ml-4 -mt-2 text-xs text-gray-900 bg-white ">
                   Email Address
                 </span>
-                <PrimaryButton size="sm" text="Sign&nbsp;up" />
+                <PrimaryButton
+                  size="sm"
+                  text="Sign&nbsp;up"
+                  onClick={() => {}}
+                />
               </div>
             </form>
           </div>

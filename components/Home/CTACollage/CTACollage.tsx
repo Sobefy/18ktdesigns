@@ -41,7 +41,11 @@ const CTACollage = () => {
                 />
               </div>
               <div className="inline-block">
-                <PrimaryButton size="md" text="Start a Project" />
+                <PrimaryButton
+                  size="md"
+                  text="Start a Project"
+                  onClick={() => {}}
+                />
               </div>
             </div>
           </div>

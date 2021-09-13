@@ -24,7 +24,11 @@ const CTA = () => {
             />
           </div>
           <div className="inline-block w-full ml-auto md:w-auto">
-            <PrimaryButton size="lg" text="Start a Project" />
+            <PrimaryButton
+              size="lg"
+              text="Start a Project"
+              onClick={() => {}}
+            />
           </div>
         </div>
       </div>
