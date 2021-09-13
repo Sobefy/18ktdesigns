@@ -47,23 +47,27 @@ export const cards: JewelryTypes[] = [
 export const socialNetworkLinks = [
   {
     id: 1,
-    value: "fb",
+    socialIcon: "fb",
     url: "https://translate.google.com/",
+    target: "_blank",
   },
   {
     id: 2,
-    value: "tw",
+    socialIcon: "tw",
     url: "https://translate.google.com/",
+    target: "_blank",
   },
   {
     id: 3,
-    value: "ig",
+    socialIcon: "ig",
     url: "https://translate.google.com/",
+    target: "_blank",
   },
   {
     id: 4,
-    value: "li",
+    socialIcon: "li",
     url: "https://translate.google.com/",
+    target: "_blank",
   },
 ];
 export const listFooter = [
@@ -72,24 +76,28 @@ export const listFooter = [
     value: "partnerships",
     label: "Partnerships",
     url: "https://translate.google.com/",
+    target: "_blank",
   },
   {
     id: 2,
     value: "affiliates",
     label: "Affiliates",
-    url: "https://twitter.com/",
+    url: "https://translate.google.com/",
+    target: "_blank",
   },
   {
     id: 3,
     value: "press",
     label: "Press",
     url: "https://translate.google.com/",
+    target: "_blank",
   },
   {
     id: 4,
     value: "privacyPolicy",
     label: "Privacy Policy",
     url: "https://twitter.com/",
+    target: "_blank",
   },
 ];
 export const selectStone: ListOption[] = [

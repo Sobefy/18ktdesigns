@@ -1,15 +1,11 @@
 interface PrimaryButtonProps {
   text: string;
-  onClick(): void;
-  buttonLocated?: "lg" | "md" | "sm" | "gray";
+  onClick?(): void;
+  size?: "lg" | "md" | "sm" | "gray";
 }
-const PrimaryButton = ({
-  text,
-  onClick,
-  buttonLocated,
-}: PrimaryButtonProps) => {
+const PrimaryButton = ({ text, onClick, size }: PrimaryButtonProps) => {
   const getButtonClassName = () => {
-    switch (buttonLocated) {
+    switch (size) {
       case "lg":
         return "px-12 text-white bg-red-400 hover:bg-red-300";
       case "md":

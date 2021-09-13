@@ -41,7 +41,7 @@ const CTACollage = () => {
                 />
               </div>
               <div className="inline-block">
-                <PrimaryButton buttonLocated="md" text="Start a Project" />
+                <PrimaryButton size="md" text="Start a Project" />
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { cards } from "@lib/consts";
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryButton from "@components/Common/PrimaryButton";
 import Description from "@components/Common/Description";
+import { JewelryTypes } from "@lib/types";
 /* eslint-disable @next/next/no-img-element */
 
 export const TabGroup = () => {
@@ -12,6 +13,7 @@ export const TabGroup = () => {
     setToggle(index);
   };
   const filteredCard = cards.filter((card) => card.id === toggle);
+  const filteredCardSelected = filteredCard[0];
   return (
     <>
       <div className="container pt-20 mx-auto mb-2 ">
@@ -41,31 +43,32 @@ export const TabGroup = () => {
                         onClick={() => toggleTab(id)}
                       >
                         <p
-                          className={
-                            toggle === id
-                              ? "inline-block px-8 py-4 text-sm font-semibold rounded shadow bg-white"
-                              : "inline-block px-8 py-4 text-sm font-semibold bg-blue-50 text-gray-500"
-                          }
+                          className={`inline-block px-8 py-4 text-sm font-semibold
+                            ${
+                              toggle === id
+                                ? "rounded shadow bg-white"
+                                : "bg-blue-50 text-gray-500"
+                            }`}
                         >
                           {title}
                         </p>
                       </li>
                     ))}
                   </ul>
-                  <div className="max-w-md" key={filteredCard[0].id}>
+                  <div className="max-w-md" key={filteredCardSelected.id}>
                     <div className="mb-4 lg:mb-10">
                       <ComposedTitles
-                        subtitleText={filteredCard[0].title}
+                        subtitleText={filteredCardSelected.title}
                         subtitleSize="md"
                       />
                     </div>
                     <div className="mb-6 leading-loose text-gray-500 lg:mb-10">
-                      <Description text={filteredCard[0].content} />
+                      <Description text={filteredCardSelected.content} />
                     </div>
                     <div className="inline-block mb-10 lg:mb-0">
                       <PrimaryButton
-                        text={filteredCard[0].textButton}
-                        buttonLocated="lg"
+                        text={filteredCardSelected.textButton}
+                        size="lg"
                       />
                     </div>
                   </div>
@@ -73,8 +76,8 @@ export const TabGroup = () => {
                 <div className="relative w-full px-4 lg:w-1/2">
                   <img
                     className="rounded-xl"
-                    src={filteredCard[0].img}
-                    alt={filteredCard[0].title}
+                    src={filteredCardSelected.img}
+                    alt={filteredCardSelected.title}
                   />
                 </div>
               </div>
