@@ -1,14 +1,14 @@
+import Image from "next/image";
+
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import { BlogCarouselItem } from "@lib/types";
-import Image from "next/image";
 
 interface BlogCarouselCardProps {
   data: BlogCarouselItem;
 }
 const BlogCarouselCard = ({ data }: BlogCarouselCardProps) => {
   const {
-    id,
     value,
     label,
     summary,
@@ -17,6 +17,7 @@ const BlogCarouselCard = ({ data }: BlogCarouselCardProps) => {
     imageHeight = 384,
     imageUnit = "px",
   } = data;
+
   return (
     <div className="inline-flex flex-col items-center w-full whitespace-normal justify-items-center">
       <div className="relative max-w-4xl mx-auto">
@@ -34,9 +35,8 @@ const BlogCarouselCard = ({ data }: BlogCarouselCardProps) => {
         </div>
         <div>
           <div className="mb-6">
-            <ComposedTitles subtitleText={`${label}`} subtitleSize />
+            <ComposedTitles subtitleText={`${label}`} />
           </div>
-
           <PrimaryDescription text={`${summary}`} textSize="gray" />
         </div>
       </div>
