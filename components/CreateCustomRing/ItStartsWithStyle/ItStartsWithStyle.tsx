@@ -6,6 +6,7 @@ import Description from "@components/Common/Description";
 import List from "@components/Common/List";
 import Checkbox from "@components/Common/Checkbox";
 import PrimaryButton from "@components/Common/PrimaryButton";
+import { StartsWithStyleOptions } from "@lib/machines/CreateCustomRing/types";
 
 const ItStartsWithStyle = () => {
   const {
@@ -17,8 +18,14 @@ const ItStartsWithStyle = () => {
     send,
   } = useCreateCustomRingMachine();
 
+  const canContinue = styles.length > 0 || iHaveNoIdea;
+
   const handleBack = () => {
     send("BACK");
+  };
+
+  const handleNext = () => {
+    send("NEXT");
   };
 
   const handleIHaveNoIdea = () => {
@@ -36,13 +43,17 @@ const ItStartsWithStyle = () => {
           quite yet?"
       />
       <Description text="SELECT ALL THAT APPLY" />
-      <List options={selectAllThatApply} value={styles} />
+      <List<StartsWithStyleOptions>
+        options={selectAllThatApply}
+        selectedItems={styles}
+        setSelectedItems={(styles) => send({ type: "SET_STYLES", styles })}
+      />
       <Checkbox
         text="I have no ideas yet - I just want an amazing ring!"
         checked={iHaveNoIdea}
         onChange={handleIHaveNoIdea}
       />
-      <PrimaryButton text="Next" />
+      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
     </>
   );
 };

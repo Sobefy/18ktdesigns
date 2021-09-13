@@ -5,8 +5,9 @@ import { ServicesInfo } from "@lib/types";
 
 interface ServicesCardProps {
   data: ServicesInfo;
+  index: number;
 }
-const ServicesCard = ({ data }: ServicesCardProps) => {
+const ServicesCard = ({ data, index }: ServicesCardProps) => {
   const { id, title, description } = data;
   const currentIndex = index + 1;
   const printSvgTop = () => {

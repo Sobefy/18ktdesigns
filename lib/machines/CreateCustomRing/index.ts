@@ -379,10 +379,11 @@ export const customRingMachine = createMachine<
         if (event.type !== "SET_IM_NOT_SURE") {
           return { ...context };
         }
+        const newValue = !context.yourCenterStone.imNotSure;
         return {
           yourCenterStone: {
             ...context.yourCenterStone,
-            imNotSure: true,
+            imNotSure: newValue,
             stones: [],
           },
         };

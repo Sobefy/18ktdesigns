@@ -24,8 +24,8 @@ const Services = () => {
               />
             </div>
             <div className="relative flex flex-wrap -mx-4 -mb-12">
-              {servicesData.map((services) => (
-                <ServicesCard key={services.id} data={services} />
+              {servicesData.map((services, index) => (
+                <ServicesCard key={services.id} index={index} data={services} />
               ))}
             </div>
           </div>

@@ -81,7 +81,6 @@ export enum RecipientUserSelections {
 }
 
 export enum StartsWithStyleOptions {
-  EMPTY = "",
   I_HAVE_IMAGES = "I_HAVE_IMAGES",
   DROPPED_SOME_HINTS = "DROPPED_SOME_HINTS",
   I_KNOW_MY_SO_SENSE_OF_STYLE = "I_KNOW_MY_SO_SENSE_OF_STYLE",
