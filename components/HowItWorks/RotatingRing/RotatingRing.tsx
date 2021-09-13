@@ -1,3 +1,5 @@
+//TODO: check react-player loop and autoplay not working when realoading
+
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import ReactPlayer from "react-player";
