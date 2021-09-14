@@ -35,12 +35,14 @@ const RotatingRing = () => {
           </div>
         </div>
         <div className="relative w-full px-4 lg:w-1/2">
-          <ReactPlayer
-            url="https://player.vimeo.com/video/542471857?title=0&portrait=0&byline=0&autoplay=1"
-            width="100%"
-            playing={true}
-            loop={true}
-          />
+          <div className="max-w-lg">
+            <ReactPlayer
+              url="https://player.vimeo.com/video/542471857?title=0&portrait=0&byline=0&autoplay=1"
+              width="100%"
+              playing
+              loop
+            />
+          </div>
         </div>
       </div>
     </div>
