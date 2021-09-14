@@ -38,9 +38,12 @@ const HowDidYouFindUs = () => {
       <Select<HowDidYouFindUsOptions>
         options={howDidYouFindUsList}
         value={howDidYouFindUs}
+        className="mb-4"
         onChange={handleHowDidYouFindUs}
       />
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" size="md" onClick={handleNext} />
+      ) : null}
     </>
   );
 };

@@ -6,13 +6,20 @@ import SelectedSvg from "@components/Common/SelectedSvg";
 interface ListProps<I> {
   selectedItems: I[];
   options: ListOption[];
+  style?: "inline" | "grid";
   setSelectedItems(items: I[]): void;
 }
 const List = <I,>({
   selectedItems,
   options,
+  style = "inline",
   setSelectedItems,
 }: ListProps<I>) => {
+  const isGridStyle = style === "grid";
+  const wrapperClasses = isGridStyle ? "grid-cols-2" : "";
+  const liClasses = isGridStyle ? "text-center flex-col" : "";
+  const imageClasses = isGridStyle ? "mb-4" : "";
+
   const handleItemClick = (id: I) => {
     const itemIsSelected = selectedItems.includes(id);
     if (itemIsSelected) {
@@ -24,7 +31,7 @@ const List = <I,>({
   };
 
   return (
-    <ul>
+    <ul className={`grid gap-4 ${wrapperClasses}`}>
       {options.map((option) => {
         const {
           id,
@@ -38,7 +45,7 @@ const List = <I,>({
         const itemIsSelected = selectedItems.includes(value as unknown as I);
         return (
           <li
-            className="relative w-full p-4 my-4 bg-white border border-gray-200 rounded cursor-pointer"
+            className={`flex relative w-full p-4 bg-white border border-gray-200 rounded cursor-pointer ${liClasses}`}
             key={id}
             value={value}
             onClick={() => handleItemClick(value as unknown as I)}
@@ -50,6 +57,7 @@ const List = <I,>({
                 alt={label}
                 width={`${imageWidth}${imageUnit}`}
                 height={`${imageHeight}${imageUnit}`}
+                className={`${imageClasses}`}
               />
             ) : null}
             {label}

@@ -38,10 +38,11 @@ const YourCenterStone = () => {
       <Title text="Your Center Stone" />
       <Description text="What types of center stones might you be considering for your ring?" />
       <Description text="SELECT ALL THAT APPLY" />
-      <section className="px-4 pt-8">
+      <section className="">
         <List<YourCenterStoneOptions>
           selectedItems={stones}
           options={selectStone}
+          style="grid"
           setSelectedItems={(items) =>
             send({ type: "SET_STONES", stones: items })
           }
@@ -56,7 +57,9 @@ const YourCenterStone = () => {
           />
         </label>
       </div>
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" size="md" onClick={handleNext} />
+      ) : null}
     </>
   );
 };

@@ -51,22 +51,26 @@ const SetYourBudget = () => {
         <InfoPopUp />
       </div>
       <Description text="If you have a specific price point in mind, let us know so we can help guide you towards options that fit your budget." />
-      <Select<BudgetOptions>
-        options={minPrice}
-        value={min}
-        onChange={handleMin}
-      />
-      <Select<BudgetOptions>
-        options={maxPrice}
-        value={max}
-        onChange={handleMax}
-      />
+      <div className="grid grid-cols-2 gap-4">
+        <Select<BudgetOptions>
+          options={minPrice}
+          value={min}
+          onChange={handleMin}
+        />
+        <Select<BudgetOptions>
+          options={maxPrice}
+          value={max}
+          onChange={handleMax}
+        />
+      </div>
       <Checkbox
         text="I'm not sure"
         checked={imNotSure}
         onChange={handleImNotSure}
       />
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" size="md" onClick={handleNext} />
+      ) : null}
     </>
   );
 };

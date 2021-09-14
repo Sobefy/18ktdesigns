@@ -15,14 +15,15 @@ const Landing = () => {
       <div className="flex flex-wrap">
         <PrimaryButton
           text="Get Started"
+          size="md"
           onClick={() => send({ type: "NEXT" })}
+          className="mr-4"
         />
-        <a
-          className="block w-full px-8 py-4 mb-2 text-sm font-medium text-center rounded md:w-auto borderhover:border-gray-300"
-          href="#"
-        >
-          Design other jewelry
-        </a>
+        <PrimaryButton
+          text="Design other jewelry"
+          size="gray"
+          onClick={() => {}}
+        />
       </div>
     </>
   );

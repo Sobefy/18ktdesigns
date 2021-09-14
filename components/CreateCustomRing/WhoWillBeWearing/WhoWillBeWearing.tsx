@@ -78,6 +78,7 @@ const WhoWillBeWearing = () => {
       <Select<RecipientUserSelections>
         options={chooseRecipientOptions}
         value={userSelection}
+        className="mb-4"
         onChange={handleChooseRecipient}
       />
       {state.matches("recipient.mySignificantOther") ? (
@@ -106,11 +107,14 @@ const WhoWillBeWearing = () => {
           <Select<RecipientMeOptions>
             value={me}
             options={selectResponseOptions}
+            className="mb-4"
             onChange={handleMe}
           />
         </>
       ) : null}
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" onClick={handleNext} size="md" />
+      ) : null}
     </>
   );
 };

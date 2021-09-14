@@ -51,12 +51,15 @@ const WhenIsTheSpecialDay = () => {
       <Select<WhenIsTheSpecialDayOptions>
         options={chooseAResponseOptions}
         value={specialDate}
+        className="mb-4"
         onChange={handleChooseSpecialDay}
       />
       {specialDate === WhenIsTheSpecialDayOptions.I_HAVE_A_SPECIFIC_DATE ? (
         <Calendar date={date} handleSelectDate={handleSelectDate} />
       ) : null}
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" size="md" onClick={handleNext} />
+      ) : null}
     </>
   );
 };

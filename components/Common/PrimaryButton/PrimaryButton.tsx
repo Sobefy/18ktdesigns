@@ -2,8 +2,14 @@ interface PrimaryButtonProps {
   text: string;
   onClick(): void;
   size?: "lg" | "md" | "sm" | "gray";
+  className?: string;
 }
-const PrimaryButton = ({ text, onClick, size }: PrimaryButtonProps) => {
+const PrimaryButton = ({
+  text,
+  onClick,
+  size,
+  className = "",
+}: PrimaryButtonProps) => {
   const getButtonClassName = () => {
     switch (size) {
       case "lg":
@@ -20,7 +26,7 @@ const PrimaryButton = ({ text, onClick, size }: PrimaryButtonProps) => {
   };
   return (
     <button
-      className={`md:w-auto w-full py-4 text-center text-sm font-medium leading-normal rounded transition duration-200 ${getButtonClassName()}`}
+      className={`md:w-auto w-full py-4 text-center text-sm font-medium leading-normal rounded transition duration-200 ${getButtonClassName()} ${className}`}
       onClick={onClick}
     >
       {text}

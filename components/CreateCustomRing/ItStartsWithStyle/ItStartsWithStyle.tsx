@@ -53,7 +53,9 @@ const ItStartsWithStyle = () => {
         checked={iHaveNoIdea}
         onChange={handleIHaveNoIdea}
       />
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" onClick={handleNext} size="md" />
+      ) : null}
     </>
   );
 };

@@ -38,9 +38,12 @@ const WherWillBeShipping = () => {
       <Select<ShippingOptions>
         options={chooseACountry}
         value={shipping}
+        className="mb-4"
         onChange={handleSelectShipping}
       />
-      {canContinue ? <PrimaryButton text="Next" onClick={handleNext} /> : null}
+      {canContinue ? (
+        <PrimaryButton text="Next" size="md" onClick={handleNext} />
+      ) : null}
     </>
   );
 };
