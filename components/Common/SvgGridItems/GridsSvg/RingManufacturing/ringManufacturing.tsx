@@ -1,4 +1,4 @@
-const RingManufacturingSvg = () => {
+const ringManufacturing = () => {
   return (
     <svg
       width="22"
@@ -27,4 +27,4 @@ const RingManufacturingSvg = () => {
   );
 };
 
-export default RingManufacturingSvg;
+export default ringManufacturing;

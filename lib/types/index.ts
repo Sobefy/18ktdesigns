@@ -1,9 +1,9 @@
-export type gridItemsTypes={
+export type gridItemsTypes = {
   id: number;
-  title:string;
-  content:string;
-  svg:string;
-}
+  title: string;
+  content: string;
+  svg: string;
+};
 export type ListOption = {
   id: number;
   value: string;

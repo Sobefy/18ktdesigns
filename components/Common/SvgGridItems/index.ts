@@ -1,1 +1,1 @@
-export {default} from "./SvgGridItems"
+export { default } from "./SvgGridItems";

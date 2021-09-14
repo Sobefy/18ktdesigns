@@ -1,1 +1,1 @@
-export {default} from "./RingManufacturingSvg"
+export { default } from "./ringManufacturing";

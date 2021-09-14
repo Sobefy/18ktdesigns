@@ -19,14 +19,14 @@ export const gridItems: gridItemsTypes[] = [
     id: 1,
     title: "Material and Style",
     content:
-    "For now, we’ll do the asking. Who is it for? Have they hinted at an specific type of ring they like? We'll ask lots of questions in order to learn as much as possible about your future partner.",
+      "For now, we’ll do the asking. Who is it for? Have they hinted at an specific type of ring they like? We'll ask lots of questions in order to learn as much as possible about your future partner.",
     svg: "mad",
   },
   {
     id: 2,
     title: "Diamonds or Stones?",
     content:
-    "Our gem and diamond experts work diligently to find the perfect stone for you and offer guidance through every step of the process.",
+      "Our gem and diamond experts work diligently to find the perfect stone for you and offer guidance through every step of the process.",
     svg: "dios",
   },
   {
@@ -34,7 +34,7 @@ export const gridItems: gridItemsTypes[] = [
     title: "Design Review",
     content:
       "We are able to create realistic 3D renderings that show exactly how the ring will look. We'll tweak and tune until we hear you say: “It looks perfect!",
-    svg:"dr",
+    svg: "dr",
   },
   {
     id: 4,
