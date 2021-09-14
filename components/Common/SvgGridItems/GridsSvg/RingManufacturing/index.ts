@@ -1,1 +1,1 @@
-export { default } from "./ringManufacturing";
+export { default } from "./RingManufacturing";

@@ -1,1 +1,1 @@
-export { default } from "./diamondsOrStones";
+export { default } from "./DiamondsOrStones";

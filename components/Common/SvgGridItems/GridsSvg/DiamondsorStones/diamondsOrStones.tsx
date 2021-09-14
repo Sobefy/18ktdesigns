@@ -1,4 +1,4 @@
-const diamondOrStones = () => {
+const DiamondOrStones = () => {
   return (
     <svg
       width="20"
@@ -34,4 +34,4 @@ const diamondOrStones = () => {
   );
 };
 
-export default diamondOrStones;
+export default DiamondOrStones;

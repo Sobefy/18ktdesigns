@@ -1,4 +1,4 @@
-const designReview = () => {
+const DesignReview = () => {
   return (
     <svg
       width="18"
@@ -34,4 +34,4 @@ const designReview = () => {
   );
 };
 
-export default designReview;
+export default DesignReview;

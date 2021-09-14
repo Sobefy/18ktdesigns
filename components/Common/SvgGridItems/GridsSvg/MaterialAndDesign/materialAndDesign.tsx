@@ -1,4 +1,4 @@
-const materialAndStyle = () => {
+const MaterialAndStyle = () => {
   return (
     <svg
       width="18"
@@ -27,4 +27,4 @@ const materialAndStyle = () => {
   );
 };
 
-export default materialAndStyle;
+export default MaterialAndStyle;

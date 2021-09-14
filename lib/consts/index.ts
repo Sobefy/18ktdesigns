@@ -20,28 +20,28 @@ export const gridItems: gridItemsTypes[] = [
     title: "Material and Style",
     content:
       "For now, we’ll do the asking. Who is it for? Have they hinted at an specific type of ring they like? We'll ask lots of questions in order to learn as much as possible about your future partner.",
-    svg: "mad",
+    svg: "materialAndDesign",
   },
   {
     id: 2,
     title: "Diamonds or Stones?",
     content:
       "Our gem and diamond experts work diligently to find the perfect stone for you and offer guidance through every step of the process.",
-    svg: "dios",
+    svg: "diamondOrStones",
   },
   {
     id: 3,
     title: "Design Review",
     content:
       "We are able to create realistic 3D renderings that show exactly how the ring will look. We'll tweak and tune until we hear you say: “It looks perfect!",
-    svg: "dr",
+    svg: "designReview",
   },
   {
     id: 4,
     title: "Ring Manufacturing",
     content:
       "Our master jewelers will bring your custom design to life. Once it's in your hands, we stand behind the ring for life with our Lifetime Customer Service.",
-    svg: "rm",
+    svg: "ringManufacturing",
   },
 ];
 export const cards: JewelryTypes[] = [

@@ -1,20 +1,20 @@
-import MaterialAndDesignSvg from "@components/Common/SvgGridItems/GridsSvg/MaterialAndDesign";
-import DiamondOrStonesSvg from "@components/Common/SvgGridItems/GridsSvg/DiamondsorStones";
-import DesignReviewSvg from "@components/Common/SvgGridItems/GridsSvg/DesignReview";
-import RingManufacturingSvg from "@components/Common/SvgGridItems/GridsSvg/RingManufacturing";
+import MaterialAndDesign from "@components/Common/SvgGridItems/GridsSvg/MaterialAndDesign";
+import DiamondOrStones from "@components/Common/SvgGridItems/GridsSvg/DiamondsorStones";
+import DesignReview from "@components/Common/SvgGridItems/GridsSvg/DesignReview";
+import RingManufacturing from "@components/Common/SvgGridItems/GridsSvg/RingManufacturing";
 interface SvgIconsProps {
   ico: string;
 }
 const SvgGridItems = ({ ico }: SvgIconsProps) => {
   switch (ico) {
-    case "mad":
-      return <MaterialAndDesignSvg />;
-    case "dios":
-      return <DiamondOrStonesSvg />;
-    case "dr":
-      return <DesignReviewSvg />;
-    case "rm":
-      return <RingManufacturingSvg />;
+    case "materialAndDesign":
+      return <MaterialAndDesign />;
+    case "diamondOrStones":
+      return <DiamondOrStones />;
+    case "designReview":
+      return <DesignReview />;
+    case "ringManufacturing":
+      return <RingManufacturing />;
     default:
       return null;
   }
