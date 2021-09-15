@@ -13,6 +13,7 @@ import {
   SocialNetworkLinkType,
   ListFooterType,
   gridItemsTypes,
+  BudgetInfoType,
 } from "@lib/types";
 export const gridItems: gridItemsTypes[] = [
   {
@@ -997,5 +998,35 @@ export const servicesData: ServicesInfo[] = [
     title: "Budget friendly",
     description:
       "We can work with your budget yet create something unique and memorable.",
+  },
+];
+
+export const budgetInfo: BudgetInfoType[] = [
+  {
+    id: 1,
+    weight: "18kt",
+    purity: "75.0",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "1500",
+  },
+  {
+    id: 2,
+    weight: "22kt",
+    purity: "91.7.0",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "3500",
+  },
+  {
+    id: 3,
+    weight: "24kt",
+    purity: "99.9",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "6000",
   },
 ];

@@ -66,6 +66,16 @@ export type ListFooterType = {
   target: string;
 };
 
+export type BudgetInfoType = {
+  id: number;
+  weight: string;
+  purity: string;
+  diamondCarat: string;
+  materials: string;
+  complexity: string;
+  price: string;
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL
