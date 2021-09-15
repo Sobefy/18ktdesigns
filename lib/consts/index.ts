@@ -5,6 +5,7 @@ import {
   WhenIsTheSpecialDayOptions,
 } from "@lib/machines/CreateCustomRing/types";
 import {
+  ImageItem,
   CarouselItem,
   ListOption,
   BlogCarouselItem,
@@ -15,6 +16,85 @@ import {
   gridItemsTypes,
   BudgetInfoType,
 } from "@lib/types";
+export const ImageGridContent: ImageItem[] = [
+  {
+    id: 1,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/beautiful-engagement-proposal-at-sunset-happy-couple-tonythetigersson-tony-andrews-photography-t20-E0lomV.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    alt: "Ryan and Sandy",
+    image:
+      "/images/happy-couple-engaged-couple-engagement-ring-couple-in-love-t20-29Zp7E.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 4,
+    alt: "Ryan & Sandy",
+    image: "/images/lovely-couple-at-the-beach-t20-G0ZGZm.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 5,
+    alt: "Ryan & Sandy",
+    image: "/images/twenty20-0bade236-d46a-44cb-b8ca-cdcb8913f742.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 6,
+    alt: "Ryan & Sandy",
+    image: "/images/nominated-already-t20-3w8o4o.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 7,
+    alt: "Ryan & Sandy",
+    image: "/images/Couple-Laughing-together-at-the-beach.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 8,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 9,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+];
 export const gridItems: gridItemsTypes[] = [
   {
     id: 1,
