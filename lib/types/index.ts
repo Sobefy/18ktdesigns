@@ -1,7 +1,7 @@
 export type ImageItem = {
   id: number;
-  image?: string;
-  alt?: string;
+  image: string;
+  alt: string;
   imageWidth?: number;
   imageHeight?: number;
   imageUnit?: "px" | "rem";
