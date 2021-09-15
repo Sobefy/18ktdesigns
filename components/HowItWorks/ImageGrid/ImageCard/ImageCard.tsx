@@ -7,7 +7,7 @@ interface ImageCardProps {
 
 const ImageCard = ({ data }: ImageCardProps) => {
   const {
-    image = null,
+    image,
     alt,
     imageWidth = 371,
     imageHeight = 288,
@@ -15,15 +15,13 @@ const ImageCard = ({ data }: ImageCardProps) => {
   } = data;
   return (
     <>
-      {image ? (
-        <Image
-          className="object-cover w-full rounded-lg h-72"
-          src={image}
-          alt={alt}
-          width={`${imageWidth}${imageUnit}`}
-          height={`${imageHeight}${imageUnit}`}
-        />
-      ) : null}
+      <Image
+        className="object-cover w-full rounded-lg h-72"
+        src={image}
+        alt={alt}
+        width={`${imageWidth}${imageUnit}`}
+        height={`${imageHeight}${imageUnit}`}
+      />
     </>
   );
 };
