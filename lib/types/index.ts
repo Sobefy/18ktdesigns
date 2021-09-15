@@ -1,3 +1,11 @@
+export type ImageItem = {
+  id: number;
+  image?: string;
+  alt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
 export type gridItemsTypes = {
   id: number;
   title: string;
