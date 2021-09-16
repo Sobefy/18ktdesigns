@@ -10,14 +10,8 @@ interface AccordionCardProps {
 }
 
 const AccordionCard = ({ data, onClick }: AccordionCardProps) => {
-  const { id, title, description } = data;
-  const intitialState = () => {
-    if (id === 1) {
-      return true;
-    }
-    return false;
-  };
-  const [cardOpen, setCardOpen] = useState(intitialState);
+  const { id, title, description, defaultChecked } = data;
+  const [cardOpen, setCardOpen] = useState(defaultChecked);
   const handleCardClick = () => {
     setCardOpen(!cardOpen);
   };

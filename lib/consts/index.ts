@@ -1118,6 +1118,7 @@ export const accordionInfo: AccordionInfoType[] = [
     title: "How long does a custom ring take to make?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+    defaultChecked: true,
   },
   {
     id: 2,
