@@ -6,12 +6,14 @@ import Accordion from "@components/HowItWorks/Accordion";
 import CTA from "@components/Common/CTA";
 const HowItWorks = () => {
   return (
-    <div className="relative py-20">
-      <RotatingRing />
-      <GridSection />
-      <Budgeting />
-      <ImageGrid />
-      <Accordion />
+    <>
+      <div className="relative py-20">
+        <RotatingRing />
+        <GridSection />
+        <Budgeting />
+        <ImageGrid />
+        <Accordion />
+      </div>
       <CTA
         textTitleSize="md"
         titleText="Ready to create a one-of-a-kind ring with us?"
@@ -20,7 +22,7 @@ const HowItWorks = () => {
         btnText="Sign up"
         onClick={() => {}}
       />
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ interface CTADescriptionProps {
   primarySubtitle: string;
   secondarySubtitle: string;
   btnText: string;
-  onClick?(): void;
+  onClick(): void;
 }
 const CTA = ({
   textTitleSize,
