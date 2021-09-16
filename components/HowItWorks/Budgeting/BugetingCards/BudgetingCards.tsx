@@ -64,7 +64,11 @@ const BudgetingCards = ({ data }: BudgetingCardsProps) => {
         </div>
         <div className="w-full px-4 text-center lg:w-1/5 lg:text-right ">
           <div className="lg:inline-block md:w-auto">
-            <PrimaryButton text="Quote Now" size={printBlueButton()} />
+            <PrimaryButton
+              text="Quote Now"
+              size={printBlueButton()}
+              onClick={() => {}}
+            />
           </div>
         </div>
       </div>
