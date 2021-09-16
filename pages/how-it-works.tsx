@@ -2,17 +2,16 @@ import RotatingRing from "@components/HowItWorks/RotatingRing";
 import GridSection from "@components/HowItWorks/GridSection";
 import Budgeting from "@components/HowItWorks/Budgeting/Budgeting";
 import ImageGrid from "@components/HowItWorks/ImageGrid";
+import Accordion from "@components/HowItWorks/Accordion";
 import CTA from "@components/Common/CTA";
-
 const HowItWorks = () => {
   return (
-    <>
-      <div className="relative py-20">
-        <RotatingRing />
-        <GridSection />
-        <Budgeting />
-        <ImageGrid />
-      </div>
+    <div className="relative py-20">
+      <RotatingRing />
+      <GridSection />
+      <Budgeting />
+      <ImageGrid />
+      <Accordion />
       <CTA
         textTitleSize="md"
         titleText="Ready to create a one-of-a-kind ring with us?"
@@ -21,7 +20,7 @@ const HowItWorks = () => {
         btnText="Sign up"
         onClick={() => {}}
       />
-    </>
+    </div>
   );
 };
 

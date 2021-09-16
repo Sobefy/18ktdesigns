@@ -1,6 +1,6 @@
 interface PrimaryDescriptionProps {
   text: string;
-  textSize: string;
+  textSize?: string;
 }
 const PrimaryDescription = ({ text, textSize }: PrimaryDescriptionProps) => {
   const getTextSize = () => {
