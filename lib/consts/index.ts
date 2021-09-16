@@ -15,6 +15,7 @@ import {
   ListFooterType,
   gridItemsTypes,
   BudgetInfoType,
+  AccordionInfoType,
 } from "@lib/types";
 export const ImageGridContent: ImageItem[] = [
   {
@@ -1108,5 +1109,38 @@ export const budgetInfo: BudgetInfoType[] = [
     materials: "",
     complexity: "",
     price: "6000",
+  },
+];
+
+export const accordionInfo: AccordionInfoType[] = [
+  {
+    id: 1,
+    title: "How long does a custom ring take to make?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 2,
+    title: "What if I already know the design I want?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 3,
+    title: "Can I see the design before I pay?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 4,
+    title: "What is your current warranty?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 5,
+    title: "Do you offer cleaning & maintenance?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
   },
 ];
