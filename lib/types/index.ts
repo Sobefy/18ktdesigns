@@ -88,6 +88,7 @@ export type AccordionInfoType = {
   id: number;
   title: string;
   description: string;
+  defaultChecked?: boolean;
 };
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
