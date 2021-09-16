@@ -6,8 +6,7 @@ import { useState } from "react";
 
 interface AccordionCardProps {
   data: AccordionInfoType;
-
-  onClick?(): void;
+  onClick(): void;
 }
 
 const AccordionCard = ({ data, onClick }: AccordionCardProps) => {
