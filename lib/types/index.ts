@@ -1,3 +1,17 @@
+export type ImageItem = {
+  id: number;
+  image: string;
+  alt: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
+export type gridItemsTypes = {
+  id: number;
+  title: string;
+  content: string;
+  svg: string;
+};
 export type ListOption = {
   id: number;
   value: string;
@@ -60,6 +74,22 @@ export type ListFooterType = {
   target: string;
 };
 
+export type BudgetInfoType = {
+  id: number;
+  weight: string;
+  purity: string;
+  diamondCarat: string;
+  materials: string;
+  complexity: string;
+  price: string;
+};
+
+export type AccordionInfoType = {
+  id: number;
+  title: string;
+  description: string;
+  defaultChecked?: boolean;
+};
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL

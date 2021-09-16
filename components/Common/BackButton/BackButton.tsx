@@ -1,5 +1,5 @@
 interface BackButtonProps {
-  onClick?(): void;
+  onClick(): void;
 }
 const BackButton = ({ onClick }: BackButtonProps) => {
   return (

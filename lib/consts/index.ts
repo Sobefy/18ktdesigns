@@ -5,6 +5,7 @@ import {
   WhenIsTheSpecialDayOptions,
 } from "@lib/machines/CreateCustomRing/types";
 import {
+  ImageItem,
   CarouselItem,
   ListOption,
   BlogCarouselItem,
@@ -12,8 +13,119 @@ import {
   JewelryTypes,
   SocialNetworkLinkType,
   ListFooterType,
+  gridItemsTypes,
+  BudgetInfoType,
+  AccordionInfoType,
 } from "@lib/types";
-
+export const ImageGridContent: ImageItem[] = [
+  {
+    id: 1,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/beautiful-engagement-proposal-at-sunset-happy-couple-tonythetigersson-tony-andrews-photography-t20-E0lomV.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    alt: "Ryan and Sandy",
+    image:
+      "/images/happy-couple-engaged-couple-engagement-ring-couple-in-love-t20-29Zp7E.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 4,
+    alt: "Ryan & Sandy",
+    image: "/images/lovely-couple-at-the-beach-t20-G0ZGZm.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 5,
+    alt: "Ryan & Sandy",
+    image: "/images/twenty20-0bade236-d46a-44cb-b8ca-cdcb8913f742.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 6,
+    alt: "Ryan & Sandy",
+    image: "/images/nominated-already-t20-3w8o4o.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 7,
+    alt: "Ryan & Sandy",
+    image: "/images/Couple-Laughing-together-at-the-beach.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 8,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 9,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+];
+export const gridItems: gridItemsTypes[] = [
+  {
+    id: 1,
+    title: "Material and Style",
+    content:
+      "For now, we’ll do the asking. Who is it for? Have they hinted at an specific type of ring they like? We'll ask lots of questions in order to learn as much as possible about your future partner.",
+    svg: "materialAndDesign",
+  },
+  {
+    id: 2,
+    title: "Diamonds or Stones?",
+    content:
+      "Our gem and diamond experts work diligently to find the perfect stone for you and offer guidance through every step of the process.",
+    svg: "diamondOrStones",
+  },
+  {
+    id: 3,
+    title: "Design Review",
+    content:
+      "We are able to create realistic 3D renderings that show exactly how the ring will look. We'll tweak and tune until we hear you say: “It looks perfect!",
+    svg: "designReview",
+  },
+  {
+    id: 4,
+    title: "Ring Manufacturing",
+    content:
+      "Our master jewelers will bring your custom design to life. Once it's in your hands, we stand behind the ring for life with our Lifetime Customer Service.",
+    svg: "ringManufacturing",
+  },
+];
 export const cards: JewelryTypes[] = [
   {
     id: 1,
@@ -967,5 +1079,69 @@ export const servicesData: ServicesInfo[] = [
     title: "Budget friendly",
     description:
       "We can work with your budget yet create something unique and memorable.",
+  },
+];
+
+export const budgetInfo: BudgetInfoType[] = [
+  {
+    id: 1,
+    weight: "18kt",
+    purity: "75.0",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "1500",
+  },
+  {
+    id: 2,
+    weight: "22kt",
+    purity: "91.7.0",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "3500",
+  },
+  {
+    id: 3,
+    weight: "24kt",
+    purity: "99.9",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "6000",
+  },
+];
+
+export const accordionInfo: AccordionInfoType[] = [
+  {
+    id: 1,
+    title: "How long does a custom ring take to make?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+    defaultChecked: true,
+  },
+  {
+    id: 2,
+    title: "What if I already know the design I want?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 3,
+    title: "Can I see the design before I pay?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 4,
+    title: "What is your current warranty?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 5,
+    title: "Do you offer cleaning & maintenance?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
   },
 ];
