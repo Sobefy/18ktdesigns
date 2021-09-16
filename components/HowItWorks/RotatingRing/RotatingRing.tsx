@@ -6,7 +6,7 @@ import ReactPlayer from "react-player";
 
 const RotatingRing = () => {
   return (
-    <div className="container relative px-4 mx-auto">
+    <div className="container relative px-4 pt-20 mx-auto">
       <div className="flex flex-wrap items-center -mx-4">
         <div className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
           <div className="max-w-lg">
