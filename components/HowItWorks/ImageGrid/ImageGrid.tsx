@@ -29,7 +29,7 @@ const ImageGrid = () => {
         </div>
         <SimpleReactLightbox>
           <SRLWrapper>
-            <div className="flex grid grid-cols-3 gap-4 -mx-3 ">
+            <div className="grid grid-cols-3 gap-4 -mx-3 ">
               {ImageGridContent.map((image) => (
                 <ImageCard key={image.id} data={image} />
               ))}
