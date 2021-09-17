@@ -2,11 +2,13 @@ import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import { BlogCardInfoType } from "@lib/types";
 import Image from "next/image";
+import moment from "moment";
 
 interface BlogCardsProps {
   data: BlogCardInfoType;
+  index: number;
 }
-const BlogCards = ({ data }: BlogCardsProps) => {
+const BlogCards = ({ data, index }: BlogCardsProps) => {
   const {
     id,
     value,
@@ -19,8 +21,10 @@ const BlogCards = ({ data }: BlogCardsProps) => {
     publicationDate,
     buttonText,
   } = data;
+  const date = moment(`${publicationDate}`);
+  const dateFormat = "D MMM YYYY kk:mm ";
   const getWidthClass = () => {
-    if (id === 1) {
+    if (index === 0) {
       return "lg:w-2/3";
     }
     return "lg:w-1/3";
@@ -41,7 +45,7 @@ const BlogCards = ({ data }: BlogCardsProps) => {
       ) : null}
 
       <span className="inline-block mb-4 text-xs text-gray-500">
-        {publicationDate}
+        {date.format(dateFormat)}
       </span>
       <div className="mb-4">
         <ComposedTitles subtitleText={title} subtitleSize="sm" />

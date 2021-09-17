@@ -1158,7 +1158,7 @@ export const blogCardInfo: BlogCardInfoType[] = [
     imageHeight: 384,
     imageWidth: 736,
     imageUnit: "px",
-    publicationDate: "10 jun 2020 19:40",
+    publicationDate: "2020-07-10T19:40",
     buttonText: "Read more",
   },
   {
@@ -1170,7 +1170,7 @@ export const blogCardInfo: BlogCardInfoType[] = [
     imageHeight: 384,
     imageWidth: 352,
     imageUnit: "px",
-    publicationDate: "10 jun 2020 19:40",
+    publicationDate: "2020-07-10T19:40",
     buttonText: "Read more",
   },
   {
@@ -1182,7 +1182,7 @@ export const blogCardInfo: BlogCardInfoType[] = [
     imageHeight: 384,
     imageWidth: 352,
     imageUnit: "px",
-    publicationDate: "10 jun 2020 19:40",
+    publicationDate: "2020-07-10T19:40",
     buttonText: "Read more",
   },
   {
@@ -1194,7 +1194,7 @@ export const blogCardInfo: BlogCardInfoType[] = [
     imageHeight: 384,
     imageWidth: 352,
     imageUnit: "px",
-    publicationDate: "10 jun 2020 19:40",
+    publicationDate: "2020-07-10T19:40",
     buttonText: "Read more",
   },
   {
@@ -1206,7 +1206,7 @@ export const blogCardInfo: BlogCardInfoType[] = [
     imageHeight: 384,
     imageWidth: 352,
     imageUnit: "px",
-    publicationDate: "10 jun 2020 19:40",
+    publicationDate: "2020-07-10T19:40",
     buttonText: "Read more",
   },
 ];
