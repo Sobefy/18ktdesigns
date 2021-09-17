@@ -90,6 +90,20 @@ export type AccordionInfoType = {
   description: string;
   defaultChecked?: boolean;
 };
+
+export type BlogCardInfoType = {
+  id: number;
+  value: string;
+  title: string;
+  summary: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+  publicationDate: string;
+  buttonText: string;
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL
