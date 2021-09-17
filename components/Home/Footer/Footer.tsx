@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { listFooter } from "@lib/consts";
-import FooterSocialIcons from "@components/Common/FooterSocialIcons";
+import SocialIcons from "@components/Common/SocialIcons";
 
 const Footer = () => {
   const date = new Date();
@@ -30,7 +30,7 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <FooterSocialIcons />
+        <SocialIcons />
       </div>
       <p className="px-4 pt-8 text-sm text-center text-gray-500 border-t">
         All rights reserved © 18kt Designs - A Beachside Merchants Company -

@@ -30,7 +30,7 @@ const Newsletter = () => {
             <form action="#">
               <div className="relative flex flex-wrap ml-auto lg:flex-nowrap">
                 <Input
-                  spanText="Email Address"
+                  labelText="Email Address"
                   inputSize="sm"
                   type="email"
                   text="e.g email@email.com"

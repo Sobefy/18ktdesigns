@@ -1,6 +1,6 @@
 import { socialNetworkLinks } from "@lib/consts";
 import SvgSocial from "@components/Common/SvgSocial/SvgSocial";
-const FooterSocialIcons = () => {
+const SocialIcons = () => {
   return (
     <div className="flex justify-center">
       <ul className="flex flex-wrap items-center justify-center text-sm ">
@@ -21,4 +21,4 @@ const FooterSocialIcons = () => {
   );
 };
 
-export default FooterSocialIcons;
+export default SocialIcons;

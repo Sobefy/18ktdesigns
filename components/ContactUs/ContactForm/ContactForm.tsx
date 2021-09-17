@@ -32,25 +32,25 @@ const ContactForm = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">
-            <div className="relative flex flex-wrap mb-6">
+            <div className="relative flex flex-wrap mb-8">
               <Input
-                spanText="Name"
+                labelText="Name"
                 inputSize="lg"
                 type="text"
                 text="Daniel"
                 onChange={() => {}}
               />
             </div>
-            <div className="relative flex flex-wrap mb-6">
+            <div className="relative flex flex-wrap mb-8">
               <Input
-                spanText="Your email address"
+                labelText="Your email address"
                 inputSize="lg"
                 type="email"
                 text="e.g hello@shuffle.dev"
                 onChange={() => {}}
               />
             </div>
-            <div className="relative flex flex-wrap mb-6">
+            <div className="relative flex flex-wrap mb-8">
               <TextAreaField
                 spanText="Your message"
                 text="Message..."

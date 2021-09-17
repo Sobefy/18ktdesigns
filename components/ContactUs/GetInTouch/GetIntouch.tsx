@@ -1,5 +1,5 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
-import FooterSocialIcons from "@components/Common/FooterSocialIcons";
+import SocialIcons from "@components/Common/SocialIcons";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 
 const GetInTouch = () => {
@@ -46,7 +46,7 @@ const GetInTouch = () => {
                 <ComposedTitles subtitleText="follow" />
               </div>
               <div className="flex flex-wrap items-end justify-center">
-                <FooterSocialIcons />
+                <SocialIcons />
               </div>
             </div>
           </div>
