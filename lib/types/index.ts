@@ -113,6 +113,18 @@ export type BlogCardInfoType = {
   publicationDate: string;
   buttonText: string;
 };
+export type FaqDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: string;
+  questions: questionsType[];
+};
+
+export type questionsType = {
+  question: string;
+  answer: string;
+  defaultChecked?: boolean;
+};
 
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
