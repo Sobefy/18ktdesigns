@@ -16,6 +16,7 @@ import {
   gridItemsTypes,
   BudgetInfoType,
   AccordionInfoType,
+  BlogCardInfoType,
 } from "@lib/types";
 export const ImageGridContent: ImageItem[] = [
   {
@@ -1143,5 +1144,69 @@ export const accordionInfo: AccordionInfoType[] = [
     title: "Do you offer cleaning & maintenance?",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+];
+
+export const blogCardInfo: BlogCardInfoType[] = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet consectutar domor at elis",
+    value: "blogcard1",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa nibh, pulvinar vitae aliquet nec, accumsan aliquet orci.",
+    image: "/images/photo-1525130413817-d45c1d127c42.jpg",
+    imageHeight: 384,
+    imageWidth: 736,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 2,
+    title: "Lorem ipsum dolor",
+    value: "blogcard2",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1524758631624-e2822e304c36.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 3,
+    title: "Lorem ipsum dolor",
+    value: "blogcard2",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1556761175-4b46a572b786.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 4,
+    title: "Lorem ipsum dolor",
+    value: "blogcard4",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1557804506-d8017c1e4856.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 5,
+    title: "Lorem ipsum dolor",
+    value: "blogcard5",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1544717297-fa95b6ee9643.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
   },
 ];

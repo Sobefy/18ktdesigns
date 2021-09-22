@@ -11,6 +11,7 @@
   "dependencies": {
     "@xstate/inspect": "^0.4.1",
     "@xstate/react": "^1.5.1",
+    "moment": "^2.29.1",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-datepicker": "^4.2.1",
