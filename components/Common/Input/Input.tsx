@@ -17,11 +17,11 @@ const Input = ({
   const getInputSubtitleClassName = () => {
     switch (inputSize) {
       case "sm":
-        return "py-3 pl-4 text-white bg-transparent border border-gray-400 rounded lg:mb-0 lg:mr-4";
+        return "py-3 pl-4 text-white bg-transparent border border-gray-400 rounded ";
       case "md":
         return "p-4 text-center bg-white rounded shadow-md outline-none";
       case "lg":
-        return "relative py-4 pl-4 border rounded md:mb-0";
+        return "relative py-4 pl-4 border rounded";
       default:
         return "";
     }

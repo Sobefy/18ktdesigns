@@ -2,9 +2,9 @@ interface PrimaryButtonProps {
   text: string;
   onClick(): void;
   size?: "lg" | "md" | "sm" | "gray" | "blue" | "xl";
-  width?:"max";
+  width?: "max";
 }
-const PrimaryButton = ({ text, onClick, size,width }: PrimaryButtonProps) => {
+const PrimaryButton = ({ text, onClick, size, width }: PrimaryButtonProps) => {
   const getButtonClassName = () => {
     switch (size) {
       case "xl":
