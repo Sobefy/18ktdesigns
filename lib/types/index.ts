@@ -91,16 +91,18 @@ export type AccordionInfoType = {
   defaultChecked?: boolean;
 };
 
+export type FaqDataCategory =
+  | "generalquestion"
+  | "warrantyquestion"
+  | "paymentquestion"
+  | "returnquestion"
+  | "maintenancequestion";
+
 export type FaqDataType = {
   id: number;
   buttonText: string;
-  buttonCategory: string;
-  questions: questionsType[];
-};
-
-export type questionsType = {
-  question: string;
-  answer: string;
+  buttonCategory: FaqDataCategory;
+  questions: AccordionInfoType[];
   defaultChecked?: boolean;
 };
 

@@ -6,11 +6,10 @@ import { useState } from "react";
 
 interface AccordionCardProps {
   data: AccordionInfoType;
-  onClick(): void;
 }
 
-const AccordionCard = ({ data, onClick }: AccordionCardProps) => {
-  const { id, title, description, defaultChecked = false } = data;
+const AccordionCard = ({ data }: AccordionCardProps) => {
+  const { title, description, defaultChecked = false } = data;
   const [cardOpen, setCardOpen] = useState(defaultChecked);
   const handleCardClick = () => {
     setCardOpen(!cardOpen);
