@@ -1,11 +1,14 @@
 interface PrimaryButtonProps {
   text: string;
   onClick(): void;
-  size?: "lg" | "md" | "sm" | "gray" | "blue";
+  size?: "lg" | "md" | "sm" | "gray" | "blue" | "xl";
+  width?: "max";
 }
-const PrimaryButton = ({ text, onClick, size }: PrimaryButtonProps) => {
+const PrimaryButton = ({ text, onClick, size, width }: PrimaryButtonProps) => {
   const getButtonClassName = () => {
     switch (size) {
+      case "xl":
+        return "px-6 text-white  bg-red-400 hover:bg-red-300";
       case "lg":
         return "px-12 text-white bg-red-400 hover:bg-red-300";
       case "md":
@@ -20,9 +23,15 @@ const PrimaryButton = ({ text, onClick, size }: PrimaryButtonProps) => {
         return "";
     }
   };
+  const getwidhtClassName = () => {
+    if (width === "max") {
+      return "md:w-full";
+    }
+    return "md:w-auto";
+  };
   return (
     <button
-      className={`md:w-auto w-full py-4 text-center text-sm font-medium leading-normal rounded transition duration-200 ${getButtonClassName()}`}
+      className={`w-full py-4 text-center text-sm font-medium leading-normal rounded transition duration-200 ${getButtonClassName()} ${getwidhtClassName()}`}
       onClick={onClick}
     >
       {text}

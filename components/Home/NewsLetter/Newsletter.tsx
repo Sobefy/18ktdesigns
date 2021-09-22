@@ -28,16 +28,16 @@ const Newsletter = () => {
           </div>
           <div className="w-full px-4 md:w-1/3">
             <form action="#">
-              <div className="relative flex flex-wrap ml-auto lg:flex-nowrap">
-                <Input
-                  inputSize="index"
-                  type="email"
-                  text="e.g email@email.com"
-                  onChange={() => {}}
-                />
-                <span className="absolute top-0 left-0 inline-block px-1 ml-4 -mt-2 text-xs text-gray-900 bg-white ">
-                  Email Address
-                </span>
+              <div className="flex">
+                <div className="relative flex flex-wrap ml-auto lg:flex-nowrap lg:mb-0 lg:mr-4">
+                  <Input
+                    labelText="Email Address"
+                    inputSize="sm"
+                    type="email"
+                    text="e.g email@email.com"
+                    onChange={() => {}}
+                  />
+                </div>
                 <PrimaryButton
                   size="sm"
                   text="Sign&nbsp;up"
