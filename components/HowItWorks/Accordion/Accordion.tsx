@@ -8,11 +8,7 @@ const Accordion = () => {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {accordionInfo.map((accordion) => (
-              <AccordionCard
-                key={accordion.id}
-                data={accordion}
-                onClick={() => {}}
-              />
+              <AccordionCard key={accordion.id} data={accordion} />
             ))}
           </div>
         </div>

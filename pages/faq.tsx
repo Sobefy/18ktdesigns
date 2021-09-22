@@ -1,12 +1,7 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import FaqCards from "@components/Faq/FaqCards";
 
-interface FAQProps {
-  index: number;
-  faq: any;
-}
-
-const FAQ = ({ faq, index }: FAQProps) => {
+const FAQ = () => {
   return (
     <div className="relative bg-blue-50">
       <div className="container px-4 mx-auto">
@@ -17,12 +12,7 @@ const FAQ = ({ faq, index }: FAQProps) => {
             subtitleSize="md"
           />
         </div>
-        <FaqCards
-          data={faq}
-          questionData={faq}
-          index={index}
-          onClick={() => {}}
-        />
+        <FaqCards />
       </div>
     </div>
   );

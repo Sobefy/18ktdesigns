@@ -1288,32 +1288,38 @@ export const faqData: FaqDataType[] = [
     buttonCategory: "generalquestion",
     questions: [
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
         defaultChecked: true,
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
     ],
+    defaultChecked: true,
   },
   {
     id: 2,
@@ -1321,28 +1327,34 @@ export const faqData: FaqDataType[] = [
     buttonCategory: "warrantyquestion",
     questions: [
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 1,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 3,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 4,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
-      },
-      {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 5,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
     ],
@@ -1353,28 +1365,34 @@ export const faqData: FaqDataType[] = [
     buttonCategory: "paymentquestion",
     questions: [
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 1,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 3,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 4,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
-      },
-      {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 5,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
     ],
@@ -1385,28 +1403,34 @@ export const faqData: FaqDataType[] = [
     buttonCategory: "returnquestion",
     questions: [
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
-      },
-      {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
     ],
@@ -1417,28 +1441,34 @@ export const faqData: FaqDataType[] = [
     buttonCategory: "maintenancequestion",
     questions: [
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
       {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
-      },
-      {
-        question: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
-        answer:
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
       },
     ],

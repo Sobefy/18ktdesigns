@@ -1,14 +1,11 @@
+import { FaqDataCategory } from "@lib/types";
+
 interface FaqSvgProps {
-  category:
-    | "generalquestion"
-    | "warrantyquestion"
-    | "paymentquestion"
-    | "returnquestion"
-    | "maintenancequestion";
+  category: FaqDataCategory;
 }
 
 const FaqSvg = ({ category }: FaqSvgProps) => {
-  const getFaqSvg = () => {
+  const GetFaqSvg = () => {
     switch (category) {
       case "generalquestion":
         return (
@@ -200,10 +197,10 @@ const FaqSvg = ({ category }: FaqSvgProps) => {
           </svg>
         );
       default:
-        return "";
+        return null;
     }
   };
-  return <>{getFaqSvg};</>;
+  return <GetFaqSvg />;
 };
 
 export default FaqSvg;

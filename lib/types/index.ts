@@ -101,6 +101,7 @@ export type AccordionInfoType = {
   defaultChecked?: boolean;
 };
 
+<<<<<<< HEAD
 export type BlogCardInfoType = {
   id: number;
   value: string;
@@ -113,16 +114,20 @@ export type BlogCardInfoType = {
   publicationDate: string;
   buttonText: string;
 };
+=======
+export type FaqDataCategory =
+  | "generalquestion"
+  | "warrantyquestion"
+  | "paymentquestion"
+  | "returnquestion"
+  | "maintenancequestion";
+
+>>>>>>> 6d3a2d5 (fix: fix accordion functionality)
 export type FaqDataType = {
   id: number;
   buttonText: string;
-  buttonCategory: string;
-  questions: questionsType[];
-};
-
-export type questionsType = {
-  question: string;
-  answer: string;
+  buttonCategory: FaqDataCategory;
+  questions: AccordionInfoType[];
   defaultChecked?: boolean;
 };
 
