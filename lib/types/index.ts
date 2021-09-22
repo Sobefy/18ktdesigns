@@ -90,6 +90,20 @@ export type AccordionInfoType = {
   description: string;
   defaultChecked?: boolean;
 };
+
+export type FaqDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: string;
+  questions: questionsType[];
+};
+
+export type questionsType = {
+  question: string;
+  answer: string;
+  defaultChecked?: boolean;
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL
