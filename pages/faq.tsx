@@ -1,12 +1,12 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import FaqCards from "@components/Faq/FaqCards";
 
-interface FaqPageProps {
+interface FAQProps {
   index: number;
   faq: any;
 }
 
-const FaqPage = ({ faq, index }: FaqPageProps) => {
+const FAQ = ({ faq, index }: FAQProps) => {
   return (
     <div className="relative bg-blue-50">
       <div className="container px-4 mx-auto">
@@ -28,4 +28,4 @@ const FaqPage = ({ faq, index }: FaqPageProps) => {
   );
 };
 
-export default FaqPage;
+export default FAQ;
