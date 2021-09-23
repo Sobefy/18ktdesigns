@@ -16,7 +16,39 @@ import {
   gridItemsTypes,
   BudgetInfoType,
   AccordionInfoType,
+  BlogPostType,
+  BreadCrumbsType,
 } from "@lib/types";
+export const BreadCrumbsItems:BreadCrumbsType[] = [
+  {
+    id: 1,
+    title: "Home",
+    src: "#",
+  },
+  {
+    id: 2,
+    title: "Blog",
+    src: "#",
+  },
+  {
+    id: 3,
+    title: "Article",
+    src: "#",
+  },
+];
+export const blogposts: BlogPostType = {
+  title: "Lorem ipsum dolor sit amet consectutar domor at elis",
+  authorName: "Esther Bailey",
+  authorImage: "/images/authorpicture.jpg",
+  contentImage:"/images/photo-1525129498994-580709352e20.jpg",
+  imageWidth: 60,
+  imageHeight: 60,
+  imageUnit: "px",
+  date: "February 26, 2021",
+  subTitle: "When I was a developer, I often had a hundred questions when",
+  content:
+    "Now that I am a UX designer, I notice that some designers tend to forget that wireframes are equally creative and technical. We are responsible for designing great ideas, but we are also responsible for creating product specifications. I admit that there can be so many details to remember that it’s easy to lose track. To save time and energy for myself, I gathered all of my years of wireframing knowledge into a single checklist that I refer to throughout the process. And now I am sharing this knowledge with you, so that you can get back to being creative. Now that I am a UX designer, I notice that some designers tend to forget that wireframes are equally creative and technical. We are responsible for designing great ideas, but we are also responsible for creating product specifications. I admit that there can be so many details to remember that it’s easy to lose track. To save time and energy for myself, I gathered all of my years of wireframing knowledge into a single checklist that I refer to throughout the process. And now I am sharing this knowledge with you, so that you can get back to being creative. Now that I am a UX designer, I notice that some designers tend to forget that wireframes are equally creative and technical. We are responsible for designing great ideas, but we are also responsible for creating product specifications. I admit that there can be so many details to remember that it’s easy to lose track. To save time and energy for myself, I gathered all of my years of wireframing knowledge into a single checklist that I refer to throughout the process. And now I am sharing this knowledge with you, so that you can get back to being creative. Now that I am a UX designer, I notice that some designers tend to forget that wireframes are equally creative and technical. We are responsible for designing great ideas, but we are also responsible for creating product specifications. I admit that there can be so many details to remember that it’s easy to lose track. To save time and energy for myself, I gathered all of my years of wireframing knowledge into a single checklist that I refer to throughout the process. And now I am sharing this knowledge with you, so that you can get back to being creative.Now that I am a UX designer, I notice that some designers tend to forget that wireframes are equally creative and technical. We areresponsible for designing great ideas, but we are also responsible for creating product specifications. I admit that there can be so many details to remember that it’s easy to lose track. To save time and energy for myself, I gathered all of my years of wireframing knowledge into a single checklist that I refer to throughout the process. And now I am sharing this knowledge with you, so that you can get back to being creative.",
+};
 export const ImageGridContent: ImageItem[] = [
   {
     id: 1,
