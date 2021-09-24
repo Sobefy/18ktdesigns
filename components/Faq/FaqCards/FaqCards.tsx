@@ -25,15 +25,22 @@ const FaqCards = () => {
           <div key={id} className="w-full px-4 mb-6 md:w-1/3 lg:w-1/5 lg:mb-0">
             <button
               onClick={() => toggleTab(id)}
-              className={`w-full py-6
+              className={`w-full py-6 rounded-xl
               ${
                 toggle === id
-                  ? "bg-red-400 rounded-xl"
-                  : "hover:bg-gray-900 hover:text-white"
+                  ? "bg-red-400"
+                  : "bg-white hover:bg-gray-900 hover:text-white"
               }`}
             >
-              <FaqSvg category={buttonCategory} />
-              <p className="text-lg font-semibold text-white font-heading">
+              <FaqSvg
+                category={buttonCategory}
+                color={`${toggle === id ? "white" : "gray"}`}
+              />
+              <p
+                className={`text-lg font-semibold font-heading ${
+                  toggle === id ? "text-white" : ""
+                }`}
+              >
                 {buttonText}
               </p>
             </button>
@@ -43,7 +50,11 @@ const FaqCards = () => {
       <div className="max-w-4xl mx-auto">
         <div className="space-y-4">
           {filteredCardSelected.questions.map((accordion) => (
-            <AccordionCard key={accordion.id} data={accordion} />
+            <AccordionCard
+              key={accordion.id}
+              data={accordion}
+              alternateClass="faqAccordion"
+            />
           ))}
         </div>
       </div>

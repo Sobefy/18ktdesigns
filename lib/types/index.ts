@@ -120,7 +120,12 @@ export type FaqDataCategory =
   | "warrantyquestion"
   | "paymentquestion"
   | "returnquestion"
-  | "maintenancequestion";
+  | "maintenancequestion"
+  | "warrantyoverview"
+  | "satisfactionguarantee"
+  | "diamondpricematch"
+  | "freeringresizing"
+  | "lifetimewarranty";
 
 >>>>>>> 6d3a2d5 (fix: fix accordion functionality)
 export type FaqDataType = {
