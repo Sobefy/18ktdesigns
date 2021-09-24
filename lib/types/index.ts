@@ -96,7 +96,12 @@ export type FaqDataCategory =
   | "warrantyquestion"
   | "paymentquestion"
   | "returnquestion"
-  | "maintenancequestion";
+  | "maintenancequestion"
+  | "warrantyoverview"
+  | "satisfactionguarantee"
+  | "diamondpricematch"
+  | "freeringresizing"
+  | "lifetimewarranty";
 
 export type FaqDataType = {
   id: number;
