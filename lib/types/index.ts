@@ -1,3 +1,13 @@
+export type reviewsCardsType = {
+  id: number;
+  content: string;
+  nameAuthor: string;
+  job: string;
+  authorImage: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
 export type ImageItem = {
   id: number;
   image: string;
