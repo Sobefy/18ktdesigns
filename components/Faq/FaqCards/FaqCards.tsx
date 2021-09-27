@@ -53,7 +53,7 @@ const FaqCards = () => {
             <AccordionCard
               key={accordion.id}
               data={accordion}
-              alternateClass="faqAccordion"
+              alternateClass="whiteBg"
             />
           ))}
         </div>

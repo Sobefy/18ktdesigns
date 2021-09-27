@@ -92,16 +92,16 @@ export type AccordionInfoType = {
 };
 
 export type FaqDataCategory =
-  | "generalquestion"
-  | "warrantyquestion"
-  | "paymentquestion"
-  | "returnquestion"
-  | "maintenancequestion"
-  | "warrantyoverview"
-  | "satisfactionguarantee"
-  | "diamondpricematch"
-  | "freeringresizing"
-  | "lifetimewarranty";
+  | "generalQuestion"
+  | "warrantyQuestion"
+  | "paymentQuestion"
+  | "returnQuestion"
+  | "maintenanceQuestion"
+  | "warrantyOverview"
+  | "satisfactionGuarantee"
+  | "diamondPriceMatch"
+  | "freeRingResizing"
+  | "lifetimeWarranty";
 
 export type FaqDataType = {
   id: number;

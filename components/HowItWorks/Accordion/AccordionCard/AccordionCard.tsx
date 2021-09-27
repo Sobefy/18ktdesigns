@@ -6,7 +6,7 @@ import { useState } from "react";
 
 interface AccordionCardProps {
   data: AccordionInfoType;
-  alternateClass: "accordion" | "faqAccordion";
+  alternateClass: "grayBg" | "whiteBg";
 }
 
 const AccordionCard = ({ data, alternateClass }: AccordionCardProps) => {
@@ -17,16 +17,16 @@ const AccordionCard = ({ data, alternateClass }: AccordionCardProps) => {
   };
   const getAlternateClass = () => {
     switch (alternateClass) {
-      case "accordion":
+      case "grayBg":
         return "px-6 py-8 bg-gray-50 rounded-xl";
-      case "faqAccordion":
+      case "whiteBg":
         return "p-12 bg-white border rounded-lg";
       default:
-        return null;
+        return "";
     }
   };
   return (
-    <div className={`${getAlternateClass()}`}>
+    <div className={getAlternateClass()}>
       <div className="flex items-center justify-between w-full">
         <ComposedTitles subtitleText={title} />
         <button onClick={handleCardClick}>

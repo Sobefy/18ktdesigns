@@ -11,7 +11,7 @@ const Accordion = () => {
               <AccordionCard
                 key={accordion.id}
                 data={accordion}
-                alternateClass="accordion"
+                alternateClass="grayBg"
               />
             ))}
           </div>
