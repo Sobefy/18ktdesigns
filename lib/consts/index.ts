@@ -17,7 +17,76 @@ import {
   BudgetInfoType,
   AccordionInfoType,
   BlogCardInfoType,
+  reviewsCardsType,
 } from "@lib/types";
+export const reviewsCards: reviewsCardsType[] = [
+  {
+    id: 1,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Esther Howard",
+    job: "CEO & Founder",
+    authorImage: "/images/Esther.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Robert Fox",
+    job: "CEO & Founder",
+    authorImage: "/images/Robert.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Cameron Williamson",
+    job: "CEO & Founder",
+    authorImage: "/images/Cameron.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 4,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Jane Cooper",
+    job: "CEO & Founder",
+    authorImage: "/images/Jane.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 5,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Ralph Edwards",
+    job: "CEO & Founder",
+    authorImage: "/images/Ralph.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 6,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Darrell Steward",
+    job: "CEO & Founder",
+    authorImage: "/images/Darrell.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+];
 export const ImageGridContent: ImageItem[] = [
   {
     id: 1,
