@@ -1,5 +1,6 @@
 import CaseSelection from "@components/Common/CaseSelection";
 import ComposedTitles from "@components/Common/ComposedTitles";
+import PrimaryButton from "@components/Common/PrimaryButton";
 
 /* eslint-disable @next/next/no-img-element */
 const CaseStudies = () => {
@@ -26,6 +27,9 @@ const CaseStudies = () => {
           </div>
         </div>
         <CaseSelection />
+        <div className="text-center">
+          <PrimaryButton size="md" text="See all images" onClick={() => {}} />
+        </div>
       </div>
     </div>
   );
