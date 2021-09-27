@@ -19,28 +19,30 @@ import {
   BlogPostType,
   BreadCrumbsType,
 } from "@lib/types";
-export const BreadCrumbsItems:BreadCrumbsType[] = [
+export const BreadCrumbsItems: BreadCrumbsType[] = [
   {
     id: 1,
     title: "Home",
-    src: "#",
+    url: "#",
   },
   {
     id: 2,
     title: "Blog",
-    src: "#",
+    url: "#",
   },
   {
     id: 3,
     title: "Article",
-    src: "#",
+    url: "#",
   },
 ];
-export const blogposts: BlogPostType = {
+export const blogPosts: BlogPostType = {
   title: "Lorem ipsum dolor sit amet consectutar domor at elis",
   authorName: "Esther Bailey",
+  value: "A picture of Author",
   authorImage: "/images/authorpicture.jpg",
-  contentImage:"/images/photo-1525129498994-580709352e20.jpg",
+  contentImage: "/images/photo-1525129498994-580709352e20.jpg",
+  ContentPicture: "A picture of Content",
   imageWidth: 60,
   imageHeight: 60,
   imageUnit: "px",

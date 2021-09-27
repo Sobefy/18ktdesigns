@@ -2,7 +2,9 @@ export interface BlogPostType {
   title: string;
   authorName: string;
   authorImage: string;
+  value: string;
   contentImage: string;
+  ContentPicture: string;
   imageWidth?: number;
   imageHeight?: number;
   imageUnit?: "px" | "rem";
@@ -10,11 +12,11 @@ export interface BlogPostType {
   subTitle: string;
   content: string;
 }
-export type BreadCrumbsType={
-  id:number;
-  title:string;
-  src:string;
-}
+export type BreadCrumbsType = {
+  id: number;
+  title: string;
+  url: string;
+};
 export type ImageItem = {
   id: number;
   image: string;
