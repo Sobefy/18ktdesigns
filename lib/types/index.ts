@@ -104,6 +104,13 @@ export type BlogCardInfoType = {
   buttonText: string;
 };
 
+export type caseStudiesDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: string;
+  images: ImageItem[];
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL
