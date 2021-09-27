@@ -13,12 +13,12 @@ const FaqSvg = ({ category, color }: FaqSvgProps) => {
       case "gray":
         return "#838EA4";
       default:
-        return null;
+        return "";
     }
   };
   const GetFaqSvg = () => {
     switch (category) {
-      case "generalquestion":
+      case "generalQuestion":
         return (
           <svg
             className="mx-auto mb-5"
@@ -53,7 +53,7 @@ const FaqSvg = ({ category, color }: FaqSvgProps) => {
             ></path>
           </svg>
         );
-      case "warrantyquestion":
+      case "warrantyQuestion":
         return (
           <svg
             className="mx-auto mb-5"
@@ -83,7 +83,7 @@ const FaqSvg = ({ category, color }: FaqSvgProps) => {
             ></circle>
           </svg>
         );
-      case "paymentquestion":
+      case "paymentQuestion":
         return (
           <svg
             className="mx-auto mb-5"
@@ -125,7 +125,7 @@ const FaqSvg = ({ category, color }: FaqSvgProps) => {
             ></path>
           </svg>
         );
-      case "returnquestion":
+      case "returnQuestion":
         return (
           <svg
             className="mx-auto mb-5"
@@ -165,7 +165,7 @@ const FaqSvg = ({ category, color }: FaqSvgProps) => {
             ></path>
           </svg>
         );
-      case "maintenancequestion":
+      case "maintenanceQuestion":
         return (
           <svg
             className="mx-auto mb-5"

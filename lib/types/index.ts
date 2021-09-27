@@ -116,16 +116,16 @@ export type BlogCardInfoType = {
 };
 =======
 export type FaqDataCategory =
-  | "generalquestion"
-  | "warrantyquestion"
-  | "paymentquestion"
-  | "returnquestion"
-  | "maintenancequestion"
-  | "warrantyoverview"
-  | "satisfactionguarantee"
-  | "diamondpricematch"
-  | "freeringresizing"
-  | "lifetimewarranty";
+  | "generalQuestion"
+  | "warrantyQuestion"
+  | "paymentQuestion"
+  | "returnQuestion"
+  | "maintenanceQuestion"
+  | "warrantyOverview"
+  | "satisfactionGuarantee"
+  | "diamondPriceMatch"
+  | "freeRingResizing"
+  | "lifetimeWarranty";
 
 >>>>>>> 6d3a2d5 (fix: fix accordion functionality)
 export type FaqDataType = {

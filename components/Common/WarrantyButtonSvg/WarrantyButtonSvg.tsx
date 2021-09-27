@@ -13,12 +13,12 @@ const WarrantyButtonSvg = ({ category, color }: WarrantyButtonSvgProps) => {
       case "gray":
         return "#838EA4";
       default:
-        return null;
+        return "";
     }
   };
   const GetWarrantyButtonSvg = () => {
     switch (category) {
-      case "warrantyoverview":
+      case "warrantyOverview":
         return (
           <svg
             className="mx-auto mb-5"
@@ -53,7 +53,7 @@ const WarrantyButtonSvg = ({ category, color }: WarrantyButtonSvgProps) => {
             ></path>
           </svg>
         );
-      case "satisfactionguarantee":
+      case "satisfactionGuarantee":
         return (
           <svg
             className="mx-auto mb-5"
@@ -83,7 +83,7 @@ const WarrantyButtonSvg = ({ category, color }: WarrantyButtonSvgProps) => {
             ></circle>
           </svg>
         );
-      case "diamondpricematch":
+      case "diamondPriceMatch":
         return (
           <svg
             className="mx-auto mb-5"
@@ -125,7 +125,7 @@ const WarrantyButtonSvg = ({ category, color }: WarrantyButtonSvgProps) => {
             ></path>
           </svg>
         );
-      case "freeringresizing":
+      case "freeRingResizing":
         return (
           <svg
             className="mx-auto mb-5"
@@ -165,7 +165,7 @@ const WarrantyButtonSvg = ({ category, color }: WarrantyButtonSvgProps) => {
             ></path>
           </svg>
         );
-      case "lifetimewarranty":
+      case "lifetimeWarranty":
         return (
           <svg
             className="mx-auto mb-5"

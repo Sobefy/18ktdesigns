@@ -1285,7 +1285,7 @@ export const faqData: FaqDataType[] = [
   {
     id: 1,
     buttonText: "General",
-    buttonCategory: "generalquestion",
+    buttonCategory: "generalQuestion",
     questions: [
       {
         id: 1,
@@ -1324,7 +1324,7 @@ export const faqData: FaqDataType[] = [
   {
     id: 2,
     buttonText: "Warranty",
-    buttonCategory: "warrantyquestion",
+    buttonCategory: "warrantyQuestion",
     questions: [
       {
         id: 1,
@@ -1362,7 +1362,7 @@ export const faqData: FaqDataType[] = [
   {
     id: 3,
     buttonText: "Payments",
-    buttonCategory: "paymentquestion",
+    buttonCategory: "paymentQuestion",
     questions: [
       {
         id: 1,
@@ -1400,7 +1400,7 @@ export const faqData: FaqDataType[] = [
   {
     id: 4,
     buttonText: "Returns",
-    buttonCategory: "returnquestion",
+    buttonCategory: "returnQuestion",
     questions: [
       {
         id: 1,
@@ -1438,7 +1438,7 @@ export const faqData: FaqDataType[] = [
   {
     id: 5,
     buttonText: "Maintenance",
-    buttonCategory: "maintenancequestion",
+    buttonCategory: "maintenanceQuestion",
     questions: [
       {
         id: 1,
@@ -1479,7 +1479,7 @@ export const warrantyFaqData: FaqDataType[] = [
   {
     id: 1,
     buttonText: "WARRANTY OVERVIEW",
-    buttonCategory: "warrantyoverview",
+    buttonCategory: "warrantyOverview",
     questions: [
       {
         id: 1,
@@ -1518,7 +1518,7 @@ export const warrantyFaqData: FaqDataType[] = [
   {
     id: 2,
     buttonText: "SATISFACTION GUARANTEE",
-    buttonCategory: "satisfactionguarantee",
+    buttonCategory: "satisfactionGuarantee",
     questions: [
       {
         id: 1,
@@ -1556,7 +1556,7 @@ export const warrantyFaqData: FaqDataType[] = [
   {
     id: 3,
     buttonText: "DIAMOND PRICE MATCH",
-    buttonCategory: "diamondpricematch",
+    buttonCategory: "diamondPriceMatch",
     questions: [
       {
         id: 1,
@@ -1594,7 +1594,7 @@ export const warrantyFaqData: FaqDataType[] = [
   {
     id: 4,
     buttonText: "FREE RING SIZING",
-    buttonCategory: "freeringresizing",
+    buttonCategory: "freeRingResizing",
     questions: [
       {
         id: 1,
@@ -1632,7 +1632,7 @@ export const warrantyFaqData: FaqDataType[] = [
   {
     id: 5,
     buttonText: "LIFETIME WARRANTY",
-    buttonCategory: "lifetimewarranty",
+    buttonCategory: "lifetimeWarranty",
     questions: [
       {
         id: 1,
