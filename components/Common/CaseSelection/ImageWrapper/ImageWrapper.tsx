@@ -1,6 +1,6 @@
-import { caseStudiesData } from "@lib/consts";
+/* eslint-disable @next/next/no-img-element */
+
 import { ImageItem } from "@lib/types";
-import Image from "next/image";
 
 interface ImageWrapperProps {
   imageData: ImageItem;
@@ -8,8 +8,8 @@ interface ImageWrapperProps {
 }
 
 const ImageWrapper = ({ imageData, index }: ImageWrapperProps) => {
-  const { image, alt, imageWidth, imageHeight, imageUnit } = imageData;
-  const alternateHeight = () => {
+  const { image, alt } = imageData;
+  const alternateLayout = () => {
     if (index === 2) {
       return " col-start-3 col-end-5";
     }
@@ -20,20 +20,25 @@ const ImageWrapper = ({ imageData, index }: ImageWrapperProps) => {
       return "row-start-3 col-start-3 col-end-4";
     }
     if (index === 5) {
-      return "row-start-3 col-start-4 col-end-5";
+      return "row-start-3 col-start-4 col-end-5 ";
     }
     return "";
   };
+  const alternateImageHeight = () => {
+    if (index === 2) {
+      return "lg:h-120 h-full ";
+    }
+    if (index === 3) {
+      return "lg:h-120 h-full";
+    }
+    return "h-full";
+  };
   return (
-    <div className={`w-full h-64 p-3 ${alternateHeight()}`}>
-      <Image
+    <div className={`w-full h-64 p-3 ${alternateLayout()}`}>
+      <img
         src={image}
         alt={alt}
-        width={`${imageWidth}${imageUnit}`}
-        height={`${imageHeight}${imageUnit}`}
-        objectFit="cover"
-        objectPosition="top"
-        className={"rounded-lg"}
+        className={`object-cover object-top w-full  rounded-lg ${alternateImageHeight()}`}
       />
     </div>
   );
