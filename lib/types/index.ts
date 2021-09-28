@@ -114,6 +114,26 @@ export type BlogCardInfoType = {
   buttonText: string;
 };
 
+export type FaqDataCategory =
+  | "generalQuestion"
+  | "warrantyQuestion"
+  | "paymentQuestion"
+  | "returnQuestion"
+  | "maintenanceQuestion"
+  | "warrantyOverview"
+  | "satisfactionGuarantee"
+  | "diamondPriceMatch"
+  | "freeRingResizing"
+  | "lifetimeWarranty";
+
+export type FaqDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: FaqDataCategory;
+  questions: AccordionInfoType[];
+  defaultChecked?: boolean;
+};
+
 export type BudgetOptions =
   | -1 // Note: -1 is repesenting the option ANY
   | 0 // Note: 0 is repesenting the option NULL
