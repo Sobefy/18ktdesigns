@@ -10,9 +10,7 @@ const BreadCrumbs = ({ data }: BreadCrumbsProps) => {
           <a href={item.url}>{item.title}</a>
           {i !== array.length - 1 ? (
             <label className="inline-block px-1">/</label>
-          ) : (
-            ""
-          )}
+          ) : null}
         </div>
       ))}
     </div>
