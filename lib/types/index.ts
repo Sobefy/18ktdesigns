@@ -113,12 +113,18 @@ export type BlogCardInfoType = {
   publicationDate: string;
   buttonText: string;
 };
+
 export type FaqDataCategory =
-  | "generalquestion"
-  | "warrantyquestion"
-  | "paymentquestion"
-  | "returnquestion"
-  | "maintenancequestion";
+  | "generalQuestion"
+  | "warrantyQuestion"
+  | "paymentQuestion"
+  | "returnQuestion"
+  | "maintenanceQuestion"
+  | "warrantyOverview"
+  | "satisfactionGuarantee"
+  | "diamondPriceMatch"
+  | "freeRingResizing"
+  | "lifetimeWarranty";
 
 export type FaqDataType = {
   id: number;
