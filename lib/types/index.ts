@@ -1,3 +1,13 @@
+export type reviewsCardsType = {
+  id: number;
+  content: string;
+  nameAuthor: string;
+  job: string;
+  authorImage: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
 export type ImageItem = {
   id: number;
   image: string;
@@ -109,6 +119,25 @@ export type caseStudiesDataType = {
   buttonText: string;
   buttonCategory: string;
   images: ImageItem[];
+};
+export type FaqDataCategory =
+  | "generalQuestion"
+  | "warrantyQuestion"
+  | "paymentQuestion"
+  | "returnQuestion"
+  | "maintenanceQuestion"
+  | "warrantyOverview"
+  | "satisfactionGuarantee"
+  | "diamondPriceMatch"
+  | "freeRingResizing"
+  | "lifetimeWarranty";
+
+export type FaqDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: FaqDataCategory;
+  questions: AccordionInfoType[];
+  defaultChecked?: boolean;
 };
 
 export type BudgetOptions =

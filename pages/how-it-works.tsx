@@ -4,6 +4,7 @@ import Budgeting from "@components/HowItWorks/Budgeting/Budgeting";
 import ImageGrid from "@components/HowItWorks/ImageGrid";
 import Accordion from "@components/HowItWorks/Accordion";
 import CTA from "@components/Common/CTA";
+
 const HowItWorks = () => {
   return (
     <>

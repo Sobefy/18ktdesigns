@@ -11,7 +11,7 @@ const Accordion = () => {
               <AccordionCard
                 key={accordion.id}
                 data={accordion}
-                onClick={() => {}}
+                alternateClass="grayBg"
               />
             ))}
           </div>
