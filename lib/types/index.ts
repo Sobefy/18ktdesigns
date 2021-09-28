@@ -114,6 +114,12 @@ export type BlogCardInfoType = {
   buttonText: string;
 };
 
+export type caseStudiesDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: string;
+  images: ImageItem[];
+};
 export type FaqDataCategory =
   | "generalQuestion"
   | "warrantyQuestion"
