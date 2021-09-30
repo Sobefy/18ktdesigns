@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 // TODO: Change for Image component
 import { useState } from "react";
+import { HeaderItem } from "@lib/consts";
 
 interface HeaderProps {
   alternateNav?: boolean;
@@ -12,7 +13,6 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
   const handleHamburgerClick = () => {
     setNavOpen(!navOpen);
   };
-
   return (
     <div className="absolute top-0 left-0 z-50 w-full px-4 py-8 xl:px-10">
       <nav className="flex items-center justify-between">
@@ -43,26 +43,13 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
         <div className="hidden w-auto lg:flex lg:w-3/5 lg:pl-16 ">
           {alternateNav ? null : (
             <ul className="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12">
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  How it works
-                </a>
-              </li>
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  Shop Jewerly
-                </a>
-              </li>
+              {HeaderItem.map((option) => (
+                <li key={option.id}>
+                  <a className="text-sm font-medium" href={option.url}>
+                    {option.text}
+                  </a>
+                </li>
+              ))}
             </ul>
           )}
           <div className={alternateNav ? "ml-auto" : "null"}>
@@ -115,38 +102,16 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
             <div>
               {alternateNav ? null : (
                 <ul>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded hover:bg-gray-50"
-                      href="#"
-                    >
-                      How it works
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded hover:bg-gray-50"
-                      href="#"
-                    >
-                      Testimonials
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded hover:bg-gray-50"
-                      href="#"
-                    >
-                      About Us
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded hover:bg-gray-50"
-                      href="#"
-                    >
-                      Shop Jewelry
-                    </a>
-                  </li>
+                  {HeaderItem.map((option) => (
+                    <li className="mb-1" key={option.id}>
+                      <a
+                        className="block p-4 text-sm font-medium text-gray-900 rounded hover:bg-gray-50"
+                        href={option.url}
+                      >
+                        {option.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>

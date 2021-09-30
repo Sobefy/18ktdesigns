@@ -20,7 +20,30 @@ import {
   caseStudiesDataType,
   reviewsCardsType,
   FaqDataType,
+  HeaderItemType,
 } from "@lib/types";
+export const HeaderItem: HeaderItemType[] = [
+  {
+    id: 1,
+    text: "How it works",
+    url: "#",
+  },
+  {
+    id: 2,
+    text: "Testimonials",
+    url: "#",
+  },
+  {
+    id: 3,
+    text: "About Us",
+    url: "#",
+  },
+  {
+    id: 4,
+    text: "Shop Jewerly",
+    url: "#",
+  },
+];
 export const reviewsCards: reviewsCardsType[] = [
   {
     id: 1,

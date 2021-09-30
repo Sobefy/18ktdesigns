@@ -1,3 +1,8 @@
+export type HeaderItemType = {
+  id: number;
+  text: string;
+  url: string;
+};
 export type reviewsCardsType = {
   id: number;
   content: string;
