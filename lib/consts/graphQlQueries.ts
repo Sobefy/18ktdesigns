@@ -53,6 +53,9 @@ export const servicesSection = `
     }
     servicesCollection(limit: 10) {
       items {
+        sys {
+          id
+        }
         title
         heading
         description

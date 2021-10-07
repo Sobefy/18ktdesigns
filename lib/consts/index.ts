@@ -9,7 +9,6 @@ import {
   CarouselItem,
   ListOption,
   BlogCarouselItem,
-  ServicesInfo,
   JewelryTypes,
   SocialNetworkLinkType,
   ListFooterType,
@@ -1147,33 +1146,6 @@ export const blogCarouselData: BlogCarouselItem[] = [
     imageWidth: 864,
     imageHeight: 384,
     imageUnit: "px",
-  },
-];
-
-export const servicesData: ServicesInfo[] = [
-  {
-    id: 1,
-    title: "Sketching",
-    description:
-      "We'll sketch your piece based on your personal taste and specifications.",
-  },
-  {
-    id: 2,
-    title: "Gems & Diamonds",
-    description:
-      "Our experts will be by your side and work hard to find the perfect gems and diamonds for your piece.",
-  },
-  {
-    id: 3,
-    title: "Put it all together.",
-    description:
-      "We then send our design to our manufacturing team of industry designers.",
-  },
-  {
-    id: 4,
-    title: "Budget friendly",
-    description:
-      "We can work with your budget yet create something unique and memorable.",
   },
 ];
 

@@ -60,12 +60,6 @@ export type BlogCarouselItem = {
   imageUnit?: "px" | "rem";
 };
 
-export type ServicesInfo = {
-  id: number;
-  title: string;
-  description: string;
-};
-
 export type JewelryTypes = {
   id: number;
   title: string;

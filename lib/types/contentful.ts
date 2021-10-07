@@ -59,15 +59,29 @@ export interface HeroSection extends DynamicSection {
   secondaryAction: Button;
 }
 
-export interface ServicesSection {}
+export interface ServicesCollectionItem {
+  sys: {
+    id: string;
+  };
+  title: string;
+  heading: string;
+  description: string;
+}
 
-export type DynamicSections = HeroSection | ServicesSection;
+export interface ServicesSection extends DynamicSection {
+  heading: string;
+  image: Image;
+  leftIcon: Image;
+  servicesCollection: {
+    items: [ServicesCollectionItem];
+  };
+}
 
 export interface DynamicPage {
   page: {
     title: string;
     sectionsCollection: {
-      items: [HeroSection];
+      items: [DynamicSection];
     };
   };
 }

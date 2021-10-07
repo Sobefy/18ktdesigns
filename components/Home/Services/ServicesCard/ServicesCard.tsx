@@ -1,27 +1,30 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import ServicesSvg from "@components/Common/ServicesSvg";
-import { ServicesInfo } from "@lib/types";
+import { ServicesCollectionItem } from "@lib/types/contentful";
 
 interface ServicesCardProps {
-  data: ServicesInfo;
+  data: ServicesCollectionItem;
   index: number;
 }
 const ServicesCard = ({ data, index }: ServicesCardProps) => {
-  const { id, title, description } = data;
+  const { heading, description } = data;
   const currentIndex = index + 1;
+
   const printSvgTop = () => {
-    if (id === 1) {
+    if (index === 0) {
       return <ServicesSvg />;
     }
     return "";
   };
+
   const printSvgBottom = () => {
-    if (id === 3) {
+    if (index === 2) {
       return <ServicesSvg bottom />;
     }
     return "";
   };
+
   return (
     <div className="relative w-full px-4 mb-12 lg:w-1/2">
       {printSvgTop()}
@@ -30,7 +33,7 @@ const ServicesCard = ({ data, index }: ServicesCardProps) => {
         {currentIndex}
       </span>
       <div className="mb-4">
-        <ComposedTitles subtitleText={title} />
+        <ComposedTitles subtitleText={heading} />
       </div>
       <PrimaryDescription text={description} textSize="gray" />
     </div>

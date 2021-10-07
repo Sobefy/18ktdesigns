@@ -14,9 +14,9 @@ import { HomeSections } from "@lib/consts/graphQlQueries";
 import {
   DynamicPage,
   DynamicSection,
-  DynamicSections,
   HeroSection,
   SectionTypes,
+  ServicesSection,
 } from "@lib/types/contentful";
 
 interface HomeProps {
@@ -48,7 +48,7 @@ const Home = ({ data }: HomeProps) => {
       case SectionTypes.heroSection:
         return <Hero data={section as HeroSection} />;
       case SectionTypes.servicesSection:
-        return <Services />;
+        return <Services data={section as ServicesSection} />;
       case SectionTypes.testimonials:
         return <Testimonials />;
       case SectionTypes.recentProjects:
