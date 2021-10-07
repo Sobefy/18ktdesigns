@@ -15,24 +15,59 @@ export interface ContentfulButton {
   primary: boolean;
 }
 
-export interface HeroSection {
-  type: ContentfulPageSections.HERO_SECTION;
-  topHeading: string;
+export type Image = {
   title: string;
   description: string;
+  fileName: string;
+  contentType: "image/jpeg";
+  width: number;
+  height: number;
+  size: number;
+  url: string;
+};
+
+export type Button = {
+  primary: boolean;
+  text: string;
+};
+
+export enum SectionTypes {
+  heroSection = "heroSection",
+  servicesSection = "servicesSection",
+  testimonials = "testimonials",
+  recentProjects = "recentProjects",
+  cta = "cta",
+  ctaCollage = "ctaCollage",
+  jewelryTypeSection = "jewelryTypeSection",
+  newsletterSection = "newsletterSection",
+}
+
+export interface DynamicSection {
+  title: string;
+  type: SectionTypes;
+  sys: {
+    id: string;
+  };
+}
+export interface HeroSection extends DynamicSection {
+  type: SectionTypes.heroSection;
+  topHeading: string;
   heading: string;
-  image: ContentfulImage;
-  primaryAction: ContentfulButton;
-  secondaryAction: ContentfulButton;
+  description: string;
+  image: Image;
+  primaryAction: Button;
+  secondaryAction: Button;
 }
 
-export interface Home {
-  sectionsCollection: HeroSection[];
-  type: "page_home";
-}
+export interface ServicesSection {}
 
-export interface HomeResponse {
-  pageCollection: {
-    items: Home[];
+export type DynamicSections = HeroSection | ServicesSection;
+
+export interface DynamicPage {
+  page: {
+    title: string;
+    sectionsCollection: {
+      items: [HeroSection];
+    };
   };
 }

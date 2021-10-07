@@ -2,36 +2,43 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryButton from "@components/Common/PrimaryButton";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
-const Hero = () => {
+import { HeroSection } from "@lib/types/contentful";
+
+interface HeroProps {
+  data: HeroSection;
+}
+
+const Hero = ({ data }: HeroProps) => {
+  const {
+    topHeading,
+    heading,
+    description,
+    primaryAction,
+    secondaryAction,
+    image,
+  } = data;
+
   return (
     <div className="relative md:pb-24 lg:pb-80">
       <div className="pb-32 pt-44 md:pb-64 bg-blue-50">
         <div className="container px-4 mx-auto mb-12 text-center">
-          <ComposedTitles titleText="Welcome to 18KT Designs" />
+          <ComposedTitles titleText={topHeading} />
           <div className="max-w-5xl mx-auto mt-8 mb-12">
-            <ComposedTitles
-              subtitleText="We're changing the way you buy an engagement ring."
-              subtitleSize="lg"
-            />
+            <ComposedTitles subtitleText={heading} subtitleSize="lg" />
           </div>
           <div className="max-w-3xl mx-auto mb-12">
-            <PrimaryDescription
-              text="Work with a professional team of jewelry designers and
-              manufacturers to get your dream piece tailor made. We design
-              engagement rings and wedding bands for your special occasion."
-              textSize="gray"
-            />
+            <PrimaryDescription text={description} textSize="gray" />
           </div>
           <div className="inline-block w-full mb-2 mr-4 md:w-auto">
             <PrimaryButton
-              text="Start a Project"
+              text={primaryAction.text}
               size="md"
               onClick={() => {}}
             />
           </div>
           <div className="inline-block w-full mr-4 md:w-auto">
             <PrimaryButton
-              text="View Past Work"
+              text={secondaryAction.text}
               size="gray"
               onClick={() => {}}
             />
@@ -40,7 +47,7 @@ const Hero = () => {
         <div className="inset-x-0 max-w-3xl px-4 mx-auto lg:absolute">
           <img
             className="top-0 left-0 object-cover w-full mx-auto rounded-lg lg:absolute h-96 md:mt-20"
-            src="/images/happy-couple-engaged-couple-engagement-ring-couple-in-love-t20-29Zp7E.jpg"
+            src={image.url}
             alt=""
           />
         </div>

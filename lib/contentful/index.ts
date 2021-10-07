@@ -1,4 +1,3 @@
-import { HomeResponse } from "@lib/types/contentful";
 import { GraphQLClient, gql } from "graphql-request";
 
 const fetchURL = `https://graphql.contentful.com/content/v1/spaces/${process.env.SPACE_ID}`;
@@ -9,50 +8,39 @@ const graphQLClient = new GraphQLClient(fetchURL, {
 });
 
 export default class ContentfulApi {
-  static async callContentful(query: string) {
+  static async callContentful(
+    query: string,
+    variables: {} | undefined = undefined
+  ) {
     try {
-      const data = await graphQLClient.request(query);
+      const data = await graphQLClient.request(query, variables);
+      console.log(data);
       return data;
     } catch (error) {
-      throw new Error("Could not fetch data from Contentful!");
+      console.log(error);
     }
   }
 
-  static async getHomePageData() {
+  static async getDynamicPageData(id: string, dataQuery: string) {
     const query = gql`
-      {
-        pageCollection(limit: 10) {
-          items {
-            type
-            sectionsCollection(limit: 10) {
-              items {
-                type
-                title
-                topHeading
-                heading
-                description
-                primaryAction {
-                  text
-                  primary
-                }
-                secondaryAction {
-                  text
-                  primary
-                }
-                image {
-                  url
-                  title
-                  description
-                  width
-                  height
-                }
-              }
+      query ($id: String!) {
+        page(id: $id) {
+          title
+          sectionsCollection(limit: 10) {
+            items {
+              ${dataQuery}
             }
           }
         }
       }
     `;
-    const data: HomeResponse = await this.callContentful(query);
+
+    const variables = {
+      id,
+    };
+
+    const data = await this.callContentful(query, variables);
+
     return data;
   }
 }
