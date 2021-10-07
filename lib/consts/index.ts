@@ -5,6 +5,7 @@ import {
   WhenIsTheSpecialDayOptions,
 } from "@lib/machines/CreateCustomRing/types";
 import {
+  ImageItem,
   CarouselItem,
   ListOption,
   BlogCarouselItem,
@@ -12,8 +13,214 @@ import {
   JewelryTypes,
   SocialNetworkLinkType,
   ListFooterType,
+  gridItemsTypes,
+  BudgetInfoType,
+  AccordionInfoType,
+  BlogCardInfoType,
+  caseStudiesDataType,
+  reviewsCardsType,
+  FaqDataType,
+  HeaderItemType,
 } from "@lib/types";
-
+export const HeaderItem: HeaderItemType[] = [
+  {
+    id: 1,
+    text: "How it works",
+    url: "#",
+  },
+  {
+    id: 2,
+    text: "Testimonials",
+    url: "#",
+  },
+  {
+    id: 3,
+    text: "About Us",
+    url: "#",
+  },
+  {
+    id: 4,
+    text: "Shop Jewerly",
+    url: "#",
+  },
+];
+export const reviewsCards: reviewsCardsType[] = [
+  {
+    id: 1,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Esther Howard",
+    job: "CEO & Founder",
+    authorImage: "/images/Esther.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Robert Fox",
+    job: "CEO & Founder",
+    authorImage: "/images/Robert.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Cameron Williamson",
+    job: "CEO & Founder",
+    authorImage: "/images/Cameron.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 4,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Jane Cooper",
+    job: "CEO & Founder",
+    authorImage: "/images/Jane.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 5,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Ralph Edwards",
+    job: "CEO & Founder",
+    authorImage: "/images/Ralph.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+  {
+    id: 6,
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim quam ultricies, placerat tellus sed, laoreet orci. Duis luctus quam ac metus gravida sodales. Sed a ex accumsan, pellentesque.",
+    nameAuthor: "Darrell Steward",
+    job: "CEO & Founder",
+    authorImage: "/images/Darrell.jpg",
+    imageWidth: 50,
+    imageHeight: 50,
+    imageUnit: "px",
+  },
+];
+export const ImageGridContent: ImageItem[] = [
+  {
+    id: 1,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/beautiful-engagement-proposal-at-sunset-happy-couple-tonythetigersson-tony-andrews-photography-t20-E0lomV.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 2,
+    alt: "Ryan and Sandy",
+    image:
+      "/images/happy-couple-engaged-couple-engagement-ring-couple-in-love-t20-29Zp7E.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 3,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 4,
+    alt: "Ryan & Sandy",
+    image: "/images/lovely-couple-at-the-beach-t20-G0ZGZm.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 5,
+    alt: "Ryan & Sandy",
+    image: "/images/twenty20-0bade236-d46a-44cb-b8ca-cdcb8913f742.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 6,
+    alt: "Ryan & Sandy",
+    image: "/images/nominated-already-t20-3w8o4o.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 7,
+    alt: "Ryan & Sandy",
+    image: "/images/Couple-Laughing-together-at-the-beach.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 8,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+  {
+    id: 9,
+    alt: "Ryan & Sandy",
+    image:
+      "/images/millennial-diverse-young-married-couple-laughing-and-smiling-for-the-camera-t20-BlXZoO.jpg",
+    imageWidth: 371,
+    imageHeight: 288,
+    imageUnit: "px",
+  },
+];
+export const gridItems: gridItemsTypes[] = [
+  {
+    id: 1,
+    title: "Material and Style",
+    content:
+      "For now, we’ll do the asking. Who is it for? Have they hinted at an specific type of ring they like? We'll ask lots of questions in order to learn as much as possible about your future partner.",
+    svg: "materialAndDesign",
+  },
+  {
+    id: 2,
+    title: "Diamonds or Stones?",
+    content:
+      "Our gem and diamond experts work diligently to find the perfect stone for you and offer guidance through every step of the process.",
+    svg: "diamondOrStones",
+  },
+  {
+    id: 3,
+    title: "Design Review",
+    content:
+      "We are able to create realistic 3D renderings that show exactly how the ring will look. We'll tweak and tune until we hear you say: “It looks perfect!",
+    svg: "designReview",
+  },
+  {
+    id: 4,
+    title: "Ring Manufacturing",
+    content:
+      "Our master jewelers will bring your custom design to life. Once it's in your hands, we stand behind the ring for life with our Lifetime Customer Service.",
+    svg: "ringManufacturing",
+  },
+];
 export const cards: JewelryTypes[] = [
   {
     id: 1,
@@ -967,5 +1174,748 @@ export const servicesData: ServicesInfo[] = [
     title: "Budget friendly",
     description:
       "We can work with your budget yet create something unique and memorable.",
+  },
+];
+
+export const budgetInfo: BudgetInfoType[] = [
+  {
+    id: 1,
+    weight: "18kt",
+    purity: "75.0",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "1500",
+  },
+  {
+    id: 2,
+    weight: "22kt",
+    purity: "91.7.0",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "3500",
+  },
+  {
+    id: 3,
+    weight: "24kt",
+    purity: "99.9",
+    diamondCarat: "",
+    materials: "",
+    complexity: "",
+    price: "6000",
+  },
+];
+
+export const accordionInfo: AccordionInfoType[] = [
+  {
+    id: 1,
+    title: "How long does a custom ring take to make?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+    defaultChecked: true,
+  },
+  {
+    id: 2,
+    title: "What if I already know the design I want?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 3,
+    title: "Can I see the design before I pay?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 4,
+    title: "What is your current warranty?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+  {
+    id: 5,
+    title: "Do you offer cleaning & maintenance?",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligula urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+  },
+];
+
+export const blogCardInfo: BlogCardInfoType[] = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet consectutar domor at elis",
+    value: "blogcard1",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa nibh, pulvinar vitae aliquet nec, accumsan aliquet orci.",
+    image: "/images/photo-1525130413817-d45c1d127c42.jpg",
+    imageHeight: 384,
+    imageWidth: 736,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 2,
+    title: "Lorem ipsum dolor",
+    value: "blogcard2",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1524758631624-e2822e304c36.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 3,
+    title: "Lorem ipsum dolor",
+    value: "blogcard2",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1556761175-4b46a572b786.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 4,
+    title: "Lorem ipsum dolor",
+    value: "blogcard4",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1557804506-d8017c1e4856.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+  {
+    id: 5,
+    title: "Lorem ipsum dolor",
+    value: "blogcard5",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/photo-1544717297-fa95b6ee9643.jpg",
+    imageHeight: 384,
+    imageWidth: 352,
+    imageUnit: "px",
+    publicationDate: "2020-07-10T19:40",
+    buttonText: "Read more",
+  },
+];
+
+export const caseStudiesData: caseStudiesDataType[] = [
+  {
+    id: 1,
+    buttonText: "Product Design",
+    buttonCategory: "productDesign",
+    images: [
+      {
+        id: 1,
+        image: "/images/photo-1525129498994-580709352e20.jpg",
+        alt: "men with a suitcase",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 2,
+        image: "/images/photo-1544717305-2782549b5136.jpg",
+        alt: "woman carrying a book",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+
+      {
+        id: 3,
+        image: "/images/photo-1525130413817-d45c1d127c42.jpg",
+        alt: "people pointing and looking a laptop",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 4,
+        image: "/images/photo-1544717301-9cdcb1f5940f.jpg",
+        alt: "a man screaming to the phone",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 5,
+        image: "/images/photo-1544717305-996b815c338c.jpg",
+        alt: "man seeing through a camera lens",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 6,
+        image: "/images/photo-1544717297-fa95b6ee9643.jpg",
+        alt: "man looking thoughtful on his desk",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+    ],
+  },
+  {
+    id: 2,
+    buttonText: "Management",
+    buttonCategory: "management",
+    images: [
+      {
+        id: 1,
+        image: "/images/photo-1544717305-2782549b5136.jpg",
+        alt: "woman carrying a book",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 2,
+        image: "/images/photo-1525129498994-580709352e20.jpg",
+        alt: "men with a suitcase",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 3,
+        image: "/images/photo-1525130413817-d45c1d127c42.jpg",
+        alt: "people pointing and looking a laptop",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 4,
+        image: "/images/photo-1544717301-9cdcb1f5940f.jpg",
+        alt: "a man screaming to the phone",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 5,
+        image: "/images/photo-1544717305-996b815c338c.jpg",
+        alt: "man seeing through a camera lens",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 6,
+        image: "/images/photo-1544717297-fa95b6ee9643.jpg",
+        alt: "man looking thoughtful on his desk",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+    ],
+  },
+  {
+    id: 3,
+    buttonText: "Front-End",
+    buttonCategory: "frontEnd",
+    images: [
+      {
+        id: 1,
+        image: "/images/photo-1544717305-2782549b5136.jpg",
+        alt: "woman carrying a book",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 2,
+        image: "/images/photo-1525129498994-580709352e20.jpg",
+        alt: "men with a suitcase",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 3,
+        image: "/images/photo-1525130413817-d45c1d127c42.jpg",
+        alt: "people pointing and looking a laptop",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 4,
+        image: "/images/photo-1544717301-9cdcb1f5940f.jpg",
+        alt: "a man screaming to the phone",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 5,
+        image: "/images/photo-1544717305-996b815c338c.jpg",
+        alt: "man seeing through a camera lens",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 6,
+        image: "/images/photo-1544717297-fa95b6ee9643.jpg",
+        alt: "man looking thoughtful on his desk",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+    ],
+  },
+  {
+    id: 4,
+
+    buttonText: "Back-End",
+    buttonCategory: "backEnd",
+    images: [
+      {
+        id: 1,
+        image: "/images/photo-1544717305-2782549b5136.jpg",
+        alt: "woman carrying a book",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 2,
+        image: "/images/photo-1525129498994-580709352e20.jpg",
+        alt: "men with a suitcase",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 3,
+        image: "/images/photo-1525130413817-d45c1d127c42.jpg",
+        alt: "people pointing and looking a laptop",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 4,
+        image: "/images/photo-1544717301-9cdcb1f5940f.jpg",
+        alt: "a man screaming to the phone",
+        imageHeight: 464,
+        imageWidth: 548,
+        imageUnit: "px",
+      },
+      {
+        id: 5,
+        image: "/images/photo-1544717305-996b815c338c.jpg",
+        alt: "man seeing through a camera lens",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+      {
+        id: 6,
+        image: "/images/photo-1544717297-fa95b6ee9643.jpg",
+        alt: "man looking thoughtful on his desk",
+        imageHeight: 232,
+        imageWidth: 304,
+        imageUnit: "px",
+      },
+    ],
+  },
+];
+
+export const faqData: FaqDataType[] = [
+  {
+    id: 1,
+    buttonText: "General",
+    buttonCategory: "generalQuestion",
+    questions: [
+      {
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+    defaultChecked: true,
+  },
+  {
+    id: 2,
+    buttonText: "Warranty",
+    buttonCategory: "warrantyQuestion",
+    questions: [
+      {
+        id: 1,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    buttonText: "Payments",
+    buttonCategory: "paymentQuestion",
+    questions: [
+      {
+        id: 1,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    buttonText: "Returns",
+    buttonCategory: "returnQuestion",
+    questions: [
+      {
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    buttonText: "Maintenance",
+    buttonCategory: "maintenanceQuestion",
+    questions: [
+      {
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+];
+
+export const warrantyFaqData: FaqDataType[] = [
+  {
+    id: 1,
+    buttonText: "WARRANTY OVERVIEW",
+    buttonCategory: "warrantyOverview",
+    questions: [
+      {
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+    defaultChecked: true,
+  },
+  {
+    id: 2,
+    buttonText: "SATISFACTION GUARANTEE",
+    buttonCategory: "satisfactionGuarantee",
+    questions: [
+      {
+        id: 1,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    buttonText: "DIAMOND PRICE MATCH",
+    buttonCategory: "diamondPriceMatch",
+    questions: [
+      {
+        id: 1,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    buttonText: "FREE RING SIZING",
+    buttonCategory: "freeRingResizing",
+    questions: [
+      {
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    buttonText: "LIFETIME WARRANTY",
+    buttonCategory: "lifetimeWarranty",
+    questions: [
+      {
+        id: 1,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+        defaultChecked: true,
+      },
+      {
+        id: 2,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 3,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 4,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+      {
+        id: 5,
+        title: "Fusce eget nunc et libero accumsan rutrum quis nec lectus?",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod orci sed tristique placerat. Fusce in ligul urna. Fusce eget nunc et libero accumsan rutrum quis nec lectus. Quisque luctus sem nibh, quis ornare neque consectetur varius. Maecenas rhoncus consectetur rutrum.",
+      },
+    ],
   },
 ];

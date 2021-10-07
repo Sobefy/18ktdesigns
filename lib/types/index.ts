@@ -1,3 +1,32 @@
+export type HeaderItemType = {
+  id: number;
+  text: string;
+  url: string;
+};
+export type reviewsCardsType = {
+  id: number;
+  content: string;
+  nameAuthor: string;
+  job: string;
+  authorImage: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
+export type ImageItem = {
+  id: number;
+  image: string;
+  alt: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+};
+export type gridItemsTypes = {
+  id: number;
+  title: string;
+  content: string;
+  svg: string;
+};
 export type ListOption = {
   id: number;
   value: string;
@@ -58,6 +87,62 @@ export type ListFooterType = {
   label: string;
   url: string;
   target: string;
+};
+
+export type BudgetInfoType = {
+  id: number;
+  weight: string;
+  purity: string;
+  diamondCarat: string;
+  materials: string;
+  complexity: string;
+  price: string;
+};
+
+export type AccordionInfoType = {
+  id: number;
+  title: string;
+  description: string;
+  defaultChecked?: boolean;
+};
+
+export type BlogCardInfoType = {
+  id: number;
+  value: string;
+  title: string;
+  summary: string;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageUnit?: "px" | "rem";
+  publicationDate: string;
+  buttonText: string;
+};
+
+export type caseStudiesDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: string;
+  images: ImageItem[];
+};
+export type FaqDataCategory =
+  | "generalQuestion"
+  | "warrantyQuestion"
+  | "paymentQuestion"
+  | "returnQuestion"
+  | "maintenanceQuestion"
+  | "warrantyOverview"
+  | "satisfactionGuarantee"
+  | "diamondPriceMatch"
+  | "freeRingResizing"
+  | "lifetimeWarranty";
+
+export type FaqDataType = {
+  id: number;
+  buttonText: string;
+  buttonCategory: FaqDataCategory;
+  questions: AccordionInfoType[];
+  defaultChecked?: boolean;
 };
 
 export type BudgetOptions =

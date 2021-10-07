@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 // TODO: Change for Image component
 import { useState } from "react";
+import { HeaderItem } from "@lib/consts";
 
 interface HeaderProps {
   alternateNav?: boolean;
@@ -12,7 +13,6 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
   const handleHamburgerClick = () => {
     setNavOpen(!navOpen);
   };
-
   return (
     <div className="absolute top-0 left-0 z-50 w-full px-4 py-8 xl:px-10">
       <nav className="flex items-center justify-between">
@@ -26,7 +26,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
         </a>
         <div className="ml-auto lg:hidden">
           <button
-            className="flex items-center p-3 rounded  navbar-burger hover:bg-gray-50"
+            className="flex items-center p-3 rounded navbar-burger hover:bg-gray-50"
             onClick={handleHamburgerClick}
           >
             <svg
@@ -43,31 +43,18 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
         <div className="hidden w-auto lg:flex lg:w-3/5 lg:pl-16 ">
           {alternateNav ? null : (
             <ul className="hidden lg:flex lg:ml-auto lg:mr-12 lg:items-center lg:w-auto lg:space-x-12">
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  How it works
-                </a>
-              </li>
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a className="text-sm font-medium" href="#">
-                  Shop Jewerly
-                </a>
-              </li>
+              {HeaderItem.map((option) => (
+                <li key={option.id}>
+                  <a className="text-sm font-medium" href={option.url}>
+                    {option.text}
+                  </a>
+                </li>
+              ))}
             </ul>
           )}
           <div className={alternateNav ? "ml-auto" : "null"}>
             <a
-              className="inline-block px-8 py-3 text-sm font-medium leading-normal text-red-500 transition duration-200 rounded  bg-red-50 hover:bg-red-100"
+              className="inline-block px-8 py-3 text-sm font-medium leading-normal text-red-500 transition duration-200 rounded bg-red-50 hover:bg-red-100"
               href="#"
             >
               {alternateNav ? "Chat with someone" : "Start a Project"}
@@ -78,9 +65,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
       {navOpen ? (
         <div className="relative z-50 navbar-menu ">
           <div className="fixed inset-0 bg-gray-800 opacity-25 navbar-backdrop"></div>
-          <nav
-            className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r "
-          >
+          <nav className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r ">
             <div className="flex items-center mb-8">
               <a
                 className="mr-auto text-lg font-semibold leading-none"
@@ -99,7 +84,7 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
               </a>
               <button className="navbar-close" onClick={handleHamburgerClick}>
                 <svg
-                  className="w-6 h-6 text-gray-500 cursor-pointer  hover:text-gray-500"
+                  className="w-6 h-6 text-gray-500 cursor-pointer hover:text-gray-500"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -117,45 +102,23 @@ const Header = ({ alternateNav = false }: HeaderProps) => {
             <div>
               {alternateNav ? null : (
                 <ul>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
-                      href="#"
-                    >
-                      How it works
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
-                      href="#"
-                    >
-                      Testimonials
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
-                      href="#"
-                    >
-                      About Us
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block p-4 text-sm font-medium text-gray-900 rounded  hover:bg-gray-50"
-                      href="#"
-                    >
-                      Shop Jewelry
-                    </a>
-                  </li>
+                  {HeaderItem.map((option) => (
+                    <li className="mb-1" key={option.id}>
+                      <a
+                        className="block p-4 text-sm font-medium text-gray-900 rounded hover:bg-gray-50"
+                        href={option.url}
+                      >
+                        {option.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>
             <div className="mt-auto">
               <div className="pt-6">
                 <a
-                  className="block py-3 text-sm font-semibold leading-normal text-center text-red-300 transition duration-200 rounded  bg-red-50 hover:bg-red-100"
+                  className="block py-3 text-sm font-semibold leading-normal text-center text-red-300 transition duration-200 rounded bg-red-50 hover:bg-red-100"
                   href="#"
                 >
                   {alternateNav ? "Chat with someone" : "Start a Project"}

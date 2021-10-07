@@ -85,7 +85,7 @@ const WhoWillBeWearing = () => {
           <Description text="Who’s the lucky guy or gal?" />
           <Input
             type="text"
-            inputSize="WhoWill"
+            inputSize="md"
             text="Your S/O's First Name"
             value={mySignificantOther}
             onChange={handleSoFirstName}
