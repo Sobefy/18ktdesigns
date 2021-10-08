@@ -1,7 +1,7 @@
-import { Document } from "@contentful/rich-text-types";
+import { Document as RichText } from "@contentful/rich-text-types";
 
 import { SectionTypes } from "@lib/types/enums";
-import { Image, Button } from "@lib/types/types";
+import { Image, Button, CTAHeadingSize } from "@lib/types/types";
 
 export interface DynamicSection {
   title: string;
@@ -43,15 +43,41 @@ export interface TestimonialsCollectionItem {
   title: string;
   heading: string;
   subHeading: string;
-  desctipion: { json: Document };
+  desctipion: { json: RichText };
 }
 
 export interface TestimonialsSection extends DynamicSection {
   topHeading: string;
   heading: string;
+  leftArrow: Image;
+  rightArrow: Image;
   cardsCollection: {
     items: [TestimonialsCollectionItem];
   };
+}
+
+export interface RecentProjectsCollectionItem {
+  title: string;
+  heading: string;
+  excerpt: string;
+  featuredImage: Image;
+}
+
+export interface RecentProjectsSection extends DynamicSection {
+  topHeading: string;
+  heading: string;
+  leftArrow: Image;
+  rightArrow: Image;
+  recentProjectsCollection: {
+    items: [RecentProjectsCollectionItem];
+  };
+}
+
+export interface CTASection extends DynamicSection {
+  heading: string;
+  headingSize: CTAHeadingSize;
+  ctaDescription: { json: RichText };
+  button: Button;
 }
 
 export interface DynamicPage {

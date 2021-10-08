@@ -1,7 +1,12 @@
-import BlogCarousel from "@components/Home/RecentProjects/BlogCarousel/BlogCarousel";
-
 /* eslint-disable @next/next/no-img-element */
-const RecentProjects = () => {
+import BlogCarousel from "@components/Home/RecentProjects/BlogCarousel/BlogCarousel";
+import { RecentProjectsSection } from "@lib/types/interfaces";
+
+interface RecentProjectsProps {
+  data: RecentProjectsSection;
+}
+
+const RecentProjects = ({ data }: RecentProjectsProps) => {
   return (
     <div className="relative overflow-hidden">
       <img

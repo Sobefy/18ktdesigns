@@ -13,3 +13,5 @@ export type Button = {
   primary: boolean;
   text: string;
 };
+
+export type CTAHeadingSize = "small" | "medium" | "large";

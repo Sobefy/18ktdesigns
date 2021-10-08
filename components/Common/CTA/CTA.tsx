@@ -1,46 +1,39 @@
-import PrimaryButton from "../PrimaryButton";
+import PrimaryButton from "@components/Common/PrimaryButton";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { CTASection } from "@lib/types/interfaces";
 
 interface CTADescriptionProps {
-  textTitleSize: string;
-  titleText: string;
-  primarySubtitle: string;
-  secondarySubtitle: string;
-  btnText: string;
+  data: CTASection;
   onClick(): void;
 }
-const CTA = ({
-  textTitleSize,
-  titleText,
-  primarySubtitle,
-  secondarySubtitle,
-  onClick,
-  btnText,
-}: CTADescriptionProps) => {
+const CTA = ({ data, onClick }: CTADescriptionProps) => {
+  const { headingSize, heading, ctaDescription, button } = data;
   const textTitleSizes = () => {
-    switch (textTitleSize) {
-      case "md":
+    switch (headingSize) {
+      case "medium":
         return "lg:text-5xl text-5xl";
-      case "lg":
+      case "large":
         return "text-4xl lg:text-6xl";
       default:
         return "";
     }
   };
+  const description = documentToReactComponents(ctaDescription.json);
+  console.log(ctaDescription);
   return (
     <div className="py-20 bg-blue-50">
       <div className="container px-4 mx-auto">
         <div className="mb-8 md:mb-16 ">
           <h2 className={`font-semibold font-heading ${textTitleSizes()}`}>
-            {titleText}
+            {heading}
           </h2>
         </div>
         <div className="flex flex-wrap items-center">
-          <div className="inline-block max-w-xl mb-6 md:mb-0">
-            <p className="text-xl">{primarySubtitle}</p>
-            <p className="text-xl">{secondarySubtitle}</p>
+          <div className="inline-block max-w-xl mb-6 text-xl md:mb-0">
+            {description}
           </div>
           <div className="inline-block w-full ml-auto md:w-auto">
-            <PrimaryButton size="lg" text={btnText} onClick={onClick} />
+            <PrimaryButton size="lg" text={button.text} onClick={onClick} />
           </div>
         </div>
       </div>

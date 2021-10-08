@@ -12,10 +12,13 @@ import CTA from "@components/Common/CTA";
 import ContentfulApi from "@lib/contentful";
 import { HomeSections } from "@lib/consts/graphQlQueries";
 import {
+  CTASection,
   DynamicPage,
   DynamicSection,
   HeroSection,
+  RecentProjectsSection,
   ServicesSection,
+  TestimonialsSection,
 } from "@lib/types/interfaces";
 import { SectionTypes } from "@lib/types/enums";
 
@@ -52,20 +55,11 @@ const Home = ({ data }: HomeProps) => {
       case SectionTypes.servicesSection:
         return <Services data={section as ServicesSection} />;
       case SectionTypes.testimonials:
-        return <Testimonials />;
+        return <Testimonials data={section as TestimonialsSection} />;
       case SectionTypes.recentProjects:
-        return <RecentProjects />;
+        return <RecentProjects data={section as RecentProjectsSection} />;
       case SectionTypes.cta:
-        return (
-          <CTA
-            textTitleSize="lg"
-            titleText="let's build your ring."
-            primarySubtitle="Drop us a line, and we'll get in touch."
-            secondarySubtitle="'ll see if we're a match and how we can help each other."
-            btnText="Start a Project"
-            onClick={() => {}}
-          />
-        );
+        return <CTA data={section as CTASection} onClick={() => {}} />;
       case SectionTypes.ctaCollage:
         return <CTACollage />;
       case SectionTypes.jewelryTypeSection:

@@ -1,7 +1,12 @@
-import Carousel from "@components/Home/Carousel/Carousel";
-
 /* eslint-disable @next/next/no-img-element */
-const Testimonials = () => {
+import Carousel from "@components/Home/Carousel/Carousel";
+import { TestimonialsSection } from "@lib/types/interfaces";
+
+interface TestimonialsProps {
+  data: TestimonialsSection;
+}
+
+const Testimonials = ({ data }: TestimonialsProps) => {
   return (
     <div className="relative py-20">
       <img

@@ -70,6 +70,26 @@ export const testimonialsSection = `
     type
     topHeading
     heading
+    leftArrow {
+      title
+      description
+      contentType
+      fileName
+      size
+      url
+      width
+      height
+    }
+    rightArrow {
+      title
+      description
+      contentType
+      fileName
+      size
+      url
+      width
+      height
+    }
     cardsCollection(limit: 10) {
       items {
         title
