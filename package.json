@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.4.0",
     "@xstate/inspect": "^0.4.1",
     "@xstate/react": "^1.5.1",
     "graphql": "^15.5.3",
