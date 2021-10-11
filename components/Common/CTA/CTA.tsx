@@ -19,7 +19,6 @@ const CTA = ({ data, onClick }: CTADescriptionProps) => {
     }
   };
   const description = documentToReactComponents(ctaDescription.json);
-  console.log(ctaDescription);
   return (
     <div className="py-20 bg-blue-50">
       <div className="container px-4 mx-auto">

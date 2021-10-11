@@ -1,5 +1,8 @@
 export const heroSection = `
-... on HeroSection { 
+... on HeroSection {
+    sys {
+      id
+    }
     title
     type
     topHeading
@@ -28,6 +31,9 @@ export const heroSection = `
 
 export const servicesSection = `
 ... on ServicesSection {
+    sys {
+      id
+    }
     title
     type
     heading
@@ -66,6 +72,9 @@ export const servicesSection = `
 
 export const testimonialsSection = `
 ... on TestimonialsSection {
+    sys {
+      id
+    }
     title
     type
     topHeading
@@ -115,6 +124,9 @@ export const testimonialsSection = `
 
 export const recentProjectsSection = `
 ... on RecentProjectsSection {
+    sys {
+      id
+    }
     title
     type
     topHeading
@@ -161,6 +173,9 @@ export const recentProjectsSection = `
 
 export const ctaSection = `
 ... on CtaSection {
+    sys {
+      id
+    }
     title
     type
     heading
@@ -177,6 +192,9 @@ export const ctaSection = `
 
 export const ctaCollageSection = `
 ... on CtaCollageSection {
+    sys {
+      id
+    }
     title
     type
     topHeading
@@ -204,6 +222,9 @@ export const ctaCollageSection = `
 
 export const jewerlyTypeSection = `
 ... on JewerlyTypeSection {
+    sys {
+      id
+    }
     title
     type
     heading
@@ -236,6 +257,9 @@ export const jewerlyTypeSection = `
 
 export const newsletterSection = `
 ... on NewsletterSection {
+  sys {
+    id
+  }
   title
   type
   heading
@@ -254,46 +278,55 @@ export const newsletterSection = `
 
 export const accordionSection = `
 ... on AccordionSection {
-    title
-    type
-    accordionCardsCollection(limit: 10) {
-      items {
-        title
-        heading
-        description
-        grayBg
-        whiteBg
-      }
+  sys {
+    id
+  }
+  title
+  type
+  accordionCardsCollection(limit: 10) {
+    items {
+      title
+      heading
+      description
+      grayBg
+      whiteBg
     }
+  }
 }
 `;
 
 export const budgetingSection = `
 ... on BudgetingSection {
-    title
-    type
-    topHeading
-    heading
-    description
-    budgetingCardsCollection(limit: 10) {
-      items {
-        title
-        weight
-        purity
-        diamondCarat
-        materialsAndGemstones
-        complexity
-        button {
-          text
-          primary
-        }
+  sys {
+    id
+  }
+  title
+  type
+  topHeading
+  heading
+  description
+  budgetingCardsCollection(limit: 10) {
+    items {
+      title
+      weight
+      purity
+      diamondCarat
+      materialsAndGemstones
+      complexity
+      button {
+        text
+        primary
       }
     }
+  }
 }
 `;
 
 export const rotatingRingSection = `
 ... on RotatingRingSection {
+  sys {
+    id
+  }
     title
     type
     topHeading
@@ -318,6 +351,9 @@ export const rotatingRingSection = `
 
 export const gridSection = `
 ... on GridSection {
+  sys {
+    id
+  }
     title
     type
     gridCardsCollection(limit: 10) {
@@ -342,6 +378,9 @@ export const gridSection = `
 
 export const imageGridSection = `
 ... on ImageGridSection {
+  sys {
+    id
+  }
     title
     type
     topHeading

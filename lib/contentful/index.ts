@@ -14,7 +14,6 @@ export default class ContentfulApi {
   ) {
     try {
       const data = await graphQLClient.request(query, variables);
-      console.log(data);
       return data;
     } catch (error) {
       console.log(error);
