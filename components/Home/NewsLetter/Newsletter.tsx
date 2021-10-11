@@ -11,6 +11,8 @@ interface NewsletterProps {
 }
 
 const Newsletter = ({ data }: NewsletterProps) => {
+  const { button, description, heading, input } = data;
+
   return (
     <div className="py-20 bg-blue-50">
       <div className="container px-4 mx-auto">
@@ -22,12 +24,9 @@ const Newsletter = ({ data }: NewsletterProps) => {
               </div>
               <div>
                 <div className="mb-4">
-                  <ComposedTitles
-                    subtitleText="Sign up to our newsletter"
-                    subtitleSize="sm"
-                  />
+                  <ComposedTitles subtitleText={heading} subtitleSize="sm" />
                 </div>
-                <Description text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <Description text={description} />
               </div>
             </div>
           </div>
@@ -36,16 +35,16 @@ const Newsletter = ({ data }: NewsletterProps) => {
               <div className="flex">
                 <div className="relative flex flex-wrap ml-auto lg:flex-nowrap lg:mb-0 lg:mr-4">
                   <Input
-                    labelText="Email Address"
+                    labelText={input.label}
                     inputSize="sm"
-                    type="email"
-                    text="e.g email@email.com"
+                    type={input.type}
+                    text={input.placeholder}
                     onChange={() => {}}
                   />
                 </div>
                 <PrimaryButton
                   size="sm"
-                  text="Sign&nbsp;up"
+                  text={button.text}
                   onClick={() => {}}
                 />
               </div>

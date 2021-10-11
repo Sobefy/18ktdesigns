@@ -14,4 +14,10 @@ export type Button = {
   text: string;
 };
 
+export type Input = {
+  label: string;
+  type: "text" | "email";
+  placeholder: string;
+};
+
 export type CTAHeadingSize = "small" | "medium" | "large";
