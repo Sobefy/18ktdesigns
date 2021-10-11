@@ -1,10 +1,15 @@
 //TODO: check react-player loop and autoplay not working when realoading
+import ReactPlayer from "react-player";
 
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
-import ReactPlayer from "react-player";
+import { RotatingRingSection } from "@lib/types/interfaces";
 
-const RotatingRing = () => {
+interface RotatingRingProps {
+  data: RotatingRingSection;
+}
+
+const RotatingRing = ({ data }: RotatingRingProps) => {
   return (
     <div className="container relative px-4 pt-20 mx-auto">
       <div className="flex flex-wrap items-center -mx-4">
@@ -15,7 +20,7 @@ const RotatingRing = () => {
               <ComposedTitles
                 subtitleText="Looking for the perfect ring? Let us design it and build it
                   for you"
-                subtitleSize="md"
+                subtitleSize="medium"
               />
             </div>
             <div className="mb-6 lg:mb-12">

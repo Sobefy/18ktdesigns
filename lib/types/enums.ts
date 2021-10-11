@@ -7,4 +7,6 @@ export enum SectionTypes {
   ctaCollage = "ctaCollage",
   jewelryTypeSection = "jewelryTypeSection",
   newsletterSection = "newsletterSection",
+  rotatingRingSection = "rotatingRing",
+  gridSection = "gridSection",
 }

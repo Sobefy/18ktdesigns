@@ -1,7 +1,7 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import ServicesSvg from "@components/Common/ServicesSvg";
-import { ServicesCollectionItem } from "@lib/types/contentful";
+import { ServicesCollectionItem } from "@lib/types/interfaces";
 
 interface ServicesCardProps {
   data: ServicesCollectionItem;

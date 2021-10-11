@@ -354,25 +354,25 @@ export const gridSection = `
   sys {
     id
   }
-    title
-    type
-    gridCardsCollection(limit: 10) {
-      items {
+  title
+  type
+  gridCardsCollection(limit: 10) {
+    items {
+      title
+      image {
         title
-        image {
-          title
-          description
-          contentType
-          fileName
-          size
-          url
-          width
-          height
-        }
-        heading
         description
+        contentType
+        fileName
+        size
+        url
+        width
+        height
       }
+      heading
+      description
     }
+  }
 }
 `;
 
@@ -409,12 +409,21 @@ export const imageGridSection = `
 `;
 
 export const HomeSections = `
-    ${heroSection}
-    ${servicesSection}
-    ${testimonialsSection}
-    ${recentProjectsSection}
-    ${ctaSection}
-    ${ctaCollageSection}
-    ${jewerlyTypeSection}
-    ${newsletterSection}
+  ${heroSection}
+  ${servicesSection}
+  ${testimonialsSection}
+  ${recentProjectsSection}
+  ${ctaSection}
+  ${ctaCollageSection}
+  ${jewerlyTypeSection}
+  ${newsletterSection}
+`;
+
+export const HowItWorksPageSections = `
+  ${rotatingRingSection}
+  ${gridSection}
+  ${budgetingSection}
+  ${imageGridSection}
+  ${accordionSection}
+  ${ctaSection}
 `;

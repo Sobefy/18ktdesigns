@@ -1,7 +1,7 @@
 import { Document as RichText } from "@contentful/rich-text-types";
 
 import { SectionTypes } from "@lib/types/enums";
-import { Image, Button, CTAHeadingSize, Input } from "@lib/types/types";
+import { MediaHolder, Button, CTAHeadingSize, Input } from "@lib/types/types";
 
 export interface DynamicSection {
   title: string;
@@ -16,7 +16,7 @@ export interface HeroSection extends DynamicSection {
   topHeading: string;
   heading: string;
   description: string;
-  image: Image;
+  image: MediaHolder;
   primaryAction: Button;
   secondaryAction: Button;
 }
@@ -32,8 +32,8 @@ export interface ServicesCollectionItem {
 
 export interface ServicesSection extends DynamicSection {
   heading: string;
-  image: Image;
-  leftIcon: Image;
+  image: MediaHolder;
+  leftIcon: MediaHolder;
   servicesCollection: {
     items: [ServicesCollectionItem];
   };
@@ -49,8 +49,8 @@ export interface TestimonialsCollectionItem {
 export interface TestimonialsSection extends DynamicSection {
   topHeading: string;
   heading: string;
-  leftArrow: Image;
-  rightArrow: Image;
+  leftArrow: MediaHolder;
+  rightArrow: MediaHolder;
   cardsCollection: {
     items: [TestimonialsCollectionItem];
   };
@@ -60,14 +60,14 @@ export interface RecentProjectsCollectionItem {
   title: string;
   heading: string;
   excerpt: string;
-  featuredImage: Image;
+  featuredImage: MediaHolder;
 }
 
 export interface RecentProjectsSection extends DynamicSection {
   topHeading: string;
   heading: string;
-  leftArrow: Image;
-  rightArrow: Image;
+  leftArrow: MediaHolder;
+  rightArrow: MediaHolder;
   recentProjectsCollection: {
     items: [RecentProjectsCollectionItem];
   };
@@ -86,7 +86,7 @@ export interface CTACollageSection extends DynamicSection {
   headingSize: "medium";
   ctaDescription: { json: RichText };
   button: Button;
-  image: Image;
+  image: MediaHolder;
 }
 
 export interface NewsletterSection extends DynamicSection {
@@ -94,6 +94,27 @@ export interface NewsletterSection extends DynamicSection {
   input: Input;
   description: string;
   button: Button;
+}
+
+export interface RotatingRingSection extends DynamicSection {
+  topHeading: string;
+  heading: string;
+  description: string;
+  button: Button;
+  mediaHolder: MediaHolder;
+}
+
+export interface GridSectionCollectionItem {
+  title: string;
+  heading: string;
+  description: string;
+  image: MediaHolder;
+}
+
+export interface GridSectionTypes extends DynamicSection {
+  gridCardsCollection: {
+    items: GridSectionCollectionItem[];
+  };
 }
 
 export interface DynamicPage {

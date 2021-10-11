@@ -1,8 +1,8 @@
-export type Image = {
+export type MediaHolder = {
   title: string;
   description: string;
   fileName: string;
-  contentType: "image/jpeg";
+  contentType: "image/jpeg" | "text/html";
   width: number;
   height: number;
   size: number;

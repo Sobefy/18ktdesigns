@@ -11,13 +11,17 @@ import {
   CTACollageSection,
   CTASection,
   DynamicSection,
+  GridSectionTypes,
   HeroSection,
   NewsletterSection,
   RecentProjectsSection,
+  RotatingRingSection,
   ServicesSection,
   TestimonialsSection,
 } from "@lib/types/interfaces";
 import { SectionTypes } from "@lib/types/enums";
+import RotatingRing from "@components/HowItWorks/RotatingRing";
+import GridSection from "@components/HowItWorks/GridSection";
 
 interface SectionRenderer {
   sections: DynamicSection[];
@@ -42,6 +46,10 @@ const SectionRenderer = ({ sections }: SectionRenderer) => {
         return <TabGroup />;
       case SectionTypes.newsletterSection:
         return <Newsletter data={section as NewsletterSection} />;
+      case SectionTypes.rotatingRingSection:
+        return <RotatingRing data={section as RotatingRingSection} />;
+      case SectionTypes.gridSection:
+        return <GridSection data={section as GridSectionTypes} />;
       default:
         return null;
     }

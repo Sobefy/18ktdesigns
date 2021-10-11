@@ -1,7 +1,13 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import SvgGridItems from "@components/Common/SvgGridItems";
 import { gridItems } from "@lib/consts";
-const GridSection = () => {
+import { GridSectionTypes } from "@lib/types/interfaces";
+
+interface GridSectionProps {
+  data: GridSectionTypes;
+}
+
+const GridSection = ({ data }: GridSectionProps) => {
   const cardClass = (index: number) => {
     const last = gridItems.length - 1;
     const penultimate = gridItems.length - 2;

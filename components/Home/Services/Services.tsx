@@ -1,7 +1,6 @@
-import { servicesData } from "@lib/consts";
 import ComposedTitles from "@components/Common/ComposedTitles";
 import ServicesCard from "@components/Home/Services/ServicesCard";
-import { ServicesSection } from "@lib/types/contentful";
+import { ServicesSection } from "@lib/types/interfaces";
 
 interface ServicesProps {
   data: ServicesSection;
@@ -25,7 +24,7 @@ const Services = ({ data }: ServicesProps) => {
           </div>
           <div className="w-full px-4 mb-6 lg:w-1/2 lg:mb-0">
             <div className="mb-10 lg:mb-16">
-              <ComposedTitles subtitleText={heading} subtitleSize="md" />
+              <ComposedTitles subtitleText={heading} subtitleSize="medium" />
             </div>
             <div className="relative flex flex-wrap -mx-4 -mb-12">
               {servicesCollection.items.map((services, index) => (
