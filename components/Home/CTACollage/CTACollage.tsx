@@ -1,10 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import PrimaryDescription from "@components/Common/PrimaryDescription";
 import ComposedTitles from "@components/Common/ComposedTitles";
 
 import PrimaryButton from "@components/Common/PrimaryButton";
+import { CTACollageSection } from "@lib/types/interfaces";
 
-/* eslint-disable @next/next/no-img-element */
-const CTACollage = () => {
+interface CTACollageProps {
+  data: CTACollageSection;
+}
+
+const CTACollage = ({ data }: CTACollageProps) => {
+  const { topHeading, heading, headingSize, button, image, ctaDescription } =
+    data;
   return (
     <div className="relative py-20 overflow-hidden">
       <div className="absolute bottom-0 right-0 hidden lg:block">
@@ -23,27 +30,24 @@ const CTACollage = () => {
         <div className="relative flex flex-wrap items-center -mx-4">
           <div className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0">
             <div className="max-w-lg">
-              <ComposedTitles
-                titleText="What's new at Shuffle"
-                titleSize="sm"
-              />
+              <ComposedTitles titleText={topHeading} titleSize="sm" />
               <div className="mt-8 mb-6 lg:mb-10">
                 <ComposedTitles
-                  subtitleText="We've been part of more than 500 celebrations."
-                  subtitleSize="md"
+                  subtitleText={heading}
+                  subtitleSize={headingSize}
                 />
               </div>
               <div className="mb-6 lg:mb-12">
                 <PrimaryDescription
-                  text="Our work speaks for itself. We have designed more than 1000
-                  rings up to date."
+                  text={ctaDescription.json}
                   textSize="gray"
+                  isRichText
                 />
               </div>
               <div className="inline-block">
                 <PrimaryButton
                   size="md"
-                  text="Start a Project"
+                  text={button.text}
                   onClick={() => {}}
                 />
               </div>
@@ -52,8 +56,8 @@ const CTACollage = () => {
           <div className="w-full px-4 lg:w-1/2">
             <img
               className="rounded-xl lg:max-w-2xl"
-              src="images/group-posts.png"
-              alt=""
+              src={image.url}
+              alt={image.title}
             />
           </div>
         </div>

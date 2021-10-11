@@ -2,7 +2,7 @@ interface ComposedTitlesProps {
   titleText?: string;
   subtitleText?: string;
   titleSize?: "sm" | "md";
-  subtitleSize?: "sm" | "md" | "lg" | "xl";
+  subtitleSize?: "sm" | "medium" | "lg" | "xl";
 }
 
 const ComposedTitles = ({
@@ -17,7 +17,7 @@ const ComposedTitles = ({
         return "text-4xl lg:text-6xl  max-w-full mx-auto";
       case "lg":
         return "text-4xl lg:text-5xl";
-      case "md":
+      case "medium":
         return " text-4xl";
       case "sm":
         return "text-3xl";

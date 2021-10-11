@@ -80,6 +80,15 @@ export interface CTASection extends DynamicSection {
   button: Button;
 }
 
+export interface CTACollageSection extends DynamicSection {
+  topHeading: string;
+  heading: string;
+  headingSize: "medium";
+  ctaDescription: { json: RichText };
+  button: Button;
+  image: Image;
+}
+
 export interface DynamicPage {
   page: {
     title: string;

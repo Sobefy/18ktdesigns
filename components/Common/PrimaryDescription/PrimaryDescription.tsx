@@ -1,8 +1,19 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Document as RichText } from "@contentful/rich-text-types";
 interface PrimaryDescriptionProps {
-  text: string;
+  text: string | RichText;
   textSize?: string;
+  isRichText?: boolean;
 }
-const PrimaryDescription = ({ text, textSize }: PrimaryDescriptionProps) => {
+const PrimaryDescription = ({
+  text,
+  textSize,
+  isRichText = false,
+}: PrimaryDescriptionProps) => {
+  const textToDisplay = isRichText
+    ? documentToReactComponents(text as RichText)
+    : text;
+
   const getTextSize = () => {
     switch (textSize) {
       case "gray":
@@ -15,7 +26,7 @@ const PrimaryDescription = ({ text, textSize }: PrimaryDescriptionProps) => {
         return "text-gray-500";
     }
   };
-  return <p className={`${getTextSize()}`}>{text}</p>;
+  return <p className={`${getTextSize()}`}>{textToDisplay}</p>;
 };
 
 export default PrimaryDescription;

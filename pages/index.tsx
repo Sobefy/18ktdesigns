@@ -12,6 +12,7 @@ import CTA from "@components/Common/CTA";
 import ContentfulApi from "@lib/contentful";
 import { HomeSections } from "@lib/consts/graphQlQueries";
 import {
+  CTACollageSection,
   CTASection,
   DynamicPage,
   DynamicSection,
@@ -61,7 +62,7 @@ const Home = ({ data }: HomeProps) => {
       case SectionTypes.cta:
         return <CTA data={section as CTASection} onClick={() => {}} />;
       case SectionTypes.ctaCollage:
-        return <CTACollage />;
+        return <CTACollage data={section as CTACollageSection} />;
       case SectionTypes.jewelryTypeSection:
         return <TabGroup />;
       case SectionTypes.newsletterSection:
