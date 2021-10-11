@@ -236,16 +236,19 @@ export const jewerlyTypeSection = `
 
 export const newsletterSection = `
 ... on NewsletterSection {
-    title
+  title
+  type
+  heading
+  description
+  input {
+    label
     type
-    heading
-    description
-    subHeading
-    inputDefault
-    button {
-      text
-      primary
-    }
+    placeholder
+  }
+  button {
+    text
+    primary
+  }
 }
 `;
 

@@ -1,7 +1,7 @@
 import { Document as RichText } from "@contentful/rich-text-types";
 
 import { SectionTypes } from "@lib/types/enums";
-import { Image, Button, CTAHeadingSize } from "@lib/types/types";
+import { Image, Button, CTAHeadingSize, Input } from "@lib/types/types";
 
 export interface DynamicSection {
   title: string;
@@ -91,9 +91,8 @@ export interface CTACollageSection extends DynamicSection {
 
 export interface NewsletterSection extends DynamicSection {
   heading: string;
-  subHeading: string;
+  input: Input;
   description: string;
-  inputDefault: string;
   button: Button;
 }
 
