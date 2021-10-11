@@ -32,7 +32,7 @@ const BlogCarousel = ({ loop = false }: BlogCarouselProps) => {
           <div className="mt-8 sm:mb-2 lg:mb-0">
             <ComposedTitles
               subtitleText="Some of our recent projects"
-              subtitleSize="md"
+              subtitleSize="medium"
             />
           </div>
         </div>

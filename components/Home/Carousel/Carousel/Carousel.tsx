@@ -40,7 +40,7 @@ const Carousel = ({ loop = false }: CarouselProps) => {
         <div className="mt-8 mb-10">
           <ComposedTitles
             subtitleText="500+ happy couples served!"
-            subtitleSize="md"
+            subtitleSize="medium"
           />
         </div>
         <div className="overflow-hidden">
