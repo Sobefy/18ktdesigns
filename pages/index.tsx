@@ -17,6 +17,7 @@ import {
   DynamicPage,
   DynamicSection,
   HeroSection,
+  NewsletterSection,
   RecentProjectsSection,
   ServicesSection,
   TestimonialsSection,
@@ -66,7 +67,7 @@ const Home = ({ data }: HomeProps) => {
       case SectionTypes.jewelryTypeSection:
         return <TabGroup />;
       case SectionTypes.newsletterSection:
-        return <Newsletter />;
+        return <Newsletter data={section as NewsletterSection} />;
       default:
         return null;
     }

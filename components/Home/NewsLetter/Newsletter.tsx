@@ -4,8 +4,13 @@ import Description from "@components/Common/Description";
 import Input from "@components/Common/Input";
 import PrimaryButton from "@components/Common/PrimaryButton";
 import SvgNewsletter from "@components/Common/SvgNewsletter";
+import { NewsletterSection } from "@lib/types/interfaces";
 
-const Newsletter = () => {
+interface NewsletterProps {
+  data: NewsletterSection;
+}
+
+const Newsletter = ({ data }: NewsletterProps) => {
   return (
     <div className="py-20 bg-blue-50">
       <div className="container px-4 mx-auto">

@@ -89,6 +89,14 @@ export interface CTACollageSection extends DynamicSection {
   image: Image;
 }
 
+export interface NewsletterSection extends DynamicSection {
+  heading: string;
+  subHeading: string;
+  description: string;
+  inputDefault: string;
+  button: Button;
+}
+
 export interface DynamicPage {
   page: {
     title: string;
