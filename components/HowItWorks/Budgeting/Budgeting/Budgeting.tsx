@@ -12,7 +12,7 @@ const Budgeting = () => {
             <div className="mt-8">
               <ComposedTitles
                 subtitleText="Budgeting your piece"
-                subtitleSize="md"
+                subtitleSize="medium"
               />
             </div>
           </div>

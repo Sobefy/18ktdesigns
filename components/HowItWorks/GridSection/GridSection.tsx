@@ -1,5 +1,6 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
 import { GridSectionTypes } from "@lib/types/interfaces";
+import image from "next/image";
 
 interface GridSectionProps {
   data: GridSectionTypes;
@@ -38,7 +39,7 @@ const GridSection = ({ data }: GridSectionProps) => {
                 )}`}
               >
                 <span className="flex items-center justify-center w-16 h-16 mx-auto mb-12 text-gray-500 bg-white rounded-full shadow-md">
-                  <img src={item.image.url}></img>
+                  <img alt={item.image.title} src={item.image.url}></img>
                 </span>
                 <div className="mb-4">
                   <ComposedTitles subtitleText={item.heading} />
