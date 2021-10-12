@@ -21,12 +21,7 @@ export type ImageItem = {
   imageHeight?: number;
   imageUnit?: "px" | "rem";
 };
-export type gridItemsTypes = {
-  id: number;
-  title: string;
-  content: string;
-  svg: string;
-};
+
 export type ListOption = {
   id: number;
   value: string;

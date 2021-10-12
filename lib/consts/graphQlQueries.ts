@@ -358,6 +358,9 @@ export const gridSection = `
   type
   gridCardsCollection(limit: 10) {
     items {
+      sys {
+        id
+      }
       title
       image {
         title

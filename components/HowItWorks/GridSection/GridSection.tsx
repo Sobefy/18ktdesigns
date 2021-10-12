@@ -1,6 +1,4 @@
 import ComposedTitles from "@components/Common/ComposedTitles";
-import SvgGridItems from "@components/Common/SvgGridItems";
-import { gridItems } from "@lib/consts";
 import { GridSectionTypes } from "@lib/types/interfaces";
 
 interface GridSectionProps {
@@ -8,9 +6,13 @@ interface GridSectionProps {
 }
 
 const GridSection = ({ data }: GridSectionProps) => {
-  const cardClass = (index: number) => {
-    const last = gridItems.length - 1;
-    const penultimate = gridItems.length - 2;
+  const {
+    gridCardsCollection: { items },
+  } = data;
+
+  const getCardClass = (index: number) => {
+    const last = items.length - 1;
+    const penultimate = items.length - 2;
     switch (index) {
       case 0:
         return "md:rounded-tl-lg";
@@ -28,20 +30,20 @@ const GridSection = ({ data }: GridSectionProps) => {
     <div className="py-20">
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap -m-px">
-          {gridItems.map((item, id) => (
-            <div className="flex w-full p-px md:w-1/2" key={item.id}>
+          {items.map((item, index) => (
+            <div className="flex w-full p-px md:w-1/2" key={item.sys.id}>
               <div
-                className={`p-6 text-center bg-gray-50 lg:py-12 lg:px-16 ${cardClass(
-                  id
+                className={`p-6 text-center bg-gray-50 lg:py-12 lg:px-16 ${getCardClass(
+                  index
                 )}`}
               >
                 <span className="flex items-center justify-center w-16 h-16 mx-auto mb-12 text-gray-500 bg-white rounded-full shadow-md">
-                  <SvgGridItems ico={item.svg} />
+                  <img src={item.image.url}></img>
                 </span>
                 <div className="mb-4">
-                  <ComposedTitles subtitleText={item.title} />
+                  <ComposedTitles subtitleText={item.heading} />
                 </div>
-                <p className="text-base text-gray-500">{item.content}</p>
+                <p className="text-base text-gray-500">{item.description}</p>
               </div>
             </div>
           ))}

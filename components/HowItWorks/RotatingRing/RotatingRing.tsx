@@ -11,7 +11,6 @@ interface RotatingRingProps {
 
 const RotatingRing = ({ data }: RotatingRingProps) => {
   const { description, heading, topHeading, mediaHolder, button } = data;
-  console.log(data);
 
   return (
     <div className="container relative px-4 pt-20 mx-auto">

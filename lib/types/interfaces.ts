@@ -105,6 +105,9 @@ export interface RotatingRingSection extends DynamicSection {
 }
 
 export interface GridSectionCollectionItem {
+  sys: {
+    id: string;
+  };
   title: string;
   heading: string;
   description: string;
@@ -113,7 +116,7 @@ export interface GridSectionCollectionItem {
 
 export interface GridSectionTypes extends DynamicSection {
   gridCardsCollection: {
-    items: GridSectionCollectionItem[];
+    items: [GridSectionCollectionItem];
   };
 }
 
